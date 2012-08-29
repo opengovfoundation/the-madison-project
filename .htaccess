@@ -1,0 +1,40 @@
+RewriteEngine On
+ExpiresActive On
+
+#Expire Header
+<FilesMatch "\.(ico|jpg|jpeg|png|gif|js|css|swf)$">
+ExpiresDefault "now plus 7 days"
+</FilesMatch>
+
+ExpiresByType text/css "now plus 7 days"
+ExpiresByType text/html "now plus 7 days"
+ExpiresDefault "now plus 7 days"
+
+AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css
+
+RewriteRule ^(assets|inc) - [L]
+
+RewriteCond %{QUERY_STRING} ^(.*)?$
+RewriteRule ^login$  							index.php?action=view&type=login&%1 [L]
+
+RewriteCond %{QUERY_STRING} ^(.*)?$
+RewriteRule ^forgot-password$  					index.php?action=view&type=forgot-password&%1 [L]
+
+RewriteCond %{QUERY_STRING} ^(.*)?$
+RewriteRule ^edit/user(/)?$  					index.php?action=edit&type=user&%1 [L]
+
+RewriteCond %{QUERY_STRING} ^(.*)?$
+RewriteRule ^signup(/)?$  						index.php?action=edit&type=user&id=0&%1  [L]
+
+RewriteCond %{QUERY_STRING} ^(.*)?$
+RewriteRule ^user/([0-9]+)(/)?					index.php?action=view&type=note&user=$1&%1 [L]
+
+RewriteCond %{QUERY_STRING} ^(.*)?$
+RewriteRule ^(suggestion|comment)/([0-9]+)(/)?	index.php?action=view&type=note&page=open&note_type=$1&note=$2&%1 [L]
+
+RewriteCond %{QUERY_STRING} ^(.*)?$
+RewriteRule ^([0-9A-Za-z\-_]+)/(suggestion|comment)/([0-9]+)(/)?	index.php?action=view&type=note&page=$1&note_type=$2&note=$3&%1 [L]
+
+#Catch All Pages
+RewriteCond %{QUERY_STRING} ^(.*)?$
+RewriteRule ^([0-9A-Za-z\-_]+)(/)?			index.php?action=view&type=page&page=$1&%1 [L]	
