@@ -2,17 +2,17 @@
 
 	/* REQUIRE CONFIGURATION SCRIPT
 	=====================================================================*/
-	require("config.php");
+	require("inc/config.php");
 	
 	/* CLASSES TO INCLUDE
 	=====================================================================*/
 	
-	require("db.class.php");
-	require("object.class.php");
-	require("bill.class.php");
-	require("user.class.php");
-	require("functions.php");
-	require("facebook.php");
+	require("inc/db.class.php");
+	require("inc/object.class.php");
+	require("inc/bill.class.php");
+	require("inc/user.class.php");
+	require("inc/functions.php");
+	require("inc/facebook.php");
 	
 
 	
@@ -25,6 +25,9 @@
 	=====================================================================*/
 	global $u, $b, $db;
 	
+	print_r($_SERVER['REQUEST_URI']);
+	echo "<hr>";
+	print_r($_SERVER['QUERY_STRING']);
 	
 	/* LOG USER OUT
 	=====================================================================*/
@@ -42,7 +45,7 @@
 	$db = new db($db_creds);
 
 	// Force home page to be OPEN bill for initial launch.
-	$_GET['page'] = $type == 'index' || $_SERVER['REQUEST_URI'] == '/' || strpos($_SERVER['REQUEST_URI'], '/?') !== false ? 'digital-bill-of-rights' : $_GET['page'];
+	//$_GET['page'] = $type == 'index' || $_SERVER['REQUEST_URI'] == '/' || strpos($_SERVER['REQUEST_URI'], '/?') !== false ? 'digital-bill-of-rights' : $_GET['page'];
 
 	$u  = isset($_SESSION['user']) ? $_SESSION['user'] : (isset($_COOKIE['user']) ? new User($_COOKIE['user'], $db) : new User(0, $db));
 	$b  = isset($_SESSION['bill']) ? $_SESSION['bill'] : new Bill(1, $db);
@@ -247,7 +250,7 @@
 		}
 
 		$orig = mysql_result(mysql_query("SELECT content FROM ".DB_TBL_BILL_CONTENT." WHERE id='".$note['part_id']."'", $db->mySQLconnR), 0);  #WORK AROUND FOR GET SECTION PART FUNCTION
-		include('views/view-note.php');
+		include('inc/views/view-note.php');
 	}
 	elseif($type == 'note' && isset($_GET['user'])) // View Notes by USER ID 
 	{		
@@ -255,26 +258,41 @@
 		$user->db = $db;
 
 		if(!$user->id) // User not found
-			include('views/view-404.php');
+			include('inc/views/view-404.php');
 		else // User found - show parent notes
 		{
 			$notes = $b->get_notes_by_user($_GET['user']);
-			include('views/view-notes.php');
+			include('inc/views/view-notes.php');
 		}
 	}
 	elseif($type == 'page' && $_GET['page'] == $b->slug) // Show Bill Reader App
-		include('views/'.$action.'-reader.php');
-	elseif(file_exists(SERVER_ABS.'/inc/views/'.$action.'-'.$type.'.php')) // Show Special Pages
-		include('views/'.$action.'-'.$type.'.php');
-	elseif(file_exists(SERVER_ABS.'/inc/views/'.$action.'-'.$_GET['page'].'.php')) // Show Non-Special Page : terms-conditions, contact, about, etc...
-		include('views/'.$action.'-'.$_GET['page'].'.php');
-	else
-		include('views/view-404.php'); // Show 404 Page not found
-	
-	//Display Homepage Videos
-	if( in_array($_SERVER['REQUEST_URI'], array('/open'))){
-	  get_vids();
+		include('inc/views/'.$action.'-reader.php');
+	elseif($type == 'admin'){
+		if($u->loggedin && $u->user_level == 1){
+			if($_GET['page'] == 'index'){
+				include('admin/view-index.php');
+			}
+			elseif($_GET['action'] == 'edit'){
+				include('admin/edit-doc.php');
+			}
+			elseif($_GET['page'] == 'docs'){
+				include('admin/list-docs.php');
+			}
+			else{
+				include ('inc/views/view-404.php');
+			}
+		}
+		else{
+			include('inc/views/view-404.php');
+		}
 	}
+	elseif(file_exists(SERVER_ABS.'/inc/views/'.$action.'-'.$type.'.php')) // Show Special Pages
+		include('inc/views/'.$action.'-'.$type.'.php');
+	elseif(file_exists(SERVER_ABS.'/inc/views/'.$action.'-'.$_GET['page'].'.php')) // Show Non-Special Page : terms-conditions, contact, about, etc...
+		include('inc/views/'.$action.'-'.$_GET['page'].'.php');
+	else
+		include('inc/views/view-404.php'); // Show 404 Page not found
+	
 	//Display Footer
 	get_footer();
 	

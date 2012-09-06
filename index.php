@@ -1,1 +1,1 @@
-<?php require('inc/init.php'); ?>
+<?php require('init.php'); ?>
