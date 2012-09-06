@@ -13,6 +13,13 @@ ExpiresDefault "now plus 7 days"
 AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css
 
 RewriteRule ^(assets|inc) - [L]
+			
+RewriteRule ^admin[/]?$							admin/index 
+
+RewriteRule ^admin/edit/(.*)$					index.php?type=admin&action=edit&page=$1 [L]
+
+RewriteCond %{QUERY_STRING} ^(.*)?$
+RewriteRule ^admin/(.*)$						index.php?type=admin&action=view&page=$1 [L]
 
 RewriteCond %{QUERY_STRING} ^(.*)?$
 RewriteRule ^login$  							index.php?action=view&type=login&%1 [L]
@@ -36,5 +43,7 @@ RewriteCond %{QUERY_STRING} ^(.*)?$
 RewriteRule ^([0-9A-Za-z\-_]+)/(suggestion|comment)/([0-9]+)(/)?	index.php?action=view&type=note&page=$1&note_type=$2&note=$3&%1 [L]
 
 #Catch All Pages
+RewriteRule ^index\.php$ - [L]
+
 RewriteCond %{QUERY_STRING} ^(.*)?$
-RewriteRule ^([0-9A-Za-z\-_]+)(/)?			index.php?action=view&type=page&page=$1&%1 [L]	
+RewriteRule ^([0-9A-Za-z\-_]+)(/)?			index.php?action=view&type=page&page=$1&%1 [L]

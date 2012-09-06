@@ -1097,3 +1097,15 @@ h1.sopa-markup{
 	font-size:.8em;
 	padding:30px 0;
 }
+
+
+/* Admin Content Styling */
+
+#content.admin input[type="submit"]{ display:block; }
+
+
+
+
+
+
+
