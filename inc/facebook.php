@@ -1,14 +1,9 @@
 <?php
-  if($_SERVER['SERVER_ADDR'] == ''){
-    /* Stage */
-    define('YOUR_APP_ID', '');
-    define('YOUR_APP_SECRET', '');
-  }
-  else{
-    /* Live */
-    define('YOUR_APP_ID', '');
-    define('YOUR_APP_SECRET', '');
-  }
+	//TODO: Create Madison Facebook App and plug in ID and Secret
+  
+  /* Live */
+  define('YOUR_APP_ID', '');
+  define('YOUR_APP_SECRET', '');
   
   global $facebook, $loginUrl;
   
