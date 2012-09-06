@@ -6,6 +6,7 @@ class User extends Object {
 	
 	var $loggedin    = false;
 	var $approved	 = false;
+	var $user_level	 = 3;
 	var $meta 	     = array();
 
 	/* USER CONSTRUCTOR
@@ -185,7 +186,7 @@ class User extends Object {
 	=====================================================================*/
 	public function login($email, $pass)
 	{
-	  $r = mysql_query("SELECT id FROM ".DB_TBL_USERS." WHERE email='".$email."' AND password='".md5($this->salt.$pass.$this->salt)."'", $this->db->mySQLconnR); // CHECK LOGIN CREDS
+	  $r = mysql_query("SELECT id, user_level FROM ".DB_TBL_USERS." WHERE email='".$email."' AND password='".md5($this->salt.$pass.$this->salt)."'", $this->db->mySQLconnR); // CHECK LOGIN CREDS
 		
 	  if(mysql_num_rows($r) < 1) // BAD LOGIN CREDS
   	{
@@ -193,7 +194,9 @@ class User extends Object {
   		return parent::respond();
   	}
 	
-  	$id = mysql_result($r,0);
+  	$id = mysql_result($r,0, 0);
+
+	$this->user_level = mysql_result($r, 0, 1);
 	
   	//UPDATE LAST LOGIN TIMESTAMP
   	$this->db->update(DB_TBL_USERS, array('last_login'=>time()), "id='".$this->db->clean($this->id)."'");

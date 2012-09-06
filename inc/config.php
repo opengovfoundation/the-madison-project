@@ -7,39 +7,29 @@
 	define('IS_STAGE', 	 strpos($_SERVER['HTTP_HOST'], '.yourdomain.com') !== false);
 
 	/* MISC DEFINITIONS
+	* TODO: Use server email with option for SMTP
 	=====================================================================*/
 	define('POSTMARK_APIKEY', 	'');
 	define('POSTMARK_EMAIL',  	'');
 	define('POSTMARK_NAME',		'');
 
-	/* DB CREDITIONALS
-	=====================================================================*/
-	if(IS_STAGE)
-	{
-		$db_creds = array('rw'=>array('host'=>'localhost', 'name'=>'', 'user'=>'', 'pass'=>''));
+	#ERRORS
+	ini_set('log_errors', 'on');
+	ini_set('display_errors', 'off');
+	ini_set('display_startup_errors', 'off');
+	ini_set('error_log', '');
 		
-		//error_reporting(E_ALL);
-		//ini_set('display_errors', '1');
-	}
-	else
-	{
-		#ERRORS
-		ini_set('log_errors', 'on');
-		ini_set('display_errors', 'off');
-		ini_set('display_startup_errors', 'off');
-		ini_set('error_log', '');
-		
-		#SESSION LOCATION
-		//ini_set('session.save_path', '');
+	#SESSION LOCATION
+	//ini_set('session.save_path', '');
 		
 		
-		$db_creds = array('rw'=>array('host'=>'', 'name'=>'', 'user'=>'', 'pass'=>''),
-						          'r2'=>array('host'=>'', 'name'=>'', 'user'=>'', 'pass'=>'')
-					      );
-	}
+	$db_creds = array(
+		'rw'=>array('host'=>'localhost', 'name'=>'madison', 'user'=>'madison', 'pass'=>'D5nzW4DQD3y9LJx4')
+		//,'r2'=>array('host'=>'', 'name'=>'', 'user'=>'', 'pass'=>'')
+	);
 	
-	define('DB_PREFIX', 'hoba_'); //DB TABLE PREFIX
-	
+	//define('DB_PREFIX', 'hoba_'); //DB TABLE PREFIX
+	define('DB_PREFIX', '');
 	 
 	/* DB TABLES NAME DEFINITIONS
 	=====================================================================*/

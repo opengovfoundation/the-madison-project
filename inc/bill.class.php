@@ -15,14 +15,32 @@ class Bill extends Object {
 	
 	var $view_user_edits = true;
 	
+	var $id;
+	var $title;
+	var $description;
+	var $twitter_text;
+	var $twitter_hash;
+	
 	/* BILL CONSTRUCTOR
 	=====================================================================*/
 	public function __construct($id = 0, $db = NULL) 
 	{
 		$this->db = $db;
 		
+		$billInfo = mysql_query('select * from bills where id = ' . $id, $this->db->mySQLconnR);
+		
+		if(mysql_num_rows($billInfo) >= 1){
+			$res = mysql_fetch_array($billInfo);
+			$this->title = $res['bill'];
+			$this->description = $res['description'];
+			$this->twitter_text = $res['twitter_text'];
+			$this->twitter_hash = $res['twitter_hash'];
+		}
+		
 		if($id)
 		{
+			$this->id = $id;
+			
 			parent::initialize($id, DB_TBL_BILLS);
 			
 			$this->refresh_notes();
@@ -32,6 +50,15 @@ class Bill extends Object {
 			while($s = mysql_fetch_assoc($r))
 				$this->sections[$s['id']] = $s;	
 		}
+	}
+	
+	/**
+	*	Update the bill's basic info
+	*/
+	public function update_info(){
+		print_r($this->id);
+		
+		$this->db->update(DB_TBL_BILLS, array('bill'=>$this->title, 'description'=>$this->description, 'twitter_text'=>$this->twitter_text, 'twitter_hash'=>$this->twitter_hash), "id=" . $this->id);
 	}
 	
 	/* GRAB ALL NOTES AND UPDATE BILL

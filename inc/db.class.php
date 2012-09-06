@@ -17,25 +17,8 @@ class db {
 		$this->mySQLconnRW = mysql_connect($creds['rw']['host'],$creds['rw']['user'],$creds['rw']['pass'],1);
 		mysql_select_db($creds['rw']['name'], $this->mySQLconnRW) or die ("Cannot connect to database ".mysql_error());
 		
-		if(!IS_STAGE)
-		{
-			ini_set('mysql.connect_timeout', '30');
-			
-			$rs = array(2);
-	
-			$this->mySQLconnR = mysql_connect($creds['r'.$rs[0]]['host'],$creds['r'.$rs[0]]['user'],$creds['r'.$rs[0]]['pass'],1) or die(mysql_error());
-			if(empty($this->mySQLconnR))
-			{
-				sleep(3);
-				$this->mySQLconnR = @mysql_connect($creds['r'.$rs[1]]['host'],$creds['r'.$rs[1]]['user'],$creds['r'.$rs[1]]['pass'],1);
-			}
-			mysql_select_db($creds['r'.$rs[0]]['name'], $this->mySQLconnR);
-		} 
-		else 
-		{
-			$this->mySQLconnR = $this->mySQLconnRW;
-			mysql_select_db($creds['rw']['name'], $this->mySQLconnR) or die ("Cannot connect to database ".mysql_error());
-		}
+		$this->mySQLconnR = $this->mySQLconnRW;
+		mysql_select_db($creds['rw']['name'], $this->mySQLconnR) or die ("Cannot connect to database ".mysql_error());
     }
 	
 	public function clean($i)
