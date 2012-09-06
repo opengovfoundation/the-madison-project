@@ -1,5 +1,8 @@
-<?php if($u->id != 1 && $u->id != 10)
-		redirect(SERVER_URL); ?>
+<?php 
+if($u->id != 1 && $u->id != 10) :
+	include('view-404.php');
+else : 	
+?>
 <h1>Company Approval</h1>
 <form action="" method="post">
 <div id="generic-content" style="overflow:hidden; font-size:12px;">
@@ -27,3 +30,4 @@
    $("input[name=action]").closest("form").submit();
   }
 </script>
+<?php endif; ?>
