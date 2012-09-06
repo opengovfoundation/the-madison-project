@@ -89,15 +89,16 @@ Initially, users will be able to automatically log in with their Facebook accoun
 The UI is undetermined, but we are looking at existing systems for guidance.  Examples include: YouVersion, OpenCongress, Document Cloud, Wikipedia and reddit.
 	
 ### Technical Details
-For information on the technical details of Madison, please visit the [Technical Documentation](techdoc.md)	
+For information on the technical details of Madison, please visit the [Technical Documentation](DETAILS.md)	
 	
 ### Questions and Feedback
-Please send all questions and feedback to sayhello {AT} opengovfoundation.org
-
-* Google group coming soon
+Please send all questions and feedback to sayhello {AT} opengovfoundation.org or join the project's [Google Group](https://groups.google.com/forum/#!forum/opensourcemadison)
 
 ### Bug Tracker
 We are using the built-in gitHub bug tracker for this project. 
+
+### Acknowledgements
+We'd like to thank Karl Fogel of [Open Tech Strategies, LLC](http://opentechstrategies.com) for volunteering his time and expertise in preparing Madison for posting on GitHub.
 
 ***
 ### License
@@ -106,11 +107,11 @@ The Madison Project: open source software to power open collaboration, editing a
 
 Copyright (C) 2012 by The OpenGov Foundation
 
-This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or any later version.
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the     GNU General Public License for more details.
 
-You should have received a copy of the GNU General Public License along with this program; if not, write to the: Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 The OpenGov Foundation
 PO Box 3672
