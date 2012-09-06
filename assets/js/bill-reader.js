@@ -92,9 +92,10 @@ function load_notes(id)
 		query_str = window.location.search;
 		base_uri  = window.location.pathname;
 		
-		if(base_uri == '/'){
-			base_uri = '/digital-bill-of-rights';
-		}
+		/* Temporary fix for using the homepage as inital bill */
+		//if(base_uri == '/'){
+		//	base_uri = '/digital-bill-of-rights';
+		//}
 
 		tools 	  = '<div class="note-tools">';
 		if(loggedin)
