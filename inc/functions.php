@@ -42,6 +42,13 @@
 		return mysql_num_rows($r) == 0 ? 0 : mysql_result($r, 0);
 	}
 	
+	/* HELPER FUNCTION TO REDIRECT AND EXIT
+	=====================================================================*/
+	function redirect($url)
+	{
+		header("location:".$url); exit();  
+	}
+	
 	/* HOOK INTO POSTMARK APP AND SEND TRANSACTIONAL EMAILS
 	=====================================================================*/
 	function email($em, $subject, $message = '') 
@@ -126,6 +133,13 @@
         	<link href="<?=SERVER_URL?>/assets/css/styles.css" rel="stylesheet" type="text/css" />
         	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 			<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+			<?php if($_GET['type'] == 'admin' && $u->user_level == 1) : ?>
+				<?php // jquery ui core ?>
+				<script src="<?=SERVER_URL?>/assets/js/jquery.ui.widget.js"></script>
+				<script src="<?= SERVER_URL?>/assets/js/jquery.ui.mouse.js"></script>
+				<script src="<?= SERVER_URL?>/assets/js/jquery.ui.sortable.js"></script>
+				<script src="<?=SERVER_URL?>/jquery.mjs.nestedSortable.js"></script>
+			<?php endif; ?>
         </head>
         <body>
         	<div id="fb-root"></div>
