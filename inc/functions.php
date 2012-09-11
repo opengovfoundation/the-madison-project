@@ -60,17 +60,21 @@
 	=====================================================================*/
 	function email($em, $subject, $message = '') 
 	{
-		require_once("postmark.class.php");
+		//require_once("postmark.class.php");
 
-		$email = new Mail_Postmark();
+		//$email = new Mail_Postmark();
+		$headers = 'MIME-Version: 1.0' . "\r\n";
+		$headers = 'Content-type: text/html;' . "\r\n";
+		$headers = 'From: The Madison Project' . "\r\n";
 		
 		try 
 		{
-			$email-> addTo($em)
-				  -> from(POSTMARK_EMAIL, POSTMARK_NAME)
-				  -> subject($subject)
-				  -> messageHTML($message)
-				  -> send();
+			mail($em, $subject, $message, $headers);
+			// $email-> addTo($em)
+			// 				  -> from(POSTMARK_EMAIL, POSTMARK_NAME)
+			// 				  -> subject($subject)
+			// 				  -> messageHTML($message)
+			// 				  -> send();
 		} 
 		catch (Exception $e) 
 		{
