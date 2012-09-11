@@ -131,14 +131,17 @@
 			<meta property="og:site_name" content=""/>		    
         	<title><?php site_title(); ?></title>
         	<link href="<?=SERVER_URL?>/assets/css/styles.css" rel="stylesheet" type="text/css" />
-        	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-			<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
 			<?php if($_GET['type'] == 'admin' && $u->user_level == 1) : ?>
 				<?php // jquery ui core ?>
+				<script type="text/javascript" src="<?=SERVER_URL?>/assets/js/jquery-1.8.0.js"></script>
+				<script src="<?=SERVER_URL?>/assets/js/jquery.ui.core.js"></script>
 				<script src="<?=SERVER_URL?>/assets/js/jquery.ui.widget.js"></script>
 				<script src="<?= SERVER_URL?>/assets/js/jquery.ui.mouse.js"></script>
 				<script src="<?= SERVER_URL?>/assets/js/jquery.ui.sortable.js"></script>
 				<script src="<?=SERVER_URL?>/jquery.mjs.nestedSortable.js"></script>
+			<?php else : ?>
+				<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+				<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
 			<?php endif; ?>
         </head>
         <body>
