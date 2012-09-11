@@ -17,9 +17,11 @@ class Bill extends Object {
 	
 	var $id;
 	var $title;
+	var $shortname;
 	var $description;
 	var $twitter_text;
 	var $twitter_hash;
+	var $doc_location;
 	
 	/* BILL CONSTRUCTOR
 	=====================================================================*/
@@ -32,9 +34,12 @@ class Bill extends Object {
 		if(mysql_num_rows($billInfo) >= 1){
 			$res = mysql_fetch_array($billInfo);
 			$this->title = $res['bill'];
+			$this->shortname = $res['shortname'];
 			$this->description = $res['description'];
 			$this->twitter_text = $res['twitter_text'];
 			$this->twitter_hash = $res['twitter_hash'];
+			$this->doc_location = $res['doc_location'];
+			
 		}
 		
 		if($id)
