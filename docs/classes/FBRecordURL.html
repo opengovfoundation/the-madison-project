@@ -1,0 +1,1542 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \FBRecordURL</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/inc%0A%09@copyright%20Copyright%20&amp;copy;%202012%20by%20The%20OpenGov%20Foundation.html"><i class="icon-folder-open"></i> inc
+	@copyright Copyright &amp;copy; 2012 by The OpenGov Foundation</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">214</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">2</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">3</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public inherited"><a href="#__construct" title="__construct :: Initialize a Facebook Application."><span class="description">Initialize a Facebook Application.</span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#api" title="api :: Make an API call."><span class="description">Make an API call.</span><pre>api()</pre></a></li>
+<li class="method public inherited"><a href="#destroySession" title="destroySession :: Destroy the current session"><span class="description">Destroy the current session</span><pre>destroySession()</pre></a></li>
+<li class="method public inherited"><a href="#getAccessToken" title="getAccessToken :: Determines the access token that should be used for API calls."><span class="description">Determines the access token that should be used for API calls.</span><pre>getAccessToken()</pre></a></li>
+<li class="method public inherited"><a href="#getApiSecret" title="getApiSecret :: Get the App Secret."><span class="description">Get the App Secret.</span><pre>getApiSecret()</pre></a></li>
+<li class="method public inherited"><a href="#getAppId" title="getAppId :: Get the Application ID."><span class="description">Get the Application ID.</span><pre>getAppId()</pre></a></li>
+<li class="method public inherited"><a href="#getAppSecret" title="getAppSecret :: Get the App Secret."><span class="description">Get the App Secret.</span><pre>getAppSecret()</pre></a></li>
+<li class="method public inherited"><a href="#getFileUploadSupport" title="getFileUploadSupport :: Get the file upload support status."><span class="description">Get the file upload support status.</span><pre>getFileUploadSupport()</pre></a></li>
+<li class="method public inherited"><a href="#getLoginStatusUrl" title="getLoginStatusUrl :: Get a login status URL to fetch the status from Facebook."><span class="description">Get a login status URL to fetch the status from Facebook.</span><pre>getLoginStatusUrl()</pre></a></li>
+<li class="method public inherited"><a href="#getLoginUrl" title="getLoginUrl :: Get a Login URL for use with redirects."><span class="description">Get a Login URL for use with redirects.</span><pre>getLoginUrl()</pre></a></li>
+<li class="method public inherited"><a href="#getLogoutUrl" title="getLogoutUrl :: Get a Logout URL suitable for use with redirects."><span class="description">Get a Logout URL suitable for use with redirects.</span><pre>getLogoutUrl()</pre></a></li>
+<li class="method public "><a href="#getRequestedURL" title="getRequestedURL :: "><span class="description">getRequestedURL()
+        </span><pre>getRequestedURL()</pre></a></li>
+<li class="method public inherited"><a href="#getSignedRequest" title="getSignedRequest :: Retrieve the signed request, either from a request parameter or,
+if not present, from a cookie."><span class="description">Retrieve the signed request, either from a request parameter or,
+if not present, from a cookie.</span><pre>getSignedRequest()</pre></a></li>
+<li class="method public inherited"><a href="#getUser" title="getUser :: Get the UID of the connected user, or 0
+if the Facebook user is not connected."><span class="description">Get the UID of the connected user, or 0
+if the Facebook user is not connected.</span><pre>getUser()</pre></a></li>
+<li class="method public inherited"><a href="#setAccessToken" title="setAccessToken :: Sets the access token for api calls."><span class="description">Sets the access token for api calls.</span><pre>setAccessToken()</pre></a></li>
+<li class="method public inherited"><a href="#setApiSecret" title="setApiSecret :: Set the App Secret."><span class="description">Set the App Secret.</span><pre>setApiSecret()</pre></a></li>
+<li class="method public inherited"><a href="#setAppId" title="setAppId :: Set the Application ID."><span class="description">Set the Application ID.</span><pre>setAppId()</pre></a></li>
+<li class="method public inherited"><a href="#setAppSecret" title="setAppSecret :: Set the App Secret."><span class="description">Set the App Secret.</span><pre>setAppSecret()</pre></a></li>
+<li class="method public inherited"><a href="#setFileUploadSupport" title="setFileUploadSupport :: Set the file upload support status."><span class="description">Set the file upload support status.</span><pre>setFileUploadSupport()</pre></a></li>
+<li class="method public inherited"><a href="#useFileUploadSupport" title="useFileUploadSupport :: DEPRECATED! Please use getFileUploadSupport instead."><span class="description">DEPRECATED! Please use getFileUploadSupport instead.</span><pre>useFileUploadSupport()</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="method protected inherited"><a href="#_graph" title="_graph :: Invoke the Graph API."><span class="description">Invoke the Graph API.</span><pre>_graph()</pre></a></li>
+<li class="method protected "><a href="#_oauthRequest" title="_oauthRequest :: Make a OAuth Request."><span class="description">Make a OAuth Request.</span><pre>_oauthRequest()</pre></a></li>
+<li class="method protected inherited"><a href="#_restserver" title="_restserver :: Invoke the old restserver.php endpoint."><span class="description">Invoke the old restserver.php endpoint.</span><pre>_restserver()</pre></a></li>
+<li class="method protected inherited"><a href="#base64UrlDecode" title="base64UrlDecode :: Base64 encoding that doesn't need to be urlencode()ed."><span class="description">Base64 encoding that doesn't need to be urlencode()ed.</span><pre>base64UrlDecode()</pre></a></li>
+<li class="method protected inherited"><a href="#clearAllPersistentData" title="clearAllPersistentData :: Clear all data from the persistent storage"><span class="description">Clear all data from the persistent storage</span><pre>clearAllPersistentData()</pre></a></li>
+<li class="method protected inherited"><a href="#clearPersistentData" title="clearPersistentData :: Clear the data with $key from the persistent storage"><span class="description">Clear the data with $key from the persistent storage</span><pre>clearPersistentData()</pre></a></li>
+<li class="method protected inherited"><a href="#errorLog" title="errorLog :: Prints to the error log if you aren't in command line mode."><span class="description">Prints to the error log if you aren't in command line mode.</span><pre>errorLog()</pre></a></li>
+<li class="method protected inherited"><a href="#establishCSRFTokenState" title="establishCSRFTokenState :: Lays down a CSRF state token for this process."><span class="description">Lays down a CSRF state token for this process.</span><pre>establishCSRFTokenState()</pre></a></li>
+<li class="method protected inherited"><a href="#getAccessTokenFromCode" title="getAccessTokenFromCode :: Retrieves an access token for the given authorization code
+(previously generated from www.facebook.com on behalf of
+a specific user)."><span class="description">Retrieves an access token for the given authorization code
+(previously generated from www.facebook.com on behalf of
+a specific user).</span><pre>getAccessTokenFromCode()</pre></a></li>
+<li class="method protected inherited"><a href="#getApiUrl" title="getApiUrl :: Build the URL for api given parameters."><span class="description">Build the URL for api given parameters.</span><pre>getApiUrl()</pre></a></li>
+<li class="method protected inherited"><a href="#getApplicationAccessToken" title="getApplicationAccessToken :: Returns the access token that should be used for logged out
+users when no authorization code is available."><span class="description">Returns the access token that should be used for logged out
+users when no authorization code is available.</span><pre>getApplicationAccessToken()</pre></a></li>
+<li class="method protected inherited"><a href="#getCode" title="getCode :: Get the authorization code from the query parameters, if it exists,
+and otherwise return false to signal no authorization code was
+discoverable."><span class="description">Get the authorization code from the query parameters, if it exists,
+and otherwise return false to signal no authorization code was
+discoverable.</span><pre>getCode()</pre></a></li>
+<li class="method protected inherited"><a href="#getCurrentUrl" title="getCurrentUrl :: Returns the Current URL, stripping it of known FB parameters that should
+not persist."><span class="description">Returns the Current URL, stripping it of known FB parameters that should
+not persist.</span><pre>getCurrentUrl()</pre></a></li>
+<li class="method protected inherited"><a href="#getMetadataCookie" title="getMetadataCookie :: Parses the metadata cookie that our Javascript API set"><span class="description">Parses the metadata cookie that our Javascript API set</span><pre>getMetadataCookie()</pre></a></li>
+<li class="method protected inherited"><a href="#getMetadataCookieName" title="getMetadataCookieName :: Constructs and returns the name of the coookie that potentially contain
+metadata."><span class="description">Constructs and returns the name of the coookie that potentially contain
+metadata.</span><pre>getMetadataCookieName()</pre></a></li>
+<li class="method protected inherited"><a href="#getPersistentData" title="getPersistentData :: Get the data for $key, persisted by BaseFacebook::setPersistentData()"><span class="description">Get the data for $key, persisted by BaseFacebook::setPersistentData()</span><pre>getPersistentData()</pre></a></li>
+<li class="method protected inherited"><a href="#getSignedRequestCookieName" title="getSignedRequestCookieName :: Constructs and returns the name of the cookie that
+potentially houses the signed request for the app user."><span class="description">Constructs and returns the name of the cookie that
+potentially houses the signed request for the app user.</span><pre>getSignedRequestCookieName()</pre></a></li>
+<li class="method protected inherited"><a href="#getUrl" title="getUrl :: Build the URL for given domain alias, path and parameters."><span class="description">Build the URL for given domain alias, path and parameters.</span><pre>getUrl()</pre></a></li>
+<li class="method protected inherited"><a href="#getUserAccessToken" title="getUserAccessToken :: Determines and returns the user access token, first using
+the signed request if present, and then falling back on
+the authorization code if present."><span class="description">Determines and returns the user access token, first using
+the signed request if present, and then falling back on
+the authorization code if present.</span><pre>getUserAccessToken()</pre></a></li>
+<li class="method protected inherited"><a href="#getUserFromAccessToken" title="getUserFromAccessToken :: Retrieves the UID with the understanding that
+$this-&gt;accessToken has already been set and is
+seemingly legitimate."><span class="description">Retrieves the UID with the understanding that
+$this-&gt;accessToken has already been set and is
+seemingly legitimate.</span><pre>getUserFromAccessToken()</pre></a></li>
+<li class="method protected inherited"><a href="#getUserFromAvailableData" title="getUserFromAvailableData :: Determines the connected user by first examining any signed
+requests, then considering an authorization code, and then
+falling back to any persistent store storing the user."><span class="description">Determines the connected user by first examining any signed
+requests, then considering an authorization code, and then
+falling back to any persistent store storing the user.</span><pre>getUserFromAvailableData()</pre></a></li>
+<li class="method protected inherited"><a href="#isVideoPost" title="isVideoPost :: Return true if this is video post."><span class="description">Return true if this is video post.</span><pre>isVideoPost()</pre></a></li>
+<li class="method protected inherited"><a href="#makeRequest" title="makeRequest :: Makes an HTTP request."><span class="description">Makes an HTTP request.</span><pre>makeRequest()</pre></a></li>
+<li class="method protected inherited"><a href="#parseSignedRequest" title="parseSignedRequest :: Parses a signed_request and validates the signature."><span class="description">Parses a signed_request and validates the signature.</span><pre>parseSignedRequest()</pre></a></li>
+<li class="method protected inherited"><a href="#setPersistentData" title="setPersistentData :: Stores the given ($key, $value) pair, so that future calls to
+getPersistentData($key) return $value."><span class="description">Stores the given ($key, $value) pair, so that future calls to
+getPersistentData($key) return $value.</span><pre>setPersistentData()</pre></a></li>
+<li class="method protected inherited"><a href="#shouldRetainParam" title="shouldRetainParam :: Returns true if and only if the key or key/value pair should
+be retained as part of the query string."><span class="description">Returns true if and only if the key or key/value pair should
+be retained as part of the query string.</span><pre>shouldRetainParam()</pre></a></li>
+<li class="method protected inherited"><a href="#throwAPIException" title="throwAPIException :: Analyzes the supplied result to see if it was thrown
+because the access token is no longer valid."><span class="description">Analyzes the supplied result to see if it was thrown
+because the access token is no longer valid.</span><pre>throwAPIException()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="property public inherited"><a href="#%24CURL_OPTS" title="$CURL_OPTS :: Default options for curl."><span class="description">Default options for curl.</span><pre>$CURL_OPTS</pre></a></li>
+<li class="property public inherited"><a href="#%24DOMAIN_MAP" title="$DOMAIN_MAP :: Maps aliases to Facebook domains."><span class="description">Maps aliases to Facebook domains.</span><pre>$DOMAIN_MAP</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected inherited"><a href="#%24DROP_QUERY_PARAMS" title="$DROP_QUERY_PARAMS :: List of query parameters that get automatically dropped when rebuilding
+the current URL."><span class="description">List of query parameters that get automatically dropped when rebuilding
+the current URL.</span><pre>$DROP_QUERY_PARAMS</pre></a></li>
+<li class="property protected inherited"><a href="#%24accessToken" title="$accessToken :: The OAuth access token received in exchange for a valid authorization
+code."><span class="description">The OAuth access token received in exchange for a valid authorization
+code.</span><pre>$accessToken</pre></a></li>
+<li class="property protected inherited"><a href="#%24appId" title="$appId :: The Application ID."><span class="description">The Application ID.</span><pre>$appId</pre></a></li>
+<li class="property protected inherited"><a href="#%24appSecret" title="$appSecret :: The Application App Secret."><span class="description">The Application App Secret.</span><pre>$appSecret</pre></a></li>
+<li class="property protected inherited"><a href="#%24fileUploadSupport" title="$fileUploadSupport :: Indicates if the CURL based @ syntax for file uploads is enabled."><span class="description">Indicates if the CURL based @ syntax for file uploads is enabled.</span><pre>$fileUploadSupport</pre></a></li>
+<li class="property protected inherited"><a href="#%24signedRequest" title="$signedRequest :: The data from the signed_request token."><span class="description">The data from the signed_request token.</span><pre>$signedRequest</pre></a></li>
+<li class="property protected inherited"><a href="#%24state" title="$state :: A CSRF state variable to assist in the defense against CSRF attacks."><span class="description">A CSRF state variable to assist in the defense against CSRF attacks.</span><pre>$state</pre></a></li>
+<li class="property protected inherited"><a href="#%24user" title="$user :: The ID of the Facebook user, or 0 if the user is logged out."><span class="description">The ID of the Facebook user, or 0 if the user is logged out.</span><pre>$user</pre></a></li>
+<li class="nav-header private">» Private</li>
+<li class="property private "><a href="#%24url" title="$url :: "><span class="description">$url</span><pre>$url</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants</li>
+<li class="constant  inherited"><a href="#VERSION" title="VERSION :: Version."><span class="description">Version.</span><pre>VERSION</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CFBRecordURL" id="\FBRecordURL"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/FBRecordURL.html">FBRecordURL</a>
+</li>
+</ul>
+<div href="../classes/FBRecordURL.html" class="element class">
+<p class="short_description">Provides access to the Facebook Platform.</p>
+<div class="details">
+<p class="long_description"><p>This class provides
+a majority of the functionality needed, but the class is abstract
+because it is designed to be sub-classed.  The subclass must
+implement the four abstract methods listed at the bottom of
+the file.</p></p>
+<table class="table table-bordered"><tr>
+<th>author</th>
+<td><a href="mailto:naitik@facebook.com">Naitik Shah</a></td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Initialize a Facebook Application.</h2>
+<pre>__construct(array $config) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>The configuration:
+- appId: the application ID
+- secret: the application secret
+- fileUpload: (optional) boolean indicating if file uploads are enabled</p></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::__construct()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::__construct()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$config</h4>
+<code>array</code><p>The application configuration</p></div>
+</div></div>
+</div>
+<a name="api" id="api"></a><div class="element clickable method public api" data-toggle="collapse" data-target=".api .collapse">
+<h2>Make an API call.</h2>
+<pre>api() : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::api()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::api()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>The decoded response</div>
+</div></div>
+</div>
+<a name="destroySession" id="destroySession"></a><div class="element clickable method public destroySession" data-toggle="collapse" data-target=".destroySession .collapse">
+<h2>Destroy the current session</h2>
+<pre>destroySession() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::destroySession()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::destroySession()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="getAccessToken" id="getAccessToken"></a><div class="element clickable method public getAccessToken" data-toggle="collapse" data-target=".getAccessToken .collapse">
+<h2>Determines the access token that should be used for API calls.</h2>
+<pre>getAccessToken() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>The first time this is called, $this->accessToken is set equal
+to either a valid user access token, or it's set to the application
+access token if a valid user access token wasn't available.  Subsequent
+calls return whatever the first call returned.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::getAccessToken()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::getAccessToken()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The access token</div>
+</div></div>
+</div>
+<a name="getApiSecret" id="getApiSecret"></a><div class="element clickable method public getApiSecret" data-toggle="collapse" data-target=".getApiSecret .collapse">
+<h2>Get the App Secret.</h2>
+<pre>getApiSecret() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::getApiSecret()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::getApiSecret()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>the App Secret</div>
+</div></div>
+</div>
+<a name="getAppId" id="getAppId"></a><div class="element clickable method public getAppId" data-toggle="collapse" data-target=".getAppId .collapse">
+<h2>Get the Application ID.</h2>
+<pre>getAppId() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::getAppId()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::getAppId()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>the Application ID</div>
+</div></div>
+</div>
+<a name="getAppSecret" id="getAppSecret"></a><div class="element clickable method public getAppSecret" data-toggle="collapse" data-target=".getAppSecret .collapse">
+<h2>Get the App Secret.</h2>
+<pre>getAppSecret() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::getAppSecret()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::getAppSecret()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>the App Secret</div>
+</div></div>
+</div>
+<a name="getFileUploadSupport" id="getFileUploadSupport"></a><div class="element clickable method public getFileUploadSupport" data-toggle="collapse" data-target=".getFileUploadSupport .collapse">
+<h2>Get the file upload support status.</h2>
+<pre>getFileUploadSupport() : boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::getFileUploadSupport()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::getFileUploadSupport()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>true if and only if the server supports file upload.</div>
+</div></div>
+</div>
+<a name="getLoginStatusUrl" id="getLoginStatusUrl"></a><div class="element clickable method public getLoginStatusUrl" data-toggle="collapse" data-target=".getLoginStatusUrl .collapse">
+<h2>Get a login status URL to fetch the status from Facebook.</h2>
+<pre>getLoginStatusUrl(array $params) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>The parameters:
+- ok_session: the URL to go to if a session is found
+- no_session: the URL to go to if the user is not connected
+- no_user: the URL to go to if the user is not signed into facebook</p></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::getLoginStatusUrl()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::getLoginStatusUrl()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>Provide custom parameters</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The URL for the logout flow</div>
+</div></div>
+</div>
+<a name="getLoginUrl" id="getLoginUrl"></a><div class="element clickable method public getLoginUrl" data-toggle="collapse" data-target=".getLoginUrl .collapse">
+<h2>Get a Login URL for use with redirects.</h2>
+<pre>getLoginUrl(array $params) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>By default, full page redirect is
+assumed. If you are using the generated URL with a window.open() call in
+JavaScript, you can pass in display=popup as part of the $params.</p>
+
+<p>The parameters:
+- redirect_uri: the url to go to after a successful login
+- scope: comma separated list of requested extended perms</p></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::getLoginUrl()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::getLoginUrl()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>Provide custom parameters</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The URL for the login flow</div>
+</div></div>
+</div>
+<a name="getLogoutUrl" id="getLogoutUrl"></a><div class="element clickable method public getLogoutUrl" data-toggle="collapse" data-target=".getLogoutUrl .collapse">
+<h2>Get a Logout URL suitable for use with redirects.</h2>
+<pre>getLogoutUrl(array $params) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>The parameters:
+- next: the url to go to after a successful logout</p></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::getLogoutUrl()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::getLogoutUrl()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>Provide custom parameters</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The URL for the logout flow</div>
+</div></div>
+</div>
+<a name="getRequestedURL" id="getRequestedURL"></a><div class="element clickable method public getRequestedURL" data-toggle="collapse" data-target=".getRequestedURL .collapse">
+<h2>getRequestedURL()
+        </h2>
+<pre>getRequestedURL() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="getSignedRequest" id="getSignedRequest"></a><div class="element clickable method public getSignedRequest" data-toggle="collapse" data-target=".getSignedRequest .collapse">
+<h2>Retrieve the signed request, either from a request parameter or,
+if not present, from a cookie.</h2>
+<pre>getSignedRequest() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::getSignedRequest()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::getSignedRequest()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>the signed request, if available, or null otherwise.</div>
+</div></div>
+</div>
+<a name="getUser" id="getUser"></a><div class="element clickable method public getUser" data-toggle="collapse" data-target=".getUser .collapse">
+<h2>Get the UID of the connected user, or 0
+if the Facebook user is not connected.</h2>
+<pre>getUser() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::getUser()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::getUser()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>the UID if available.</div>
+</div></div>
+</div>
+<a name="setAccessToken" id="setAccessToken"></a><div class="element clickable method public setAccessToken" data-toggle="collapse" data-target=".setAccessToken .collapse">
+<h2>Sets the access token for api calls.</h2>
+<pre>setAccessToken(string $access_token) : <a href="../classes/BaseFacebook.html">\BaseFacebook</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Use this if you get
+your access token by other means and just want the SDK
+to use it.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::setAccessToken()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::setAccessToken()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$access_token</h4>
+<code>string</code><p>an access token.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/BaseFacebook.html">\BaseFacebook</a></code></div>
+</div></div>
+</div>
+<a name="setApiSecret" id="setApiSecret"></a><div class="element clickable method public setApiSecret" data-toggle="collapse" data-target=".setApiSecret .collapse">
+<h2>Set the App Secret.</h2>
+<pre>setApiSecret(string $apiSecret) : <a href="../classes/BaseFacebook.html">\BaseFacebook</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::setApiSecret()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::setApiSecret()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$apiSecret</h4>
+<code>string</code><p>The App Secret</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/BaseFacebook.html">\BaseFacebook</a></code></div>
+</div></div>
+</div>
+<a name="setAppId" id="setAppId"></a><div class="element clickable method public setAppId" data-toggle="collapse" data-target=".setAppId .collapse">
+<h2>Set the Application ID.</h2>
+<pre>setAppId(string $appId) : <a href="../classes/BaseFacebook.html">\BaseFacebook</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::setAppId()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::setAppId()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$appId</h4>
+<code>string</code><p>The Application ID</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/BaseFacebook.html">\BaseFacebook</a></code></div>
+</div></div>
+</div>
+<a name="setAppSecret" id="setAppSecret"></a><div class="element clickable method public setAppSecret" data-toggle="collapse" data-target=".setAppSecret .collapse">
+<h2>Set the App Secret.</h2>
+<pre>setAppSecret(string $appSecret) : <a href="../classes/BaseFacebook.html">\BaseFacebook</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::setAppSecret()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::setAppSecret()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$appSecret</h4>
+<code>string</code><p>The App Secret</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/BaseFacebook.html">\BaseFacebook</a></code></div>
+</div></div>
+</div>
+<a name="setFileUploadSupport" id="setFileUploadSupport"></a><div class="element clickable method public setFileUploadSupport" data-toggle="collapse" data-target=".setFileUploadSupport .collapse">
+<h2>Set the file upload support status.</h2>
+<pre>setFileUploadSupport(boolean $fileUploadSupport) : <a href="../classes/BaseFacebook.html">\BaseFacebook</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::setFileUploadSupport()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::setFileUploadSupport()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$fileUploadSupport</h4>
+<code>boolean</code><p>The file upload support status.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/BaseFacebook.html">\BaseFacebook</a></code></div>
+</div></div>
+</div>
+<a name="useFileUploadSupport" id="useFileUploadSupport"></a><div class="element clickable method public useFileUploadSupport" data-toggle="collapse" data-target=".useFileUploadSupport .collapse">
+<h2>DEPRECATED! Please use getFileUploadSupport instead.</h2>
+<pre>useFileUploadSupport() : boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Get the file upload support status.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::useFileUploadSupport()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::useFileUploadSupport()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>true if and only if the server supports file upload.</div>
+</div></div>
+</div>
+<a name="_graph" id="_graph"></a><div class="element clickable method protected _graph" data-toggle="collapse" data-target="._graph .collapse">
+<h2>Invoke the Graph API.</h2>
+<pre>_graph(string $path, string $method, array $params) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::_graph()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::_graph()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$path</h4>
+<code>string</code><p>The path (required)</p>
+</div>
+<div class="subelement argument">
+<h4>$method</h4>
+<code>string</code><p>The http method (default 'GET')</p>
+</div>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>The query/post data</p>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/FacebookApiException.html">\FacebookApiException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>The decoded response object</div>
+</div></div>
+</div>
+<a name="_oauthRequest" id="_oauthRequest"></a><div class="element clickable method protected _oauthRequest" data-toggle="collapse" data-target="._oauthRequest .collapse">
+<h2>Make a OAuth Request.</h2>
+<pre>_oauthRequest(string $url, array $params) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$url</h4>
+<code>string</code><p>The path (required)</p>
+</div>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>The query/post data</p>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/FacebookApiException.html">\FacebookApiException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The decoded response object</div>
+</div></div>
+</div>
+<a name="_restserver" id="_restserver"></a><div class="element clickable method protected _restserver" data-toggle="collapse" data-target="._restserver .collapse">
+<h2>Invoke the old restserver.php endpoint.</h2>
+<pre>_restserver(array $params) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::_restserver()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::_restserver()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>Method call object</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="../classes/FacebookApiException.html">\FacebookApiException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>The decoded response object</div>
+</div></div>
+</div>
+<a name="base64UrlDecode" id="base64UrlDecode"></a><div class="element clickable method protected base64UrlDecode" data-toggle="collapse" data-target=".base64UrlDecode .collapse">
+<h2>Base64 encoding that doesn't need to be urlencode()ed.</h2>
+<pre>base64UrlDecode(string $input) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Exactly the same as base64_encode except it uses
+  - instead of +
+  _ instead of /</p></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::base64UrlDecode()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::base64UrlDecode()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$input</h4>
+<code>string</code><p>base64UrlEncoded string</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="clearAllPersistentData" id="clearAllPersistentData"></a><div class="element clickable method protected clearAllPersistentData" data-toggle="collapse" data-target=".clearAllPersistentData .collapse">
+<h2>Clear all data from the persistent storage</h2>
+<pre>clearAllPersistentData() : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::clearAllPersistentData()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="clearPersistentData" id="clearPersistentData"></a><div class="element clickable method protected clearPersistentData" data-toggle="collapse" data-target=".clearPersistentData .collapse">
+<h2>Clear the data with $key from the persistent storage</h2>
+<pre>clearPersistentData(string $key) : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::clearPersistentData()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a name="errorLog" id="errorLog"></a><div class="element clickable method protected errorLog" data-toggle="collapse" data-target=".errorLog .collapse">
+<h2>Prints to the error log if you aren't in command line mode.</h2>
+<pre>errorLog(string $msg) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::errorLog()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::errorLog()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$msg</h4>
+<code>string</code><p>Log message</p></div>
+</div></div>
+</div>
+<a name="establishCSRFTokenState" id="establishCSRFTokenState"></a><div class="element clickable method protected establishCSRFTokenState" data-toggle="collapse" data-target=".establishCSRFTokenState .collapse">
+<h2>Lays down a CSRF state token for this process.</h2>
+<pre>establishCSRFTokenState() : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::establishCSRFTokenState()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::establishCSRFTokenState()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="getAccessTokenFromCode" id="getAccessTokenFromCode"></a><div class="element clickable method protected getAccessTokenFromCode" data-toggle="collapse" data-target=".getAccessTokenFromCode .collapse">
+<h2>Retrieves an access token for the given authorization code
+(previously generated from www.facebook.com on behalf of
+a specific user).</h2>
+<pre>getAccessTokenFromCode(string $code, $redirect_uri) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>The authorization code is sent to graph.facebook.com
+and a legitimate access token is generated provided the access token
+and the user for which it was generated all match, and the user is
+either logged in to Facebook or has granted an offline access permission.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::getAccessTokenFromCode()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::getAccessTokenFromCode()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$code</h4>
+<code>string</code><p>An authorization code.</p></div>
+<div class="subelement argument"><h4>$redirect_uri</h4></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>An access token exchanged for the authorization code, or
+              false if an access token could not be generated.</div>
+</div></div>
+</div>
+<a name="getApiUrl" id="getApiUrl"></a><div class="element clickable method protected getApiUrl" data-toggle="collapse" data-target=".getApiUrl .collapse">
+<h2>Build the URL for api given parameters.</h2>
+<pre>getApiUrl(\$method $method) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::getApiUrl()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::getApiUrl()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$method</h4>
+<code>\$method</code><p>String the method name.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The URL for the given parameters</div>
+</div></div>
+</div>
+<a name="getApplicationAccessToken" id="getApplicationAccessToken"></a><div class="element clickable method protected getApplicationAccessToken" data-toggle="collapse" data-target=".getApplicationAccessToken .collapse">
+<h2>Returns the access token that should be used for logged out
+users when no authorization code is available.</h2>
+<pre>getApplicationAccessToken() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::getApplicationAccessToken()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::getApplicationAccessToken()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The application access token, useful for gathering
+               public information about users and applications.</div>
+</div></div>
+</div>
+<a name="getCode" id="getCode"></a><div class="element clickable method protected getCode" data-toggle="collapse" data-target=".getCode .collapse">
+<h2>Get the authorization code from the query parameters, if it exists,
+and otherwise return false to signal no authorization code was
+discoverable.</h2>
+<pre>getCode() : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::getCode()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::getCode()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>The authorization code, or false if the authorization
+              code could not be determined.</div>
+</div></div>
+</div>
+<a name="getCurrentUrl" id="getCurrentUrl"></a><div class="element clickable method protected getCurrentUrl" data-toggle="collapse" data-target=".getCurrentUrl .collapse">
+<h2>Returns the Current URL, stripping it of known FB parameters that should
+not persist.</h2>
+<pre>getCurrentUrl() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::getCurrentUrl()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::getCurrentUrl()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The current URL</div>
+</div></div>
+</div>
+<a name="getMetadataCookie" id="getMetadataCookie"></a><div class="element clickable method protected getMetadataCookie" data-toggle="collapse" data-target=".getMetadataCookie .collapse">
+<h2>Parses the metadata cookie that our Javascript API set</h2>
+<pre>getMetadataCookie() : \an</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::getMetadataCookie()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::getMetadataCookie()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\an</code>array mapping key to value</div>
+</div></div>
+</div>
+<a name="getMetadataCookieName" id="getMetadataCookieName"></a><div class="element clickable method protected getMetadataCookieName" data-toggle="collapse" data-target=".getMetadataCookieName .collapse">
+<h2>Constructs and returns the name of the coookie that potentially contain
+metadata.</h2>
+<pre>getMetadataCookieName() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>The cookie is not set by the BaseFacebook class, but it may be
+set by the JavaScript SDK.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::getMetadataCookieName()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::getMetadataCookieName()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>the name of the cookie that would house metadata.</div>
+</div></div>
+</div>
+<a name="getPersistentData" id="getPersistentData"></a><div class="element clickable method protected getPersistentData" data-toggle="collapse" data-target=".getPersistentData .collapse">
+<h2>Get the data for $key, persisted by BaseFacebook::setPersistentData()</h2>
+<pre>getPersistentData(string $key, boolean $default) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::getPersistentData()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>string</code><p>The key of the data to retrieve</p></div>
+<div class="subelement argument">
+<h4>$default</h4>
+<code>boolean</code><p>The default value to return if $key is not found</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a name="getSignedRequestCookieName" id="getSignedRequestCookieName"></a><div class="element clickable method protected getSignedRequestCookieName" data-toggle="collapse" data-target=".getSignedRequestCookieName .collapse">
+<h2>Constructs and returns the name of the cookie that
+potentially houses the signed request for the app user.</h2>
+<pre>getSignedRequestCookieName() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>The cookie is not set by the BaseFacebook class, but
+it may be set by the JavaScript SDK.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::getSignedRequestCookieName()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::getSignedRequestCookieName()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>the name of the cookie that would house
+        the signed request value.</div>
+</div></div>
+</div>
+<a name="getUrl" id="getUrl"></a><div class="element clickable method protected getUrl" data-toggle="collapse" data-target=".getUrl .collapse">
+<h2>Build the URL for given domain alias, path and parameters.</h2>
+<pre>getUrl(\$name $name, \$path $path, \$params $params) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::getUrl()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::getUrl()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>\$name</code><p>string The name of the domain</p></div>
+<div class="subelement argument">
+<h4>$path</h4>
+<code>\$path</code><p>string Optional path (without a leading slash)</p>
+</div>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>\$params</code><p>array Optional query parameters</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The URL for the given parameters</div>
+</div></div>
+</div>
+<a name="getUserAccessToken" id="getUserAccessToken"></a><div class="element clickable method protected getUserAccessToken" data-toggle="collapse" data-target=".getUserAccessToken .collapse">
+<h2>Determines and returns the user access token, first using
+the signed request if present, and then falling back on
+the authorization code if present.</h2>
+<pre>getUserAccessToken() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>The intent is to
+return a valid user access token, or false if one is determined
+to not be available.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::getUserAccessToken()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::getUserAccessToken()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>A valid user access token, or false if one
+               could not be determined.</div>
+</div></div>
+</div>
+<a name="getUserFromAccessToken" id="getUserFromAccessToken"></a><div class="element clickable method protected getUserFromAccessToken" data-toggle="collapse" data-target=".getUserFromAccessToken .collapse">
+<h2>Retrieves the UID with the understanding that
+$this-&gt;accessToken has already been set and is
+seemingly legitimate.</h2>
+<pre>getUserFromAccessToken() : integer</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>It relies on Facebook's Graph API
+to retrieve user information and then extract
+the user ID.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::getUserFromAccessToken()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::getUserFromAccessToken()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>integer</code>Returns the UID of the Facebook user, or 0
+                if the Facebook user could not be determined.</div>
+</div></div>
+</div>
+<a name="getUserFromAvailableData" id="getUserFromAvailableData"></a><div class="element clickable method protected getUserFromAvailableData" data-toggle="collapse" data-target=".getUserFromAvailableData .collapse">
+<h2>Determines the connected user by first examining any signed
+requests, then considering an authorization code, and then
+falling back to any persistent store storing the user.</h2>
+<pre>getUserFromAvailableData() : integer</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::getUserFromAvailableData()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::getUserFromAvailableData()</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>integer</code>The id of the connected Facebook user,
+                or 0 if no such user exists.</div>
+</div></div>
+</div>
+<a name="isVideoPost" id="isVideoPost"></a><div class="element clickable method protected isVideoPost" data-toggle="collapse" data-target=".isVideoPost .collapse">
+<h2>Return true if this is video post.</h2>
+<pre>isVideoPost(string $path, string $method) : boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::isVideoPost()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::isVideoPost()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$path</h4>
+<code>string</code><p>The path</p></div>
+<div class="subelement argument">
+<h4>$method</h4>
+<code>string</code><p>The http method (default 'GET')</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>true if this is video post</div>
+</div></div>
+</div>
+<a name="makeRequest" id="makeRequest"></a><div class="element clickable method protected makeRequest" data-toggle="collapse" data-target=".makeRequest .collapse">
+<h2>Makes an HTTP request.</h2>
+<pre>makeRequest(string $url, array $params, \CurlHandler $ch) : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This method can be overridden by subclasses if
+developers want to do fancier things or use something other than curl to
+make the request.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::makeRequest()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::makeRequest()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$url</h4>
+<code>string</code><p>The URL to make the request to</p></div>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>The parameters to use for the POST body</p></div>
+<div class="subelement argument">
+<h4>$ch</h4>
+<code>\CurlHandler</code><p>Initialized curl handle</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The response text</div>
+</div></div>
+</div>
+<a name="parseSignedRequest" id="parseSignedRequest"></a><div class="element clickable method protected parseSignedRequest" data-toggle="collapse" data-target=".parseSignedRequest .collapse">
+<h2>Parses a signed_request and validates the signature.</h2>
+<pre>parseSignedRequest(string $signed_request) : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::parseSignedRequest()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::parseSignedRequest()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$signed_request</h4>
+<code>string</code><p>A signed token</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>The payload inside it or null if the sig is wrong</div>
+</div></div>
+</div>
+<a name="setPersistentData" id="setPersistentData"></a><div class="element clickable method protected setPersistentData" data-toggle="collapse" data-target=".setPersistentData .collapse">
+<h2>Stores the given ($key, $value) pair, so that future calls to
+getPersistentData($key) return $value.</h2>
+<pre>setPersistentData(string $key, array $value) : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This call may be in another request.</p></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::setPersistentData()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>array</code>
+</div>
+</div></div>
+</div>
+<a name="shouldRetainParam" id="shouldRetainParam"></a><div class="element clickable method protected shouldRetainParam" data-toggle="collapse" data-target=".shouldRetainParam .collapse">
+<h2>Returns true if and only if the key or key/value pair should
+be retained as part of the query string.</h2>
+<pre>shouldRetainParam(string $param) : boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This amounts to
+a brute-force search of the very small list of Facebook-specific
+params that should be stripped out.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::shouldRetainParam()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::shouldRetainParam()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$param</h4>
+<code>string</code><p>A key or key/value pair within a URL's query (e.g. 'foo=a', 'foo=', or 'foo'.</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a name="throwAPIException" id="throwAPIException"></a><div class="element clickable method protected throwAPIException" data-toggle="collapse" data-target=".throwAPIException .collapse">
+<h2>Analyzes the supplied result to see if it was thrown
+because the access token is no longer valid.</h2>
+<pre>throwAPIException(\$result $result) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>If that is
+the case, then we destroy the session.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::throwAPIException()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::throwAPIException()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$result</h4>
+<code>\$result</code><p>array A record storing the error message returned by a failed API call.</p></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24CURL_OPTS" id="$CURL_OPTS"> </a><div class="element clickable property public $CURL_OPTS" data-toggle="collapse" data-target=".$CURL_OPTS .collapse">
+<h2>Default options for curl.</h2>
+<pre>$CURL_OPTS </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::$$CURL_OPTS</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::$$CURL_OPTS</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24DOMAIN_MAP" id="$DOMAIN_MAP"> </a><div class="element clickable property public $DOMAIN_MAP" data-toggle="collapse" data-target=".$DOMAIN_MAP .collapse">
+<h2>Maps aliases to Facebook domains.</h2>
+<pre>$DOMAIN_MAP </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::$$DOMAIN_MAP</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::$$DOMAIN_MAP</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24DROP_QUERY_PARAMS" id="$DROP_QUERY_PARAMS"> </a><div class="element clickable property protected $DROP_QUERY_PARAMS" data-toggle="collapse" data-target=".$DROP_QUERY_PARAMS .collapse">
+<h2>List of query parameters that get automatically dropped when rebuilding
+the current URL.</h2>
+<pre>$DROP_QUERY_PARAMS </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::$$DROP_QUERY_PARAMS</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::$$DROP_QUERY_PARAMS</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24accessToken" id="$accessToken"> </a><div class="element clickable property protected $accessToken" data-toggle="collapse" data-target=".$accessToken .collapse">
+<h2>The OAuth access token received in exchange for a valid authorization
+code.</h2>
+<pre>$accessToken : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>null means the access token has yet to be determined.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::$$accessToken</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::$$accessToken</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24appId" id="$appId"> </a><div class="element clickable property protected $appId" data-toggle="collapse" data-target=".$appId .collapse">
+<h2>The Application ID.</h2>
+<pre>$appId : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::$$appId</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::$$appId</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24appSecret" id="$appSecret"> </a><div class="element clickable property protected $appSecret" data-toggle="collapse" data-target=".$appSecret .collapse">
+<h2>The Application App Secret.</h2>
+<pre>$appSecret : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::$$appSecret</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::$$appSecret</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24fileUploadSupport" id="$fileUploadSupport"> </a><div class="element clickable property protected $fileUploadSupport" data-toggle="collapse" data-target=".$fileUploadSupport .collapse">
+<h2>Indicates if the CURL based @ syntax for file uploads is enabled.</h2>
+<pre>$fileUploadSupport : boolean</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::$$fileUploadSupport</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::$$fileUploadSupport</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24signedRequest" id="$signedRequest"> </a><div class="element clickable property protected $signedRequest" data-toggle="collapse" data-target=".$signedRequest .collapse">
+<h2>The data from the signed_request token.</h2>
+<pre>$signedRequest </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::$$signedRequest</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::$$signedRequest</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24state" id="$state"> </a><div class="element clickable property protected $state" data-toggle="collapse" data-target=".$state .collapse">
+<h2>A CSRF state variable to assist in the defense against CSRF attacks.</h2>
+<pre>$state </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::$$state</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::$$state</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24user" id="$user"> </a><div class="element clickable property protected $user" data-toggle="collapse" data-target=".$user .collapse">
+<h2>The ID of the Facebook user, or 0 if the user is logged out.</h2>
+<pre>$user : integer</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::$$user</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::$$user</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24url" id="$url"> </a><div class="element clickable property private $url" data-toggle="collapse" data-target=".$url .collapse">
+<h2>$url</h2>
+<pre>$url </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a name="VERSION" id="VERSION"> </a><div class="element clickable constant  VERSION" data-toggle="collapse" data-target=".VERSION .collapse">
+<h2>Version.</h2>
+<pre>VERSION </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\BaseFacebook::VERSION</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\TransientFacebook::VERSION</td>
+</tr>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-09-11T15:02:17-04:00.<br></footer></div>
+</div>
+</body>
+</html>

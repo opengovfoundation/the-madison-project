@@ -1,0 +1,3623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0a10" title="">
+  <file path="admin/edit-doc.php" hash="010ac58cac9a9073673a65b85ef51069" package="Default">
+    <docblock line="2">
+      <description><![CDATA[Madison Admin Page]]></description>
+      <long-description><![CDATA[<p>@copyright Copyright &copy; 2012 by The OpenGov Foundation</p>]]></long-description>
+      <tag line="2" name="license" description="http://www.gnu.org/licenses/ GNU GPL v.3"/>
+    </docblock>
+  </file>
+  <file path="admin/edit-nav.php" hash="056735c4f140effc4f78994b33bf3232" package="Default">
+    <docblock line="2">
+      <description><![CDATA[Madison Admin Page]]></description>
+      <long-description><![CDATA[<p>@copyright Copyright &copy; 2012 by The OpenGov Foundation</p>]]></long-description>
+      <tag line="2" name="license" description="http://www.gnu.org/licenses/ GNU GPL v.3"/>
+    </docblock>
+  </file>
+  <file path="admin/list-docs.php" hash="0c488d887b2897fe08e26f64301557e1" package="Default">
+    <docblock line="2">
+      <description><![CDATA[Madison Admin Page]]></description>
+      <long-description><![CDATA[<p>@copyright Copyright &copy; 2012 by The OpenGov Foundation</p>]]></long-description>
+      <tag line="2" name="license" description="http://www.gnu.org/licenses/ GNU GPL v.3"/>
+    </docblock>
+  </file>
+  <file path="admin/view-index.php" hash="5d64ec977f6c63b332e5aef79a5c4d69" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file admin/view-index.php</error>
+    </parse_markers>
+  </file>
+  <file path="inc/bill.class.php" hash="cb853d6b4bc033d423399c600ecdd0f7" package="Default">
+    <class final="false" abstract="false" namespace="global" line="9" package="Default">
+      <extends>\Object</extends>
+      <name>Bill</name>
+      <full_name>\Bill</full_name>
+      <docblock line="2">
+        <description><![CDATA[Madison Document Class]]></description>
+        <long-description><![CDATA[<p>@copyright Copyright &copy; 2012 by The OpenGov Foundation</p>]]></long-description>
+        <tag line="2" name="license" description="http://www.gnu.org/licenses/ GNU GPL v.3"/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="11" namespace="global" package="Default">
+        <name>$flagged_threshold</name>
+        <default><![CDATA[5]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="13" namespace="global" package="Default">
+        <name>$sections</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="14" namespace="global" package="Default">
+        <name>$content</name>
+        <default><![CDATA[array()]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="16" namespace="global" package="Default">
+        <name>$first_section</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="17" namespace="global" package="Default">
+        <name>$section_part_ids</name>
+        <default><![CDATA[array()]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="19" namespace="global" package="Default">
+        <name>$suggestions</name>
+        <default><![CDATA[array()]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="20" namespace="global" package="Default">
+        <name>$comments</name>
+        <default><![CDATA[array()]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="22" namespace="global" package="Default">
+        <name>$view_user_edits</name>
+        <default><![CDATA[true]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="24" namespace="global" package="Default">
+        <name>$id</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="25" namespace="global" package="Default">
+        <name>$title</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="26" namespace="global" package="Default">
+        <name>$shortname</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="27" namespace="global" package="Default">
+        <name>$description</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="28" namespace="global" package="Default">
+        <name>$twitter_text</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="29" namespace="global" package="Default">
+        <name>$twitter_hash</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="30" namespace="global" package="Default">
+        <name>$doc_location</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="34" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <argument line="34">
+          <name>$id</name>
+          <default><![CDATA[0]]></default>
+          <type/>
+        </argument>
+        <argument line="34">
+          <name>$db</name>
+          <default><![CDATA[NULL]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="69" package="Default">
+        <name>update_info</name>
+        <full_name>update_info</full_name>
+        <docblock line="66">
+          <description><![CDATA[Update the bill's basic info]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="77" package="Default">
+        <name>refresh_notes</name>
+        <full_name>refresh_notes</full_name>
+        <argument line="77">
+          <name>$pid</name>
+          <default><![CDATA[0]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="107" package="Default">
+        <name>get_section</name>
+        <full_name>get_section</full_name>
+        <argument line="107">
+          <name>$sid</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="107">
+          <name>$force_refresh</name>
+          <default><![CDATA[false]]></default>
+          <type/>
+        </argument>
+        <argument line="107">
+          <name>$show_edits</name>
+          <default><![CDATA[0]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="129" package="Default">
+        <name>get_top_level_content</name>
+        <full_name>get_top_level_content</full_name>
+        <argument line="129">
+          <name>$gen</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="129">
+          <name>$show_edits</name>
+          <default><![CDATA[0]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="154" package="Default">
+        <name>get_latest_user_suggestion</name>
+        <full_name>get_latest_user_suggestion</full_name>
+        <argument line="154">
+          <name>$uid</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="154">
+          <name>$pid</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="172" package="Default">
+        <name>get_section_parts</name>
+        <full_name>get_section_parts</full_name>
+        <argument line="172">
+          <name>$root</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="172">
+          <name>$children</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="183" package="Default">
+        <name>get_section_part</name>
+        <full_name>get_section_part</full_name>
+        <argument line="183">
+          <name>$pid</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="183">
+          <name>$parts</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="194" package="Default">
+        <name>section_to_html</name>
+        <full_name>section_to_html</full_name>
+        <argument line="194">
+          <name>$sec</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="194">
+          <name>$view</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="194">
+          <name>$children</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="194">
+          <name>$level</name>
+          <default><![CDATA[0]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="219" package="Default">
+        <name>add_note</name>
+        <full_name>add_note</full_name>
+        <argument line="219">
+          <name>$part_id</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="219">
+          <name>$type</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="219">
+          <name>$note</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="219">
+          <name>$uid</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="219">
+          <name>$parent</name>
+          <default><![CDATA[0]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="240" package="Default">
+        <name>ldf_note</name>
+        <full_name>ldf_note</full_name>
+        <argument line="240">
+          <name>$note_id</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="240">
+          <name>$type</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="240">
+          <name>$uid</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="261" package="Default">
+        <name>get_notes_by_part</name>
+        <full_name>get_notes_by_part</full_name>
+        <argument line="261">
+          <name>$pid</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="261">
+          <name>$type</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="261">
+          <name>$shorten</name>
+          <default><![CDATA[false]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="297" package="Default">
+        <name>get_all_section_notes</name>
+        <full_name>get_all_section_notes</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="311" package="Default">
+        <name>get_notes_by_user</name>
+        <full_name>get_notes_by_user</full_name>
+        <argument line="311">
+          <name>$uid</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="311">
+          <name>$pid</name>
+          <default><![CDATA[0]]></default>
+          <type/>
+        </argument>
+        <argument line="311">
+          <name>$ooc</name>
+          <default><![CDATA[false]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="335" package="Default">
+        <name>sorry_carlin</name>
+        <full_name>sorry_carlin</full_name>
+        <argument line="335">
+          <name>$input</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="345" package="Default">
+        <name>diff</name>
+        <full_name>diff</full_name>
+        <argument line="345">
+          <name>$old</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="345">
+          <name>$new</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="366" package="Default">
+        <name>edit_diff</name>
+        <full_name>edit_diff</full_name>
+        <argument line="366">
+          <name>$old</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="366">
+          <name>$new</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="380" package="Default">
+        <name>edit_diff_old</name>
+        <full_name>edit_diff_old</full_name>
+        <argument line="380">
+          <name>$old</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="380">
+          <name>$new</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/bill.class.php</error>
+      <error line="11" code="50018">No DocBlock was found for property $flagged_threshold</error>
+      <error line="13" code="50018">No DocBlock was found for property $sections</error>
+      <error line="14" code="50018">No DocBlock was found for property $content</error>
+      <error line="16" code="50018">No DocBlock was found for property $first_section</error>
+      <error line="17" code="50018">No DocBlock was found for property $section_part_ids</error>
+      <error line="19" code="50018">No DocBlock was found for property $suggestions</error>
+      <error line="20" code="50018">No DocBlock was found for property $comments</error>
+      <error line="22" code="50018">No DocBlock was found for property $view_user_edits</error>
+      <error line="24" code="50018">No DocBlock was found for property $id</error>
+      <error line="25" code="50018">No DocBlock was found for property $title</error>
+      <error line="26" code="50018">No DocBlock was found for property $shortname</error>
+      <error line="27" code="50018">No DocBlock was found for property $description</error>
+      <error line="28" code="50018">No DocBlock was found for property $twitter_text</error>
+      <error line="29" code="50018">No DocBlock was found for property $twitter_hash</error>
+      <error line="30" code="50018">No DocBlock was found for property $doc_location</error>
+      <error line="34" code="50010">No DocBlock was found for method __construct()</error>
+      <error line="77" code="50010">No DocBlock was found for method refresh_notes()</error>
+      <error line="107" code="50010">No DocBlock was found for method get_section()</error>
+      <error line="129" code="50010">No DocBlock was found for method get_top_level_content()</error>
+      <error line="154" code="50010">No DocBlock was found for method get_latest_user_suggestion()</error>
+      <error line="172" code="50010">No DocBlock was found for method get_section_parts()</error>
+      <error line="183" code="50010">No DocBlock was found for method get_section_part()</error>
+      <error line="194" code="50010">No DocBlock was found for method section_to_html()</error>
+      <error line="219" code="50010">No DocBlock was found for method add_note()</error>
+      <error line="240" code="50010">No DocBlock was found for method ldf_note()</error>
+      <error line="261" code="50010">No DocBlock was found for method get_notes_by_part()</error>
+      <error line="297" code="50010">No DocBlock was found for method get_all_section_notes()</error>
+      <error line="311" code="50010">No DocBlock was found for method get_notes_by_user()</error>
+      <error line="335" code="50010">No DocBlock was found for method sorry_carlin()</error>
+      <error line="345" code="50010">No DocBlock was found for method diff()</error>
+      <error line="366" code="50010">No DocBlock was found for method edit_diff()</error>
+      <error line="380" code="50010">No DocBlock was found for method edit_diff_old()</error>
+    </parse_markers>
+  </file>
+  <file path="inc/config.php" hash="b3f017d41512c3893576782d6363988a" package="Default">
+    <constant namespace="global" line="11" package="Default">
+      <name>SERVER_ABS</name>
+      <full_name>\SERVER_ABS</full_name>
+      <value><![CDATA[$_SERVER[]]]></value>
+      <docblock line="2">
+        <description><![CDATA[Madison Config File]]></description>
+        <long-description><![CDATA[<p>@copyright Copyright &copy; 2012 by The OpenGov Foundation</p>]]></long-description>
+        <tag line="2" name="license" description="http://www.gnu.org/licenses/ GNU GPL v.3"/>
+      </docblock>
+    </constant>
+    <constant namespace="global" line="12" package="Default">
+      <name>SERVER_URL</name>
+      <full_name>\SERVER_URL</full_name>
+      <value><![CDATA[ . $_SERVER[]]]></value>
+    </constant>
+    <constant namespace="global" line="13" package="Default">
+      <name>IS_STAGE</name>
+      <full_name>\IS_STAGE</full_name>
+      <value><![CDATA[strpos($_SERVER[], ) !== false]]></value>
+    </constant>
+    <constant namespace="global" line="18" package="Default">
+      <name>POSTMARK_APIKEY</name>
+      <full_name>\POSTMARK_APIKEY</full_name>
+      <value><![CDATA[]]></value>
+    </constant>
+    <constant namespace="global" line="19" package="Default">
+      <name>POSTMARK_EMAIL</name>
+      <full_name>\POSTMARK_EMAIL</full_name>
+      <value><![CDATA[]]></value>
+    </constant>
+    <constant namespace="global" line="20" package="Default">
+      <name>POSTMARK_NAME</name>
+      <full_name>\POSTMARK_NAME</full_name>
+      <value><![CDATA[]]></value>
+    </constant>
+    <constant namespace="global" line="38" package="Default">
+      <name>DB_PREFIX</name>
+      <full_name>\DB_PREFIX</full_name>
+      <value><![CDATA[]]></value>
+    </constant>
+    <constant namespace="global" line="42" package="Default">
+      <name>DB_TBL_BILLS</name>
+      <full_name>\DB_TBL_BILLS</full_name>
+      <value><![CDATA[DB_PREFIX . ]]></value>
+    </constant>
+    <constant namespace="global" line="43" package="Default">
+      <name>DB_TBL_BILL_CONTENT</name>
+      <full_name>\DB_TBL_BILL_CONTENT</full_name>
+      <value><![CDATA[DB_PREFIX . ]]></value>
+    </constant>
+    <constant namespace="global" line="44" package="Default">
+      <name>DB_TBL_NOTES</name>
+      <full_name>\DB_TBL_NOTES</full_name>
+      <value><![CDATA[DB_PREFIX . ]]></value>
+    </constant>
+    <constant namespace="global" line="45" package="Default">
+      <name>DB_TBL_TOP_NOTES</name>
+      <full_name>\DB_TBL_TOP_NOTES</full_name>
+      <value><![CDATA[DB_PREFIX . ]]></value>
+    </constant>
+    <constant namespace="global" line="46" package="Default">
+      <name>DB_TBL_USERS</name>
+      <full_name>\DB_TBL_USERS</full_name>
+      <value><![CDATA[DB_PREFIX . ]]></value>
+    </constant>
+    <constant namespace="global" line="47" package="Default">
+      <name>DB_TBL_USER_META</name>
+      <full_name>\DB_TBL_USER_META</full_name>
+      <value><![CDATA[DB_PREFIX . ]]></value>
+    </constant>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/config.php</error>
+    </parse_markers>
+  </file>
+  <file path="inc/db.class.php" hash="9d97f47cd38c5da9ec58af90732d4161" package="Default">
+    <class final="false" abstract="false" namespace="global" line="12" package="inc&#10;&#9;@copyright Copyright &amp;copy; 2012 by The OpenGov Foundation">
+      <extends/>
+      <name>db</name>
+      <full_name>\db</full_name>
+      <docblock line="3">
+        <description><![CDATA[db.class.php]]></description>
+        <long-description><![CDATA[<p>Purpose is to simplify commonly used db code</p>]]></long-description>
+        <tag line="3" name="package" description="inc&#10;&#9;@copyright Copyright &amp;copy; 2012 by The OpenGov Foundation"/>
+        <tag line="3" name="license" description="http://www.gnu.org/licenses/ GNU GPL v.3"/>
+      </docblock>
+      <property final="false" static="false" visibility="public" line="14" namespace="global" package="Default">
+        <name>$mySQLconnRW</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="15" namespace="global" package="Default">
+        <name>$mySQLconnR</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="17" package="inc&#10;&#9;@copyright Copyright &amp;copy; 2012 by The OpenGov Foundation">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <argument line="17">
+          <name>$creds</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="26" package="inc&#10;&#9;@copyright Copyright &amp;copy; 2012 by The OpenGov Foundation">
+        <name>clean</name>
+        <full_name>clean</full_name>
+        <argument line="26">
+          <name>$i</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="35" package="inc&#10;&#9;@copyright Copyright &amp;copy; 2012 by The OpenGov Foundation">
+        <name>insert</name>
+        <full_name>insert</full_name>
+        <argument line="35">
+          <name>$t</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="35">
+          <name>$i</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="54" package="inc&#10;&#9;@copyright Copyright &amp;copy; 2012 by The OpenGov Foundation">
+        <name>update</name>
+        <full_name>update</full_name>
+        <argument line="54">
+          <name>$t</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="54">
+          <name>$u</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="54">
+          <name>$w</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/db.class.php</error>
+      <error line="14" code="50018">No DocBlock was found for property $mySQLconnRW</error>
+      <error line="15" code="50018">No DocBlock was found for property $mySQLconnR</error>
+      <error line="17" code="50010">No DocBlock was found for method __construct()</error>
+      <error line="26" code="50010">No DocBlock was found for method clean()</error>
+      <error line="35" code="50010">No DocBlock was found for method insert()</error>
+      <error line="54" code="50010">No DocBlock was found for method update()</error>
+    </parse_markers>
+  </file>
+  <file path="inc/email.php" hash="e9f991931d4236f798f21bda6fb2b2a1" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/email.php</error>
+    </parse_markers>
+  </file>
+  <file path="inc/facebook/php-sdk/examples/example.php" hash="c16b4247b4a2506a44166fb37bb1efe2" package="Default">
+    <include line="18" type="Require" package="Default">
+      <name>../src/facebook.php</name>
+      <docblock line="2">
+        <description><![CDATA[Copyright 2011 Facebook, Inc.]]></description>
+        <long-description><![CDATA[<p>Licensed under the Apache License, Version 2.0 (the "License"); you may
+not use this file except in compliance with the License. You may obtain
+a copy of the License at</p>
+
+<pre><code>http://www.apache.org/licenses/LICENSE-2.0
+</code></pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License.</p>]]></long-description>
+      </docblock>
+    </include>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/facebook/php-sdk/examples/example.php</error>
+    </parse_markers>
+  </file>
+  <file path="inc/facebook/php-sdk/examples/with_js_sdk.php" hash="555e738cb8c6b42834a5c5a2083bd3e6" package="Default">
+    <include line="3" type="Require" package="Default">
+      <name>../src/facebook.php</name>
+    </include>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/facebook/php-sdk/examples/with_js_sdk.php</error>
+    </parse_markers>
+  </file>
+  <file path="inc/facebook/php-sdk/src/base_facebook.php" hash="9e9556021d9375d0804ff7e80ac16e43" package="Default">
+    <docblock line="2">
+      <description><![CDATA[Copyright 2011 Facebook, Inc.]]></description>
+      <long-description><![CDATA[<p>Licensed under the Apache License, Version 2.0 (the "License"); you may
+not use this file except in compliance with the License. You may obtain
+a copy of the License at</p>
+
+<pre><code>http://www.apache.org/licenses/LICENSE-2.0
+</code></pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License.</p>]]></long-description>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="30" package="Default">
+      <extends>\Exception</extends>
+      <name>FacebookApiException</name>
+      <full_name>\FacebookApiException</full_name>
+      <docblock line="25">
+        <description><![CDATA[Thrown when an API call returns an exception.]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="25" name="author" description="Naitik Shah &lt;naitik@facebook.com&gt;"/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="35" namespace="global" package="Default">
+        <name>$result</name>
+        <default><![CDATA[]]></default>
+        <docblock line="32">
+          <description><![CDATA[The result from the API server that represents the exception information.]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="42" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="37">
+          <description><![CDATA[Make a new API Exception with the given result.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="37" name="param" description="The result from the API server" type="array" variable="$result">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="42">
+          <name>$result</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="68" package="Default">
+        <name>getResult</name>
+        <full_name>getResult</full_name>
+        <docblock line="63">
+          <description><![CDATA[Return the associated result object returned by the API server.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="63" name="return" description="The result from the API server" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="78" package="Default">
+        <name>getType</name>
+        <full_name>getType</full_name>
+        <docblock line="72">
+          <description><![CDATA[Returns the associated type for the error.]]></description>
+          <long-description><![CDATA[<p>This will default to
+'Exception' when a type is not available.</p>]]></long-description>
+          <tag line="72" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="100" package="Default">
+        <name>__toString</name>
+        <full_name>__toString</full_name>
+        <docblock line="95">
+          <description><![CDATA[To make debugging easier.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="95" name="return" description="The string representation of the error" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <class final="false" abstract="false" namespace="global" line="118" package="Default">
+      <extends/>
+      <name>BaseFacebook</name>
+      <full_name>\BaseFacebook</full_name>
+      <docblock line="109">
+        <description><![CDATA[Provides access to the Facebook Platform.]]></description>
+        <long-description><![CDATA[<p>This class provides
+a majority of the functionality needed, but the class is abstract
+because it is designed to be sub-classed.  The subclass must
+implement the four abstract methods listed at the bottom of
+the file.</p>]]></long-description>
+        <tag line="109" name="author" description="Naitik Shah &lt;naitik@facebook.com&gt;"/>
+      </docblock>
+      <constant namespace="global" line="123" package="Default">
+        <name>VERSION</name>
+        <full_name>VERSION</full_name>
+        <value><![CDATA['3.1.1']]></value>
+        <docblock line="120">
+          <description><![CDATA[Version.]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </constant>
+      <property final="false" static="true" visibility="public" line="128" namespace="global" package="Default">
+        <name>$CURL_OPTS</name>
+        <default><![CDATA[array(CURLOPT_CONNECTTIMEOUT => 10, CURLOPT_RETURNTRANSFER => true, CURLOPT_TIMEOUT => 60, CURLOPT_USERAGENT => 'facebook-php-3.1')]]></default>
+        <docblock line="125">
+          <description><![CDATA[Default options for curl.]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </property>
+      <property final="false" static="true" visibility="protected" line="139" namespace="global" package="Default">
+        <name>$DROP_QUERY_PARAMS</name>
+        <default><![CDATA[array('code', 'state', 'signed_request')]]></default>
+        <docblock line="135">
+          <description><![CDATA[List of query parameters that get automatically dropped when rebuilding
+the current URL.]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </property>
+      <property final="false" static="true" visibility="public" line="148" namespace="global" package="Default">
+        <name>$DOMAIN_MAP</name>
+        <default><![CDATA[array('api' => 'https://api.facebook.com/', 'api_video' => 'https://api-video.facebook.com/', 'api_read' => 'https://api-read.facebook.com/', 'graph' => 'https://graph.facebook.com/', 'graph_video' => 'https://graph-video.facebook.com/', 'www' => 'https://www.facebook.com/')]]></default>
+        <docblock line="145">
+          <description><![CDATA[Maps aliases to Facebook domains.]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="162" namespace="global" package="Default">
+        <name>$appId</name>
+        <default><![CDATA[]]></default>
+        <docblock line="157">
+          <description><![CDATA[The Application ID.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="157" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="169" namespace="global" package="Default">
+        <name>$appSecret</name>
+        <default><![CDATA[]]></default>
+        <docblock line="164">
+          <description><![CDATA[The Application App Secret.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="164" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="176" namespace="global" package="Default">
+        <name>$user</name>
+        <default><![CDATA[]]></default>
+        <docblock line="171">
+          <description><![CDATA[The ID of the Facebook user, or 0 if the user is logged out.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="171" name="var" description="" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="181" namespace="global" package="Default">
+        <name>$signedRequest</name>
+        <default><![CDATA[]]></default>
+        <docblock line="178">
+          <description><![CDATA[The data from the signed_request token.]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="186" namespace="global" package="Default">
+        <name>$state</name>
+        <default><![CDATA[]]></default>
+        <docblock line="183">
+          <description><![CDATA[A CSRF state variable to assist in the defense against CSRF attacks.]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="194" namespace="global" package="Default">
+        <name>$accessToken</name>
+        <default><![CDATA[null]]></default>
+        <docblock line="188">
+          <description><![CDATA[The OAuth access token received in exchange for a valid authorization
+code.]]></description>
+          <long-description><![CDATA[<p>null means the access token has yet to be determined.</p>]]></long-description>
+          <tag line="188" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="201" namespace="global" package="Default">
+        <name>$fileUploadSupport</name>
+        <default><![CDATA[false]]></default>
+        <docblock line="196">
+          <description><![CDATA[Indicates if the CURL based @ syntax for file uploads is enabled.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="196" name="var" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="213" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="203">
+          <description><![CDATA[Initialize a Facebook Application.]]></description>
+          <long-description><![CDATA[<p>The configuration:
+- appId: the application ID
+- secret: the application secret
+- fileUpload: (optional) boolean indicating if file uploads are enabled</p>]]></long-description>
+          <tag line="203" name="param" description="The application configuration" type="array" variable="$config">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="213">
+          <name>$config</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="232" package="Default">
+        <name>setAppId</name>
+        <full_name>setAppId</full_name>
+        <docblock line="226">
+          <description><![CDATA[Set the Application ID.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="226" name="param" description="The Application ID" type="string" variable="$appId">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="226" name="return" description="" type="\BaseFacebook">
+            <type by_reference="false">\BaseFacebook</type>
+          </tag>
+        </docblock>
+        <argument line="232">
+          <name>$appId</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="242" package="Default">
+        <name>getAppId</name>
+        <full_name>getAppId</full_name>
+        <docblock line="237">
+          <description><![CDATA[Get the Application ID.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="237" name="return" description="the Application ID" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="253" package="Default">
+        <name>setApiSecret</name>
+        <full_name>setApiSecret</full_name>
+        <docblock line="246">
+          <description><![CDATA[Set the App Secret.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="246" name="param" description="The App Secret" type="string" variable="$apiSecret">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="246" name="return" description="" type="\BaseFacebook">
+            <type by_reference="false">\BaseFacebook</type>
+          </tag>
+          <tag line="246" name="deprecated" description=""/>
+        </docblock>
+        <argument line="253">
+          <name>$apiSecret</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="264" package="Default">
+        <name>setAppSecret</name>
+        <full_name>setAppSecret</full_name>
+        <docblock line="258">
+          <description><![CDATA[Set the App Secret.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="258" name="param" description="The App Secret" type="string" variable="$appSecret">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="258" name="return" description="" type="\BaseFacebook">
+            <type by_reference="false">\BaseFacebook</type>
+          </tag>
+        </docblock>
+        <argument line="264">
+          <name>$appSecret</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="275" package="Default">
+        <name>getApiSecret</name>
+        <full_name>getApiSecret</full_name>
+        <docblock line="269">
+          <description><![CDATA[Get the App Secret.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="269" name="return" description="the App Secret" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="269" name="deprecated" description=""/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="284" package="Default">
+        <name>getAppSecret</name>
+        <full_name>getAppSecret</full_name>
+        <docblock line="279">
+          <description><![CDATA[Get the App Secret.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="279" name="return" description="the App Secret" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="294" package="Default">
+        <name>setFileUploadSupport</name>
+        <full_name>setFileUploadSupport</full_name>
+        <docblock line="288">
+          <description><![CDATA[Set the file upload support status.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="288" name="param" description="The file upload support status." type="boolean" variable="$fileUploadSupport">
+            <type by_reference="false">boolean</type>
+          </tag>
+          <tag line="288" name="return" description="" type="\BaseFacebook">
+            <type by_reference="false">\BaseFacebook</type>
+          </tag>
+        </docblock>
+        <argument line="294">
+          <name>$fileUploadSupport</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="304" package="Default">
+        <name>getFileUploadSupport</name>
+        <full_name>getFileUploadSupport</full_name>
+        <docblock line="299">
+          <description><![CDATA[Get the file upload support status.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="299" name="return" description="true if and only if the server supports file upload." type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="315" package="Default">
+        <name>useFileUploadSupport</name>
+        <full_name>useFileUploadSupport</full_name>
+        <docblock line="308">
+          <description><![CDATA[DEPRECATED! Please use getFileUploadSupport instead.]]></description>
+          <long-description><![CDATA[<p>Get the file upload support status.</p>]]></long-description>
+          <tag line="308" name="return" description="true if and only if the server supports file upload." type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="327" package="Default">
+        <name>setAccessToken</name>
+        <full_name>setAccessToken</full_name>
+        <docblock line="319">
+          <description><![CDATA[Sets the access token for api calls.]]></description>
+          <long-description><![CDATA[<p>Use this if you get
+your access token by other means and just want the SDK
+to use it.</p>]]></long-description>
+          <tag line="319" name="param" description="an access token." type="string" variable="$access_token">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="319" name="return" description="" type="\BaseFacebook">
+            <type by_reference="false">\BaseFacebook</type>
+          </tag>
+        </docblock>
+        <argument line="327">
+          <name>$access_token</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="341" package="Default">
+        <name>getAccessToken</name>
+        <full_name>getAccessToken</full_name>
+        <docblock line="332">
+          <description><![CDATA[Determines the access token that should be used for API calls.]]></description>
+          <long-description><![CDATA[<p>The first time this is called, $this->accessToken is set equal
+to either a valid user access token, or it's set to the application
+access token if a valid user access token wasn't available.  Subsequent
+calls return whatever the first call returned.</p>]]></long-description>
+          <tag line="332" name="return" description="The access token" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="369" package="Default">
+        <name>getUserAccessToken</name>
+        <full_name>getUserAccessToken</full_name>
+        <docblock line="359">
+          <description><![CDATA[Determines and returns the user access token, first using
+the signed request if present, and then falling back on
+the authorization code if present.]]></description>
+          <long-description><![CDATA[<p>The intent is to
+return a valid user access token, or false if one is determined
+to not be available.</p>]]></long-description>
+          <tag line="359" name="return" description="A valid user access token, or false if one&#10;               could not be determined." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="427" package="Default">
+        <name>getSignedRequest</name>
+        <full_name>getSignedRequest</full_name>
+        <docblock line="421">
+          <description><![CDATA[Retrieve the signed request, either from a request parameter or,
+if not present, from a cookie.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="421" name="return" description="the signed request, if available, or null otherwise." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="446" package="Default">
+        <name>getUser</name>
+        <full_name>getUser</full_name>
+        <docblock line="440">
+          <description><![CDATA[Get the UID of the connected user, or 0
+if the Facebook user is not connected.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="440" name="return" description="the UID if available." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="463" package="Default">
+        <name>getUserFromAvailableData</name>
+        <full_name>getUserFromAvailableData</full_name>
+        <docblock line="455">
+          <description><![CDATA[Determines the connected user by first examining any signed
+requests, then considering an authorization code, and then
+falling back to any persistent store storing the user.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="455" name="return" description="The id of the connected Facebook user,&#10;                or 0 if no such user exists." type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="512" package="Default">
+        <name>getLoginUrl</name>
+        <full_name>getLoginUrl</full_name>
+        <docblock line="500">
+          <description><![CDATA[Get a Login URL for use with redirects.]]></description>
+          <long-description><![CDATA[<p>By default, full page redirect is
+assumed. If you are using the generated URL with a window.open() call in
+JavaScript, you can pass in display=popup as part of the $params.</p>
+
+<p>The parameters:
+- redirect_uri: the url to go to after a successful login
+- scope: comma separated list of requested extended perms</p>]]></long-description>
+          <tag line="500" name="param" description="Provide custom parameters" type="array" variable="$params">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="500" name="return" description="The URL for the login flow" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="512">
+          <name>$params</name>
+          <default><![CDATA[array()]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="541" package="Default">
+        <name>getLogoutUrl</name>
+        <full_name>getLogoutUrl</full_name>
+        <docblock line="532">
+          <description><![CDATA[Get a Logout URL suitable for use with redirects.]]></description>
+          <long-description><![CDATA[<p>The parameters:
+- next: the url to go to after a successful logout</p>]]></long-description>
+          <tag line="532" name="param" description="Provide custom parameters" type="array" variable="$params">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="532" name="return" description="The URL for the logout flow" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="541">
+          <name>$params</name>
+          <default><![CDATA[array()]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="563" package="Default">
+        <name>getLoginStatusUrl</name>
+        <full_name>getLoginStatusUrl</full_name>
+        <docblock line="552">
+          <description><![CDATA[Get a login status URL to fetch the status from Facebook.]]></description>
+          <long-description><![CDATA[<p>The parameters:
+- ok_session: the URL to go to if a session is found
+- no_session: the URL to go to if the user is not connected
+- no_user: the URL to go to if the user is not signed into facebook</p>]]></long-description>
+          <tag line="552" name="param" description="Provide custom parameters" type="array" variable="$params">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="552" name="return" description="The URL for the logout flow" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="563">
+          <name>$params</name>
+          <default><![CDATA[array()]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="582" package="Default">
+        <name>api</name>
+        <full_name>api</full_name>
+        <docblock line="577">
+          <description><![CDATA[Make an API call.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="577" name="return" description="The decoded response" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="600" package="Default">
+        <name>getSignedRequestCookieName</name>
+        <full_name>getSignedRequestCookieName</full_name>
+        <docblock line="591">
+          <description><![CDATA[Constructs and returns the name of the cookie that
+potentially houses the signed request for the app user.]]></description>
+          <long-description><![CDATA[<p>The cookie is not set by the BaseFacebook class, but
+it may be set by the JavaScript SDK.</p>]]></long-description>
+          <tag line="591" name="return" description="the name of the cookie that would house&#10;        the signed request value." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="611" package="Default">
+        <name>getMetadataCookieName</name>
+        <full_name>getMetadataCookieName</full_name>
+        <docblock line="604">
+          <description><![CDATA[Constructs and returns the name of the coookie that potentially contain
+metadata.]]></description>
+          <long-description><![CDATA[<p>The cookie is not set by the BaseFacebook class, but it may be
+set by the JavaScript SDK.</p>]]></long-description>
+          <tag line="604" name="return" description="the name of the cookie that would house metadata." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="623" package="Default">
+        <name>getCode</name>
+        <full_name>getCode</full_name>
+        <docblock line="615">
+          <description><![CDATA[Get the authorization code from the query parameters, if it exists,
+and otherwise return false to signal no authorization code was
+discoverable.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="615" name="return" description="The authorization code, or false if the authorization&#10;              code could not be determined." type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="652" package="Default">
+        <name>getUserFromAccessToken</name>
+        <full_name>getUserFromAccessToken</full_name>
+        <docblock line="642">
+          <description><![CDATA[Retrieves the UID with the understanding that
+$this->accessToken has already been set and is
+seemingly legitimate.]]></description>
+          <long-description><![CDATA[<p>It relies on Facebook's Graph API
+to retrieve user information and then extract
+the user ID.</p>]]></long-description>
+          <tag line="642" name="return" description="Returns the UID of the Facebook user, or 0&#10;                if the Facebook user could not be determined." type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="668" package="Default">
+        <name>getApplicationAccessToken</name>
+        <full_name>getApplicationAccessToken</full_name>
+        <docblock line="661">
+          <description><![CDATA[Returns the access token that should be used for logged out
+users when no authorization code is available.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="661" name="return" description="The application access token, useful for gathering&#10;               public information about users and applications." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="677" package="Default">
+        <name>establishCSRFTokenState</name>
+        <full_name>establishCSRFTokenState</full_name>
+        <docblock line="672">
+          <description><![CDATA[Lays down a CSRF state token for this process.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="672" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="696" package="Default">
+        <name>getAccessTokenFromCode</name>
+        <full_name>getAccessTokenFromCode</full_name>
+        <docblock line="684">
+          <description><![CDATA[Retrieves an access token for the given authorization code
+(previously generated from www.facebook.com on behalf of
+a specific user).]]></description>
+          <long-description><![CDATA[<p>The authorization code is sent to graph.facebook.com
+and a legitimate access token is generated provided the access token
+and the user for which it was generated all match, and the user is
+either logged in to Facebook or has granted an offline access permission.</p>]]></long-description>
+          <tag line="684" name="param" description="An authorization code." type="string" variable="$code">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="684" name="return" description="An access token exchanged for the authorization code, or&#10;              false if an access token could not be generated." type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="696">
+          <name>$code</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="696">
+          <name>$redirect_uri</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="742" package="Default">
+        <name>_restserver</name>
+        <full_name>_restserver</full_name>
+        <docblock line="734">
+          <description><![CDATA[Invoke the old restserver.php endpoint.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="734" name="param" description="Method call object" type="array" variable="$params">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="734" name="return" description="The decoded response object" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="734" name="throws" description="" type="\FacebookApiException">
+            <type by_reference="false">\FacebookApiException</type>
+          </tag>
+        </docblock>
+        <argument line="742">
+          <name>$params</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="773" package="Default">
+        <name>isVideoPost</name>
+        <full_name>isVideoPost</full_name>
+        <docblock line="765">
+          <description><![CDATA[Return true if this is video post.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="765" name="param" description="The path" type="string" variable="$path">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="765" name="param" description="The http method (default 'GET')" type="string" variable="$method">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="765" name="return" description="true if this is video post" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="773">
+          <name>$path</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="773">
+          <name>$method</name>
+          <default><![CDATA['GET']]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="790" package="Default">
+        <name>_graph</name>
+        <full_name>_graph</full_name>
+        <docblock line="780">
+          <description><![CDATA[Invoke the Graph API.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="780" name="param" description="The path (required)" type="string" variable="$path">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="780" name="param" description="The http method (default 'GET')" type="string" variable="$method">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="780" name="param" description="The query/post data" type="array" variable="$params">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="780" name="return" description="The decoded response object" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="780" name="throws" description="" type="\FacebookApiException">
+            <type by_reference="false">\FacebookApiException</type>
+          </tag>
+        </docblock>
+        <argument line="790">
+          <name>$path</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="790">
+          <name>$method</name>
+          <default><![CDATA['GET']]></default>
+          <type/>
+        </argument>
+        <argument line="790">
+          <name>$params</name>
+          <default><![CDATA[array()]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="825" package="Default">
+        <name>_oauthRequest</name>
+        <full_name>_oauthRequest</full_name>
+        <docblock line="816">
+          <description><![CDATA[Make a OAuth Request.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="816" name="param" description="The path (required)" type="string" variable="$url">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="816" name="param" description="The query/post data" type="array" variable="$params">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="816" name="return" description="The decoded response object" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="816" name="throws" description="" type="\FacebookApiException">
+            <type by_reference="false">\FacebookApiException</type>
+          </tag>
+        </docblock>
+        <argument line="825">
+          <name>$url</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="825">
+          <name>$params</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="851" package="Default">
+        <name>makeRequest</name>
+        <full_name>makeRequest</full_name>
+        <docblock line="840">
+          <description><![CDATA[Makes an HTTP request.]]></description>
+          <long-description><![CDATA[<p>This method can be overridden by subclasses if
+developers want to do fancier things or use something other than curl to
+make the request.</p>]]></long-description>
+          <tag line="840" name="param" description="The URL to make the request to" type="string" variable="$url">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="840" name="param" description="The parameters to use for the POST body" type="array" variable="$params">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="840" name="param" description="Initialized curl handle" type="\CurlHandler" variable="$ch">
+            <type by_reference="false">\CurlHandler</type>
+          </tag>
+          <tag line="840" name="return" description="The response text" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="851">
+          <name>$url</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="851">
+          <name>$params</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="851">
+          <name>$ch</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="906" package="Default">
+        <name>parseSignedRequest</name>
+        <full_name>parseSignedRequest</full_name>
+        <docblock line="900">
+          <description><![CDATA[Parses a signed_request and validates the signature.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="900" name="param" description="A signed token" type="string" variable="$signed_request">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="900" name="return" description="The payload inside it or null if the sig is wrong" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="906">
+          <name>$signed_request</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="935" package="Default">
+        <name>getApiUrl</name>
+        <full_name>getApiUrl</full_name>
+        <docblock line="929">
+          <description><![CDATA[Build the URL for api given parameters.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="929" name="param" description="String the method name." type="\$method" variable="$method">
+            <type by_reference="false">\$method</type>
+          </tag>
+          <tag line="929" name="return" description="The URL for the given parameters" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="935">
+          <name>$method</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="1015" package="Default">
+        <name>getUrl</name>
+        <full_name>getUrl</full_name>
+        <docblock line="1006">
+          <description><![CDATA[Build the URL for given domain alias, path and parameters.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="1006" name="param" description="string The name of the domain" type="\$name" variable="$name">
+            <type by_reference="false">\$name</type>
+          </tag>
+          <tag line="1006" name="param" description="string Optional path (without a leading slash)" type="\$path" variable="$path">
+            <type by_reference="false">\$path</type>
+          </tag>
+          <tag line="1006" name="param" description="array Optional query parameters" type="\$params" variable="$params">
+            <type by_reference="false">\$params</type>
+          </tag>
+          <tag line="1006" name="return" description="The URL for the given parameters" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="1015">
+          <name>$name</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="1015">
+          <name>$path</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+        <argument line="1015">
+          <name>$params</name>
+          <default><![CDATA[array()]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="1036" package="Default">
+        <name>getCurrentUrl</name>
+        <full_name>getCurrentUrl</full_name>
+        <docblock line="1030">
+          <description><![CDATA[Returns the Current URL, stripping it of known FB parameters that should
+not persist.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="1030" name="return" description="The current URL" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="1087" package="Default">
+        <name>shouldRetainParam</name>
+        <full_name>shouldRetainParam</full_name>
+        <docblock line="1076">
+          <description><![CDATA[Returns true if and only if the key or key/value pair should
+be retained as part of the query string.]]></description>
+          <long-description><![CDATA[<p>This amounts to
+a brute-force search of the very small list of Facebook-specific
+params that should be stripped out.</p>]]></long-description>
+          <tag line="1076" name="param" description="A key or key/value pair within a URL's query (e.g. 'foo=a', 'foo=', or 'foo'." type="string" variable="$param">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="1076" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="1087">
+          <name>$param</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="1105" package="Default">
+        <name>throwAPIException</name>
+        <full_name>throwAPIException</full_name>
+        <docblock line="1097">
+          <description><![CDATA[Analyzes the supplied result to see if it was thrown
+because the access token is no longer valid.]]></description>
+          <long-description><![CDATA[<p>If that is
+the case, then we destroy the session.</p>]]></long-description>
+          <tag line="1097" name="param" description="array A record storing the error message returned by a failed API call." type="\$result" variable="$result">
+            <type by_reference="false">\$result</type>
+          </tag>
+        </docblock>
+        <argument line="1105">
+          <name>$result</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="global" line="1133" package="Default">
+        <name>errorLog</name>
+        <full_name>errorLog</full_name>
+        <docblock line="1128">
+          <description><![CDATA[Prints to the error log if you aren't in command line mode.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="1128" name="param" description="Log message" type="string" variable="$msg">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="1133">
+          <name>$msg</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="global" line="1153" package="Default">
+        <name>base64UrlDecode</name>
+        <full_name>base64UrlDecode</full_name>
+        <docblock line="1144">
+          <description><![CDATA[Base64 encoding that doesn't need to be urlencode()ed.]]></description>
+          <long-description><![CDATA[<p>Exactly the same as base64_encode except it uses
+  - instead of +
+  _ instead of /</p>]]></long-description>
+          <tag line="1144" name="param" description="base64UrlEncoded string" type="string" variable="$input">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="1144" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="1153">
+          <name>$input</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1160" package="Default">
+        <name>destroySession</name>
+        <full_name>destroySession</full_name>
+        <docblock line="1157">
+          <description><![CDATA[Destroy the current session]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="1198" package="Default">
+        <name>getMetadataCookie</name>
+        <full_name>getMetadataCookie</full_name>
+        <docblock line="1193">
+          <description><![CDATA[Parses the metadata cookie that our Javascript API set]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="1193" name="return" description="array mapping key to value" type="\an">
+            <type by_reference="false">\an</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="global" line="1243" package="Default">
+        <name>setPersistentData</name>
+        <full_name>setPersistentData</full_name>
+        <docblock line="1234">
+          <description><![CDATA[Stores the given ($key, $value) pair, so that future calls to
+getPersistentData($key) return $value.]]></description>
+          <long-description><![CDATA[<p>This call may be in another request.</p>]]></long-description>
+          <tag line="1234" name="param" description="" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="1234" name="param" description="" type="array" variable="$value">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="1234" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="1243">
+          <name>$key</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="1243">
+          <name>$value</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="global" line="1253" package="Default">
+        <name>getPersistentData</name>
+        <full_name>getPersistentData</full_name>
+        <docblock line="1245">
+          <description><![CDATA[Get the data for $key, persisted by BaseFacebook::setPersistentData()]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="1245" name="param" description="The key of the data to retrieve" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="1245" name="param" description="The default value to return if $key is not found" type="boolean" variable="$default">
+            <type by_reference="false">boolean</type>
+          </tag>
+          <tag line="1245" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="1253">
+          <name>$key</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="1253">
+          <name>$default</name>
+          <default><![CDATA[false]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="global" line="1261" package="Default">
+        <name>clearPersistentData</name>
+        <full_name>clearPersistentData</full_name>
+        <docblock line="1255">
+          <description><![CDATA[Clear the data with $key from the persistent storage]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="1255" name="param" description="" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="1255" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="1261">
+          <name>$key</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="global" line="1268" package="Default">
+        <name>clearAllPersistentData</name>
+        <full_name>clearAllPersistentData</full_name>
+        <docblock line="1263">
+          <description><![CDATA[Clear all data from the persistent storage]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="1263" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="684" code="50015">Argument $redirect_uri is missing from the Docblock of getAccessTokenFromCode()</error>
+    </parse_markers>
+  </file>
+  <file path="inc/facebook/php-sdk/src/facebook.php" hash="9ca98ec14e2f3926ba89fcb753fbc598" package="Default">
+    <include line="18" type="Require Once" package="Default">
+      <name>base_facebook.php</name>
+      <docblock line="2">
+        <description><![CDATA[Copyright 2011 Facebook, Inc.]]></description>
+        <long-description><![CDATA[<p>Licensed under the Apache License, Version 2.0 (the "License"); you may
+not use this file except in compliance with the License. You may obtain
+a copy of the License at</p>
+
+<pre><code>http://www.apache.org/licenses/LICENSE-2.0
+</code></pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License.</p>]]></long-description>
+      </docblock>
+    </include>
+    <class final="false" abstract="false" namespace="global" line="24" package="Default">
+      <extends>\BaseFacebook</extends>
+      <name>Facebook</name>
+      <full_name>\Facebook</full_name>
+      <docblock line="20">
+        <description><![CDATA[Extends the BaseFacebook class with the intent of using
+PHP sessions to store user ids and access tokens.]]></description>
+        <long-description><![CDATA[]]></long-description>
+      </docblock>
+      <property final="false" static="true" visibility="protected" line="42" namespace="global" package="Default">
+        <name>$kSupportedKeys</name>
+        <default><![CDATA[array('state', 'code', 'access_token', 'user_id')]]></default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="35" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="26">
+          <description><![CDATA[Identical to the parent constructor, except that
+we start a PHP session to store the user ID and
+access token if during the course of execution
+we discover them.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="26" name="param" description="the application configuration." type="Array" variable="$config">
+            <type by_reference="false">Array</type>
+          </tag>
+          <tag line="26" name="see" description="\global\BaseFacebook::__construct" refers="\global\BaseFacebook::__construct"/>
+        </docblock>
+        <argument line="35">
+          <name>$config</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="51" package="Default">
+        <name>setPersistentData</name>
+        <full_name>setPersistentData</full_name>
+        <docblock line="45">
+          <description><![CDATA[Provides the implementations of the inherited abstract
+methods.]]></description>
+          <long-description><![CDATA[<p>The implementation uses PHP sessions to maintain
+a store for authorization codes, user ids, CSRF states, and
+access tokens.</p>]]></long-description>
+        </docblock>
+        <argument line="51">
+          <name>$key</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="51">
+          <name>$value</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="61" package="Default">
+        <name>getPersistentData</name>
+        <full_name>getPersistentData</full_name>
+        <argument line="61">
+          <name>$key</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="61">
+          <name>$default</name>
+          <default><![CDATA[false]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="72" package="Default">
+        <name>clearPersistentData</name>
+        <full_name>clearPersistentData</full_name>
+        <argument line="72">
+          <name>$key</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="82" package="Default">
+        <name>clearAllPersistentData</name>
+        <full_name>clearAllPersistentData</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="88" package="Default">
+        <name>constructSessionVariableName</name>
+        <full_name>constructSessionVariableName</full_name>
+        <argument line="88">
+          <name>$key</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/facebook/php-sdk/src/facebook.php</error>
+      <error line="42" code="50018">No DocBlock was found for property $kSupportedKeys</error>
+      <error line="45" code="50015">Argument $key is missing from the Docblock of setPersistentData()</error>
+      <error line="45" code="50015">Argument $value is missing from the Docblock of setPersistentData()</error>
+      <error line="61" code="50010">No DocBlock was found for method getPersistentData()</error>
+      <error line="72" code="50010">No DocBlock was found for method clearPersistentData()</error>
+      <error line="82" code="50010">No DocBlock was found for method clearAllPersistentData()</error>
+      <error line="88" code="50010">No DocBlock was found for method constructSessionVariableName()</error>
+    </parse_markers>
+  </file>
+  <file path="inc/facebook/php-sdk/tests/bootstrap.php" hash="b8bd1937c8d639841949a24e2fcdf983" package="Default">
+    <include line="4" type="Require" package="Default">
+      <name/>
+    </include>
+    <include line="5" type="Require" package="Default">
+      <name/>
+    </include>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/facebook/php-sdk/tests/bootstrap.php</error>
+    </parse_markers>
+  </file>
+  <file path="inc/facebook/php-sdk/tests/tests.php" hash="79565ad7bdae96bbe5c7dd11f7002196" package="Default">
+    <class final="false" abstract="false" namespace="global" line="18" package="Default">
+      <extends>\PHPUnit_Framework_TestCase</extends>
+      <name>PHPSDKTestCase</name>
+      <full_name>\PHPSDKTestCase</full_name>
+      <docblock line="2">
+        <description><![CDATA[Copyright 2011 Facebook, Inc.]]></description>
+        <long-description><![CDATA[<p>Licensed under the Apache License, Version 2.0 (the "License"); you may
+not use this file except in compliance with the License. You may obtain
+a copy of the License at</p>
+
+<pre><code>http://www.apache.org/licenses/LICENSE-2.0
+</code></pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License.</p>]]></long-description>
+      </docblock>
+      <constant namespace="global" line="19" package="Default">
+        <name>APP_ID</name>
+        <full_name>APP_ID</full_name>
+        <value><![CDATA['117743971608120']]></value>
+      </constant>
+      <constant namespace="global" line="20" package="Default">
+        <name>SECRET</name>
+        <full_name>SECRET</full_name>
+        <value><![CDATA['943716006e74d9b9283d4d5d8ab93204']]></value>
+      </constant>
+      <constant namespace="global" line="22" package="Default">
+        <name>MIGRATED_APP_ID</name>
+        <full_name>MIGRATED_APP_ID</full_name>
+        <value><![CDATA['174236045938435']]></value>
+      </constant>
+      <constant namespace="global" line="23" package="Default">
+        <name>MIGRATED_SECRET</name>
+        <full_name>MIGRATED_SECRET</full_name>
+        <value><![CDATA['0073dce2d95c4a5c2922d1827ea0cca6']]></value>
+      </constant>
+      <property final="false" static="true" visibility="private" line="25" namespace="global" package="Default">
+        <name>$kExpiredAccessToken</name>
+        <default><![CDATA['206492729383450|2.N4RKywNPuHAey7CK56_wmg__.3600.1304560800.1-214707|6Q14AfpYi_XJB26aRQumouzJiGA']]></default>
+      </property>
+      <property final="false" static="true" visibility="private" line="26" namespace="global" package="Default">
+        <name>$kValidSignedRequest</name>
+        <default><![CDATA['1sxR88U4SW9m6QnSxwCEw_CObqsllXhnpP5j2pxD97c.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImV4cGlyZXMiOjEyODEwNTI4MDAsIm9hdXRoX3Rva2VuIjoiMTE3NzQzOTcxNjA4MTIwfDIuVlNUUWpub3hYVVNYd1RzcDB1U2g5d19fLjg2NDAwLjEyODEwNTI4MDAtMTY3Nzg0NjM4NXx4NURORHBtcy1nMUM0dUJHQVYzSVdRX2pYV0kuIiwidXNlcl9pZCI6IjE2Nzc4NDYzODUifQ']]></default>
+      </property>
+      <property final="false" static="true" visibility="private" line="27" namespace="global" package="Default">
+        <name>$kNonTosedSignedRequest</name>
+        <default><![CDATA['c0Ih6vYvauDwncv0n0pndr0hP0mvZaJPQDPt6Z43O0k.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiJ9']]></default>
+      </property>
+      <property final="false" static="true" visibility="private" line="28" namespace="global" package="Default">
+        <name>$kSignedRequestWithBogusSignature</name>
+        <default><![CDATA['1sxR32U4SW9m6QnSxwCEw_CObqsllXhnpP5j2pxD97c.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImV4cGlyZXMiOjEyODEwNTI4MDAsIm9hdXRoX3Rva2VuIjoiMTE3NzQzOTcxNjA4MTIwfDIuVlNUUWpub3hYVVNYd1RzcDB1U2g5d19fLjg2NDAwLjEyODEwNTI4MDAtMTY3Nzg0NjM4NXx4NURORHBtcy1nMUM0dUJHQVYzSVdRX2pYV0kuIiwidXNlcl9pZCI6IjE2Nzc4NDYzODUifQ']]></default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="30" package="Default">
+        <name>testConstructor</name>
+        <full_name>testConstructor</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="41" package="Default">
+        <name>testConstructorWithFileUpload</name>
+        <full_name>testConstructorWithFileUpload</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="58" package="Default">
+        <name>testSetAppId</name>
+        <full_name>testSetAppId</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="68" package="Default">
+        <name>testSetAPISecret</name>
+        <full_name>testSetAPISecret</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="78" package="Default">
+        <name>testSetAPPSecret</name>
+        <full_name>testSetAPPSecret</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="88" package="Default">
+        <name>testSetAccessToken</name>
+        <full_name>testSetAccessToken</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="99" package="Default">
+        <name>testSetFileUploadSupport</name>
+        <full_name>testSetFileUploadSupport</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="117" package="Default">
+        <name>testGetCurrentURL</name>
+        <full_name>testGetCurrentURL</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="153" package="Default">
+        <name>testGetLoginURL</name>
+        <full_name>testGetLoginURL</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="178" package="Default">
+        <name>testGetLoginURLWithExtraParams</name>
+        <full_name>testGetLoginURLWithExtraParams</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="206" package="Default">
+        <name>testGetLoginURLWithScopeParamsAsArray</name>
+        <full_name>testGetLoginURLWithScopeParamsAsArray</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="239" package="Default">
+        <name>testGetCodeWithValidCSRFState</name>
+        <full_name>testGetCodeWithValidCSRFState</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="253" package="Default">
+        <name>testGetCodeWithInvalidCSRFState</name>
+        <full_name>testGetCodeWithInvalidCSRFState</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="266" package="Default">
+        <name>testGetCodeWithMissingCSRFState</name>
+        <full_name>testGetCodeWithMissingCSRFState</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="279" package="Default">
+        <name>testGetUserFromSignedRequest</name>
+        <full_name>testGetUserFromSignedRequest</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="290" package="Default">
+        <name>testGetSignedRequestFromCookie</name>
+        <full_name>testGetSignedRequestFromCookie</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="303" package="Default">
+        <name>testGetSignedRequestWithIncorrectSignature</name>
+        <full_name>testGetSignedRequestWithIncorrectSignature</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="314" package="Default">
+        <name>testNonUserAccessToken</name>
+        <full_name>testNonUserAccessToken</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="327" package="Default">
+        <name>testAPIForLoggedOutUsers</name>
+        <full_name>testAPIForLoggedOutUsers</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="342" package="Default">
+        <name>testAPIWithBogusAccessToken</name>
+        <full_name>testAPIWithBogusAccessToken</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="369" package="Default">
+        <name>testAPIGraphPublicData</name>
+        <full_name>testAPIGraphPublicData</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="380" package="Default">
+        <name>testGraphAPIWithBogusAccessToken</name>
+        <full_name>testGraphAPIWithBogusAccessToken</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="398" package="Default">
+        <name>testGraphAPIWithExpiredAccessToken</name>
+        <full_name>testGraphAPIWithExpiredAccessToken</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="416" package="Default">
+        <name>testGraphAPIMethod</name>
+        <full_name>testGraphAPIMethod</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="436" package="Default">
+        <name>testGraphAPIOAuthSpecError</name>
+        <full_name>testGraphAPIOAuthSpecError</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="456" package="Default">
+        <name>testGraphAPIMethodOAuthSpecError</name>
+        <full_name>testGraphAPIMethodOAuthSpecError</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="471" package="Default">
+        <name>testCurlFailure</name>
+        <full_name>testCurlFailure</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="500" package="Default">
+        <name>testGraphAPIWithOnlyParams</name>
+        <full_name>testGraphAPIWithOnlyParams</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="526" package="Default">
+        <name>testLoginURLDefaults</name>
+        <full_name>testLoginURLDefaults</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="538" package="Default">
+        <name>testLoginURLDefaultsDropStateQueryParam</name>
+        <full_name>testLoginURLDefaultsDropStateQueryParam</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="552" package="Default">
+        <name>testLoginURLDefaultsDropCodeQueryParam</name>
+        <full_name>testLoginURLDefaultsDropCodeQueryParam</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="566" package="Default">
+        <name>testLoginURLDefaultsDropSignedRequestParamButNotOthers</name>
+        <full_name>testLoginURLDefaultsDropSignedRequestParamButNotOthers</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="581" package="Default">
+        <name>testLoginURLCustomNext</name>
+        <full_name>testLoginURLCustomNext</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="601" package="Default">
+        <name>testLogoutURLDefaults</name>
+        <full_name>testLogoutURLDefaults</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="613" package="Default">
+        <name>testLoginStatusURLDefaults</name>
+        <full_name>testLoginStatusURLDefaults</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="625" package="Default">
+        <name>testLoginStatusURLCustom</name>
+        <full_name>testLoginStatusURLCustom</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="644" package="Default">
+        <name>testNonDefaultPort</name>
+        <full_name>testNonDefaultPort</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="656" package="Default">
+        <name>testSecureCurrentUrl</name>
+        <full_name>testSecureCurrentUrl</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="669" package="Default">
+        <name>testSecureCurrentUrlWithNonDefaultPort</name>
+        <full_name>testSecureCurrentUrlWithNonDefaultPort</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="682" package="Default">
+        <name>testAppSecretCall</name>
+        <full_name>testAppSecretCall</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="704" package="Default">
+        <name>testBase64UrlEncode</name>
+        <full_name>testBase64UrlEncode</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="711" package="Default">
+        <name>testSignedToken</name>
+        <full_name>testSignedToken</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="723" package="Default">
+        <name>testNonTossedSignedtoken</name>
+        <full_name>testNonTossedSignedtoken</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="737" package="Default">
+        <name>testBundledCACert</name>
+        <full_name>testBundledCACert</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="753" package="Default">
+        <name>testVideoUpload</name>
+        <full_name>testVideoUpload</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="764" package="Default">
+        <name>testGetUserAndAccessTokenFromSession</name>
+        <full_name>testGetUserAndAccessTokenFromSession</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="781" package="Default">
+        <name>testGetUserAndAccessTokenFromSignedRequestNotSession</name>
+        <full_name>testGetUserAndAccessTokenFromSignedRequestNotSession</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="804" package="Default">
+        <name>testGetUserWithoutCodeOrSignedRequestOrSession</name>
+        <full_name>testGetUserWithoutCodeOrSignedRequestOrSession</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="824" package="Default">
+        <name>generateMD5HashOfRandomValue</name>
+        <full_name>generateMD5HashOfRandomValue</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="828" package="Default">
+        <name>setUp</name>
+        <full_name>setUp</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="832" package="Default">
+        <name>tearDown</name>
+        <full_name>tearDown</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="837" package="Default">
+        <name>clearSuperGlobals</name>
+        <full_name>clearSuperGlobals</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="857" package="Default">
+        <name>assertIsSubset</name>
+        <full_name>assertIsSubset</full_name>
+        <docblock line="851">
+          <description><![CDATA[Checks that the correct args are a subset of the returned obj]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="851" name="param" description="The correct array values" type="array" variable="$correct">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="851" name="param" description="The values in practice" type="array" variable="$actual">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="851" name="param" description="to be shown on failure" type="string" variable="$message">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="857">
+          <name>$correct</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="857">
+          <name>$actual</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="857">
+          <name>$msg</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <class final="false" abstract="false" namespace="global" line="866" package="Default">
+      <extends>\BaseFacebook</extends>
+      <name>TransientFacebook</name>
+      <full_name>\TransientFacebook</full_name>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="867" package="Default">
+        <name>setPersistentData</name>
+        <full_name>setPersistentData</full_name>
+        <argument line="867">
+          <name>$key</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="867">
+          <name>$value</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="868" package="Default">
+        <name>getPersistentData</name>
+        <full_name>getPersistentData</full_name>
+        <argument line="868">
+          <name>$key</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="868">
+          <name>$default</name>
+          <default><![CDATA[false]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="871" package="Default">
+        <name>clearPersistentData</name>
+        <full_name>clearPersistentData</full_name>
+        <argument line="871">
+          <name>$key</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="872" package="Default">
+        <name>clearAllPersistentData</name>
+        <full_name>clearAllPersistentData</full_name>
+      </method>
+    </class>
+    <class final="false" abstract="false" namespace="global" line="875" package="Default">
+      <extends>\TransientFacebook</extends>
+      <name>FBRecordURL</name>
+      <full_name>\FBRecordURL</full_name>
+      <property final="false" static="false" visibility="private" line="876" namespace="global" package="Default">
+        <name>$url</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="878" package="Default">
+        <name>_oauthRequest</name>
+        <full_name>_oauthRequest</full_name>
+        <argument line="878">
+          <name>$url</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="878">
+          <name>$params</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="882" package="Default">
+        <name>getRequestedURL</name>
+        <full_name>getRequestedURL</full_name>
+      </method>
+    </class>
+    <class final="false" abstract="false" namespace="global" line="887" package="Default">
+      <extends>\TransientFacebook</extends>
+      <name>FBPublic</name>
+      <full_name>\FBPublic</full_name>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="888" package="Default">
+        <name>publicBase64UrlDecode</name>
+        <full_name>publicBase64UrlDecode</full_name>
+        <argument line="888">
+          <name>$input</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="891" package="Default">
+        <name>publicParseSignedRequest</name>
+        <full_name>publicParseSignedRequest</full_name>
+        <argument line="891">
+          <name>$input</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <class final="false" abstract="false" namespace="global" line="896" package="Default">
+      <extends>\Facebook</extends>
+      <name>PersistentFBPublic</name>
+      <full_name>\PersistentFBPublic</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="897" package="Default">
+        <name>publicParseSignedRequest</name>
+        <full_name>publicParseSignedRequest</full_name>
+        <argument line="897">
+          <name>$input</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="901" package="Default">
+        <name>publicSetPersistentData</name>
+        <full_name>publicSetPersistentData</full_name>
+        <argument line="901">
+          <name>$key</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="901">
+          <name>$value</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <class final="false" abstract="false" namespace="global" line="906" package="Default">
+      <extends>\Facebook</extends>
+      <name>FBCode</name>
+      <full_name>\FBCode</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="907" package="Default">
+        <name>publicGetCode</name>
+        <full_name>publicGetCode</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="911" package="Default">
+        <name>setCSRFStateToken</name>
+        <full_name>setCSRFStateToken</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="915" package="Default">
+        <name>getCSRFStateToken</name>
+        <full_name>getCSRFStateToken</full_name>
+      </method>
+    </class>
+    <class final="false" abstract="false" namespace="global" line="920" package="Default">
+      <extends>\TransientFacebook</extends>
+      <name>FBAccessToken</name>
+      <full_name>\FBAccessToken</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="921" package="Default">
+        <name>publicGetApplicationAccessToken</name>
+        <full_name>publicGetApplicationAccessToken</full_name>
+      </method>
+    </class>
+    <class final="false" abstract="false" namespace="global" line="926" package="Default">
+      <extends>\TransientFacebook</extends>
+      <name>FBGetCurrentURLFacebook</name>
+      <full_name>\FBGetCurrentURLFacebook</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="927" package="Default">
+        <name>publicGetCurrentUrl</name>
+        <full_name>publicGetCurrentUrl</full_name>
+      </method>
+    </class>
+    <class final="false" abstract="false" namespace="global" line="932" package="Default">
+      <extends>\TransientFacebook</extends>
+      <name>FBGetSignedRequestCookieFacebook</name>
+      <full_name>\FBGetSignedRequestCookieFacebook</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="933" package="Default">
+        <name>publicGetSignedRequest</name>
+        <full_name>publicGetSignedRequest</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="937" package="Default">
+        <name>publicGetSignedRequestCookieName</name>
+        <full_name>publicGetSignedRequestCookieName</full_name>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/facebook/php-sdk/tests/tests.php</error>
+      <error line="25" code="50018">No DocBlock was found for property $kExpiredAccessToken</error>
+      <error line="26" code="50018">No DocBlock was found for property $kValidSignedRequest</error>
+      <error line="27" code="50018">No DocBlock was found for property $kNonTosedSignedRequest</error>
+      <error line="28" code="50018">No DocBlock was found for property $kSignedRequestWithBogusSignature</error>
+      <error line="30" code="50010">No DocBlock was found for method testConstructor()</error>
+      <error line="41" code="50010">No DocBlock was found for method testConstructorWithFileUpload()</error>
+      <error line="58" code="50010">No DocBlock was found for method testSetAppId()</error>
+      <error line="68" code="50010">No DocBlock was found for method testSetAPISecret()</error>
+      <error line="78" code="50010">No DocBlock was found for method testSetAPPSecret()</error>
+      <error line="88" code="50010">No DocBlock was found for method testSetAccessToken()</error>
+      <error line="99" code="50010">No DocBlock was found for method testSetFileUploadSupport()</error>
+      <error line="117" code="50010">No DocBlock was found for method testGetCurrentURL()</error>
+      <error line="153" code="50010">No DocBlock was found for method testGetLoginURL()</error>
+      <error line="178" code="50010">No DocBlock was found for method testGetLoginURLWithExtraParams()</error>
+      <error line="206" code="50010">No DocBlock was found for method testGetLoginURLWithScopeParamsAsArray()</error>
+      <error line="239" code="50010">No DocBlock was found for method testGetCodeWithValidCSRFState()</error>
+      <error line="253" code="50010">No DocBlock was found for method testGetCodeWithInvalidCSRFState()</error>
+      <error line="266" code="50010">No DocBlock was found for method testGetCodeWithMissingCSRFState()</error>
+      <error line="279" code="50010">No DocBlock was found for method testGetUserFromSignedRequest()</error>
+      <error line="290" code="50010">No DocBlock was found for method testGetSignedRequestFromCookie()</error>
+      <error line="303" code="50010">No DocBlock was found for method testGetSignedRequestWithIncorrectSignature()</error>
+      <error line="314" code="50010">No DocBlock was found for method testNonUserAccessToken()</error>
+      <error line="327" code="50010">No DocBlock was found for method testAPIForLoggedOutUsers()</error>
+      <error line="342" code="50010">No DocBlock was found for method testAPIWithBogusAccessToken()</error>
+      <error line="369" code="50010">No DocBlock was found for method testAPIGraphPublicData()</error>
+      <error line="380" code="50010">No DocBlock was found for method testGraphAPIWithBogusAccessToken()</error>
+      <error line="398" code="50010">No DocBlock was found for method testGraphAPIWithExpiredAccessToken()</error>
+      <error line="416" code="50010">No DocBlock was found for method testGraphAPIMethod()</error>
+      <error line="436" code="50010">No DocBlock was found for method testGraphAPIOAuthSpecError()</error>
+      <error line="456" code="50010">No DocBlock was found for method testGraphAPIMethodOAuthSpecError()</error>
+      <error line="471" code="50010">No DocBlock was found for method testCurlFailure()</error>
+      <error line="500" code="50010">No DocBlock was found for method testGraphAPIWithOnlyParams()</error>
+      <error line="526" code="50010">No DocBlock was found for method testLoginURLDefaults()</error>
+      <error line="538" code="50010">No DocBlock was found for method testLoginURLDefaultsDropStateQueryParam()</error>
+      <error line="552" code="50010">No DocBlock was found for method testLoginURLDefaultsDropCodeQueryParam()</error>
+      <error line="566" code="50010">No DocBlock was found for method testLoginURLDefaultsDropSignedRequestParamButNotOthers()</error>
+      <error line="581" code="50010">No DocBlock was found for method testLoginURLCustomNext()</error>
+      <error line="601" code="50010">No DocBlock was found for method testLogoutURLDefaults()</error>
+      <error line="613" code="50010">No DocBlock was found for method testLoginStatusURLDefaults()</error>
+      <error line="625" code="50010">No DocBlock was found for method testLoginStatusURLCustom()</error>
+      <error line="644" code="50010">No DocBlock was found for method testNonDefaultPort()</error>
+      <error line="656" code="50010">No DocBlock was found for method testSecureCurrentUrl()</error>
+      <error line="669" code="50010">No DocBlock was found for method testSecureCurrentUrlWithNonDefaultPort()</error>
+      <error line="682" code="50010">No DocBlock was found for method testAppSecretCall()</error>
+      <error line="704" code="50010">No DocBlock was found for method testBase64UrlEncode()</error>
+      <error line="711" code="50010">No DocBlock was found for method testSignedToken()</error>
+      <error line="723" code="50010">No DocBlock was found for method testNonTossedSignedtoken()</error>
+      <error line="737" code="50010">No DocBlock was found for method testBundledCACert()</error>
+      <error line="753" code="50010">No DocBlock was found for method testVideoUpload()</error>
+      <error line="764" code="50010">No DocBlock was found for method testGetUserAndAccessTokenFromSession()</error>
+      <error line="781" code="50010">No DocBlock was found for method testGetUserAndAccessTokenFromSignedRequestNotSession()</error>
+      <error line="804" code="50010">No DocBlock was found for method testGetUserWithoutCodeOrSignedRequestOrSession()</error>
+      <error line="824" code="50010">No DocBlock was found for method generateMD5HashOfRandomValue()</error>
+      <error line="828" code="50010">No DocBlock was found for method setUp()</error>
+      <error line="832" code="50010">No DocBlock was found for method tearDown()</error>
+      <error line="837" code="50010">No DocBlock was found for method clearSuperGlobals()</error>
+      <error line="851" code="50014">Name of argument $msg does not match with the DocBlock's name $message in assertIsSubset()</error>
+      <notice line="851" code="50013">Parameter $message could not be found in assertIsSubset()</notice>
+      <error line="866" code="50000">No DocBlock was found for \TransientFacebook</error>
+      <error line="867" code="50010">No DocBlock was found for method setPersistentData()</error>
+      <error line="868" code="50010">No DocBlock was found for method getPersistentData()</error>
+      <error line="871" code="50010">No DocBlock was found for method clearPersistentData()</error>
+      <error line="872" code="50010">No DocBlock was found for method clearAllPersistentData()</error>
+      <error line="875" code="50000">No DocBlock was found for \FBRecordURL</error>
+      <error line="876" code="50018">No DocBlock was found for property $url</error>
+      <error line="878" code="50010">No DocBlock was found for method _oauthRequest()</error>
+      <error line="882" code="50010">No DocBlock was found for method getRequestedURL()</error>
+      <error line="887" code="50000">No DocBlock was found for \FBPublic</error>
+      <error line="888" code="50010">No DocBlock was found for method publicBase64UrlDecode()</error>
+      <error line="891" code="50010">No DocBlock was found for method publicParseSignedRequest()</error>
+      <error line="896" code="50000">No DocBlock was found for \PersistentFBPublic</error>
+      <error line="897" code="50010">No DocBlock was found for method publicParseSignedRequest()</error>
+      <error line="901" code="50010">No DocBlock was found for method publicSetPersistentData()</error>
+      <error line="906" code="50000">No DocBlock was found for \FBCode</error>
+      <error line="907" code="50010">No DocBlock was found for method publicGetCode()</error>
+      <error line="911" code="50010">No DocBlock was found for method setCSRFStateToken()</error>
+      <error line="915" code="50010">No DocBlock was found for method getCSRFStateToken()</error>
+      <error line="920" code="50000">No DocBlock was found for \FBAccessToken</error>
+      <error line="921" code="50010">No DocBlock was found for method publicGetApplicationAccessToken()</error>
+      <error line="926" code="50000">No DocBlock was found for \FBGetCurrentURLFacebook</error>
+      <error line="927" code="50010">No DocBlock was found for method publicGetCurrentUrl()</error>
+      <error line="932" code="50000">No DocBlock was found for \FBGetSignedRequestCookieFacebook</error>
+      <error line="933" code="50010">No DocBlock was found for method publicGetSignedRequest()</error>
+      <error line="937" code="50010">No DocBlock was found for method publicGetSignedRequestCookieName()</error>
+    </parse_markers>
+  </file>
+  <file path="inc/facebook.php" hash="fe95e3cab273b08bf0ef7425f1503c97" package="Default">
+    <include line="18" type="Require" package="Default">
+      <name>facebook/php-sdk/src/facebook.php</name>
+    </include>
+    <constant namespace="global" line="13" package="Default">
+      <name>YOUR_APP_ID</name>
+      <full_name>\YOUR_APP_ID</full_name>
+      <value><![CDATA[]]></value>
+      <docblock line="2">
+        <description><![CDATA[Madison Facebook Configuration File]]></description>
+        <long-description><![CDATA[<p>@copyright Copyright &copy; 2012 by The OpenGov Foundation</p>]]></long-description>
+        <tag line="2" name="license" description="http://www.gnu.org/licenses/ GNU GPL v.3"/>
+      </docblock>
+    </constant>
+    <constant namespace="global" line="14" package="Default">
+      <name>YOUR_APP_SECRET</name>
+      <full_name>\YOUR_APP_SECRET</full_name>
+      <value><![CDATA[]]></value>
+    </constant>
+    <markers>
+      <todo line="10">Create Madison Facebook App and plug in ID and Secret</todo>
+    </markers>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/facebook.php</error>
+    </parse_markers>
+  </file>
+  <file path="inc/functions.php" hash="a670b7ea026b09618f8d7bcb7cba76b0" package="Default">
+    <include line="63" type="Require Once" package="Default">
+      <name>postmark.class.php</name>
+    </include>
+    <function namespace="global" line="11" package="Default">
+      <name>archive_companies</name>
+      <full_name>\archive_companies</full_name>
+      <docblock line="2">
+        <description><![CDATA[Madison Functions File]]></description>
+        <long-description><![CDATA[<p>@copyright Copyright &copy; 2012 by The OpenGov Foundation</p>]]></long-description>
+        <tag line="2" name="license" description="http://www.gnu.org/licenses/ GNU GPL v.3"/>
+      </docblock>
+      <argument line="11">
+        <name>$ac</name>
+        <default><![CDATA[]]></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="global" line="27" package="Default">
+      <name>approve_companies</name>
+      <full_name>\approve_companies</full_name>
+      <argument line="27">
+        <name>$ac</name>
+        <default><![CDATA[]]></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="global" line="45" package="Default">
+      <name>get_bill_by_slug</name>
+      <full_name>\get_bill_by_slug</full_name>
+      <argument line="45">
+        <name>$slug</name>
+        <default><![CDATA[]]></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="global" line="54" package="Default">
+      <name>redirect</name>
+      <full_name>\redirect</full_name>
+      <argument line="54">
+        <name>$url</name>
+        <default><![CDATA[]]></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="global" line="61" package="Default">
+      <name>email</name>
+      <full_name>\email</full_name>
+      <argument line="61">
+        <name>$em</name>
+        <default><![CDATA[]]></default>
+        <type/>
+      </argument>
+      <argument line="61">
+        <name>$subject</name>
+        <default><![CDATA[]]></default>
+        <type/>
+      </argument>
+      <argument line="61">
+        <name>$message</name>
+        <default><![CDATA['']]></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="global" line="86" package="Default">
+      <name>get_url_contents</name>
+      <full_name>\get_url_contents</full_name>
+      <argument line="86">
+        <name>$url</name>
+        <default><![CDATA[]]></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="global" line="100" package="Default">
+      <name>site_title</name>
+      <full_name>\site_title</full_name>
+      <docblock line="97">
+        <description><![CDATA[Echo out the site title]]></description>
+        <long-description><![CDATA[]]></long-description>
+      </docblock>
+    </function>
+    <function namespace="global" line="107" package="Default">
+      <name>get_site_title</name>
+      <full_name>\get_site_title</full_name>
+      <docblock line="104">
+        <description><![CDATA[Return the site title from the database]]></description>
+        <long-description><![CDATA[]]></long-description>
+      </docblock>
+    </function>
+    <function namespace="global" line="117" package="Default">
+      <name>get_description</name>
+      <full_name>\get_description</full_name>
+      <docblock line="112">
+        <description><![CDATA[Return the site description from the database
+TODO: retrieve value from the database
+TODO: allow descriptions for individual pages]]></description>
+        <long-description><![CDATA[]]></long-description>
+      </docblock>
+    </function>
+    <function namespace="global" line="124" package="Default">
+      <name>get_header</name>
+      <full_name>\get_header</full_name>
+    </function>
+    <function namespace="global" line="261" package="Default">
+      <name>get_footer</name>
+      <full_name>\get_footer</full_name>
+    </function>
+    <markers>
+      <todo line="108">retrieve from the database</todo>
+    </markers>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/functions.php</error>
+      <error line="2" code="50015">Argument $ac is missing from the Docblock of \archive_companies()</error>
+      <error line="27" code="50009">No DocBlock was found for function \approve_companies()</error>
+      <error line="45" code="50009">No DocBlock was found for function \get_bill_by_slug()</error>
+      <error line="54" code="50009">No DocBlock was found for function \redirect()</error>
+      <error line="61" code="50009">No DocBlock was found for function \email()</error>
+      <error line="86" code="50009">No DocBlock was found for function \get_url_contents()</error>
+      <error line="124" code="50009">No DocBlock was found for function \get_header()</error>
+      <error line="261" code="50009">No DocBlock was found for function \get_footer()</error>
+    </parse_markers>
+  </file>
+  <file path="inc/jquery.php" hash="8c68cfc9e8eb62d5a6e7b2028ca50c39" package="Default">
+    <include line="9" type="Require" package="Default">
+      <name>config.php</name>
+      <docblock line="2">
+        <description><![CDATA[Madison Ajax Controller]]></description>
+        <long-description><![CDATA[<p>@copyright Copyright &copy; 2012 by The OpenGov Foundation</p>]]></long-description>
+        <tag line="2" name="license" description="http://www.gnu.org/licenses/ GNU GPL v.3"/>
+      </docblock>
+    </include>
+    <include line="11" type="Require" package="Default">
+      <name>db.class.php</name>
+    </include>
+    <include line="12" type="Require" package="Default">
+      <name>object.class.php</name>
+    </include>
+    <include line="13" type="Require" package="Default">
+      <name>bill.class.php</name>
+    </include>
+    <include line="14" type="Require" package="Default">
+      <name>user.class.php</name>
+    </include>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/jquery.php</error>
+    </parse_markers>
+  </file>
+  <file path="inc/livestream/iframe.php" hash="dadd6c227b95d7d40ed05e175910944c" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/livestream/iframe.php</error>
+    </parse_markers>
+  </file>
+  <file path="inc/object.class.php" hash="7759f08d2cc000d7c7518619cfd4f216" package="Default">
+    <class final="false" abstract="false" namespace="global" line="10" package="Default">
+      <extends/>
+      <name>Object</name>
+      <full_name>\Object</full_name>
+      <docblock line="3">
+        <description><![CDATA[Madison Object Class]]></description>
+        <long-description><![CDATA[<p>@copyright Copyright &copy; 2012 by The OpenGov Foundation</p>]]></long-description>
+        <tag line="3" name="license" description="http://www.gnu.org/licenses/ GNU GPL v.3"/>
+      </docblock>
+      <property final="false" static="false" visibility="public" line="12" namespace="global" package="Default">
+        <name>$id</name>
+        <default><![CDATA[0]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="13" namespace="global" package="Default">
+        <name>$table</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="15" namespace="global" package="Default">
+        <name>$post</name>
+        <default><![CDATA[array()]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="17" namespace="global" package="Default">
+        <name>$error</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="18" namespace="global" package="Default">
+        <name>$success</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="19" namespace="global" package="Default">
+        <name>$warning</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="21" namespace="global" package="Default">
+        <name>$db</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="23" package="Default">
+        <name>initialize</name>
+        <full_name>initialize</full_name>
+        <argument line="23">
+          <name>$id</name>
+          <default><![CDATA[0]]></default>
+          <type/>
+        </argument>
+        <argument line="23">
+          <name>$table</name>
+          <default><![CDATA['']]></default>
+          <type/>
+        </argument>
+        <argument line="23">
+          <name>$is_slug</name>
+          <default><![CDATA[false]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="46" package="Default">
+        <name>respond</name>
+        <full_name>respond</full_name>
+        <argument line="46">
+          <name>$data</name>
+          <default><![CDATA[array()]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="62" package="Default">
+        <name>form_check</name>
+        <full_name>form_check</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="99" package="Default">
+        <name>is_valid_email</name>
+        <full_name>is_valid_email</full_name>
+        <argument line="99">
+          <name>$email</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="103" package="Default">
+        <name>is_valid_phone</name>
+        <full_name>is_valid_phone</full_name>
+        <argument line="103">
+          <name>$phone</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="107" package="Default">
+        <name>is_valid_zip</name>
+        <full_name>is_valid_zip</full_name>
+        <argument line="107">
+          <name>$zip</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/object.class.php</error>
+      <error line="12" code="50018">No DocBlock was found for property $id</error>
+      <error line="13" code="50018">No DocBlock was found for property $table</error>
+      <error line="15" code="50018">No DocBlock was found for property $post</error>
+      <error line="17" code="50018">No DocBlock was found for property $error</error>
+      <error line="18" code="50018">No DocBlock was found for property $success</error>
+      <error line="19" code="50018">No DocBlock was found for property $warning</error>
+      <error line="21" code="50018">No DocBlock was found for property $db</error>
+      <error line="23" code="50010">No DocBlock was found for method initialize()</error>
+      <error line="46" code="50010">No DocBlock was found for method respond()</error>
+      <error line="62" code="50010">No DocBlock was found for method form_check()</error>
+      <error line="99" code="50010">No DocBlock was found for method is_valid_email()</error>
+      <error line="103" code="50010">No DocBlock was found for method is_valid_phone()</error>
+      <error line="107" code="50010">No DocBlock was found for method is_valid_zip()</error>
+    </parse_markers>
+  </file>
+  <file path="inc/postmark.class.php" hash="adde501c91261653a4c7ea6190d0f6c0" package="Default">
+    <include line="63" type="Require Once" package="Default">
+      <name>Adapter_Interface.php</name>
+    </include>
+    <class final="false" abstract="false" namespace="global" line="33" package="Default">
+      <extends/>
+      <name>Mail_Postmark</name>
+      <full_name>\Mail_Postmark</full_name>
+      <docblock line="3">
+        <description><![CDATA[Postmark PHP class]]></description>
+        <long-description><![CDATA[<p>Copyright 2010, Markus Hedlund, Mimmin AB, www.mimmin.com
+Licensed under The MIT License
+Redistributions of files must retain the above copyright notice.</p>]]></long-description>
+        <tag line="3" name="author" description="Markus Hedlund (markus@mimmin.com) at mimmin (www.mimmin.com)"/>
+        <tag line="3" name="copyright" description="Copyright 2009 - 2010, Markus Hedlund, Mimmin AB, www.mimmin.com"/>
+        <tag line="3" name="version" description="0.4.4"/>
+        <tag line="3" name="license" description="http://www.opensource.org/licenses/mit-license.php The MIT License&#10;Usage:&#10;Mail_Postmark::compose()&#10;     -&gt;addTo('address@example.com', 'Name')&#10;     -&gt;subject('Subject')&#10;     -&gt;messagePlain('Plaintext message')&#10;    -&gt;tag('Test tag')&#10;     -&gt;send();&#10;or:&#10;$email = new Mail_Postmark();&#10;$email-&gt;addTo('address@example.com', 'Name')&#10;     -&gt;subject('Subject')&#10;     -&gt;messagePlain('Plaintext message')&#10;    -&gt;tag('Test tag')&#10;     -&gt;send();"/>
+      </docblock>
+      <constant namespace="global" line="35" package="Default">
+        <name>DEBUG_OFF</name>
+        <full_name>DEBUG_OFF</full_name>
+        <value><![CDATA[0]]></value>
+      </constant>
+      <constant namespace="global" line="36" package="Default">
+        <name>DEBUG_VERBOSE</name>
+        <full_name>DEBUG_VERBOSE</full_name>
+        <value><![CDATA[1]]></value>
+      </constant>
+      <constant namespace="global" line="37" package="Default">
+        <name>DEBUG_RETURN</name>
+        <full_name>DEBUG_RETURN</full_name>
+        <value><![CDATA[2]]></value>
+      </constant>
+      <constant namespace="global" line="38" package="Default">
+        <name>TESTING_API_KEY</name>
+        <full_name>TESTING_API_KEY</full_name>
+        <value><![CDATA['POSTMARK_API_TEST']]></value>
+      </constant>
+      <constant namespace="global" line="39" package="Default">
+        <name>MAX_ATTACHMENT_SIZE</name>
+        <full_name>MAX_ATTACHMENT_SIZE</full_name>
+        <value><![CDATA[10485760]]></value>
+      </constant>
+      <property final="false" static="true" visibility="public" line="41" namespace="global" package="Default">
+        <name>$_mimeTypes</name>
+        <default><![CDATA[array('ai' => 'application/postscript', 'avi' => 'video/x-msvideo', 'doc' => 'application/msword', 'eps' => 'application/postscript', 'gif' => 'image/gif', 'htm' => 'text/html', 'html' => 'text/html', 'jpeg' => 'image/jpeg', 'jpg' => 'image/jpeg', 'mov' => 'video/quicktime', 'mp3' => 'audio/mpeg', 'mpg' => 'video/mpeg', 'pdf' => 'application/pdf', 'ppt' => 'application/vnd.ms-powerpoint', 'ps' => 'application/postscript', 'rtf' => 'application/rtf', 'tif' => 'image/tiff', 'tiff' => 'image/tiff', 'txt' => 'text/plain', 'xls' => 'application/vnd.ms-excel', 'csv' => 'text/comma-separated-values', 'docx' => 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'flv' => 'video/x-flv', 'ics' => 'text/calendar', 'log' => 'text/plain', 'png' => 'image/png', 'pptx' => 'application/vnd.openxmlformats-officedocument.presentationml.presentation', 'psd' => 'image/photoshop', 'rm' => 'application/vnd.rn-realmedia', 'swf' => 'application/x-shockwave-flash', 'xlsx' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'xml' => 'text/xml')]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="43" namespace="global" package="Default">
+        <name>$_apiKey</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="44" namespace="global" package="Default">
+        <name>$_from</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="45" namespace="global" package="Default">
+        <name>$_to</name>
+        <default><![CDATA[array()]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="46" namespace="global" package="Default">
+        <name>$_cc</name>
+        <default><![CDATA[array()]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="47" namespace="global" package="Default">
+        <name>$_bcc</name>
+        <default><![CDATA[array()]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="48" namespace="global" package="Default">
+        <name>$_replyTo</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="49" namespace="global" package="Default">
+        <name>$_subject</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="50" namespace="global" package="Default">
+        <name>$_tag</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="51" namespace="global" package="Default">
+        <name>$_messagePlain</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="52" namespace="global" package="Default">
+        <name>$_messageHtml</name>
+        <default><![CDATA[]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="53" namespace="global" package="Default">
+        <name>$_headers</name>
+        <default><![CDATA[array()]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="54" namespace="global" package="Default">
+        <name>$_attachments</name>
+        <default><![CDATA[array()]]></default>
+      </property>
+      <property final="false" static="false" visibility="private" line="55" namespace="global" package="Default">
+        <name>$_debugMode</name>
+        <default><![CDATA[self::DEBUG_OFF]]></default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="60" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="57">
+          <description><![CDATA[Initialize]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="104" package="Default">
+        <name>addAttachment</name>
+        <full_name>addAttachment</full_name>
+        <docblock line="93">
+          <description><![CDATA[Add a physical file as an attachment
+Options:
+- filenameAlias, use a different filename for the attachment]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="93" name="param" description="Location of the file" type="string" variable="$filename">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="93" name="param" description="An optional array with options" type="array" variable="$options">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="93" name="throws" description="If file doesn't exist" type="\InvalidArgumentException">
+            <type by_reference="false">\InvalidArgumentException</type>
+          </tag>
+          <tag line="93" name="throws" description="If maximum attachment size has been reached" type="\OverflowException">
+            <type by_reference="false">\OverflowException</type>
+          </tag>
+          <tag line="93" name="return" description="" type="\Mail_Postmark">
+            <type by_reference="false">\Mail_Postmark</type>
+          </tag>
+        </docblock>
+        <argument line="104">
+          <name>$filename</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="104">
+          <name>$options</name>
+          <default><![CDATA[array()]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="128" package="Default">
+        <name>addBcc</name>
+        <full_name>addBcc</full_name>
+        <docblock line="119">
+          <description><![CDATA[Add a BCC address]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="119" name="param" description="E-mail address used in BCC" type="string" variable="$address">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="119" name="param" description="Optional. Name used in BCC" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="119" name="throws" description="On invalid address" type="\InvalidArgumentException">
+            <type by_reference="false">\InvalidArgumentException</type>
+          </tag>
+          <tag line="119" name="throws" description="If there are too many email recipients" type="\OverflowException">
+            <type by_reference="false">\OverflowException</type>
+          </tag>
+          <tag line="119" name="return" description="" type="\Mail_Postmark">
+            <type by_reference="false">\Mail_Postmark</type>
+          </tag>
+        </docblock>
+        <argument line="128">
+          <name>$address</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="128">
+          <name>$name</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="143" package="Default">
+        <name>addCc</name>
+        <full_name>addCc</full_name>
+        <docblock line="134">
+          <description><![CDATA[Add a CC address]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="134" name="param" description="E-mail address used in CC" type="string" variable="$address">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="134" name="param" description="Optional. Name used in CC" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="134" name="throws" description="On invalid address" type="\InvalidArgumentException">
+            <type by_reference="false">\InvalidArgumentException</type>
+          </tag>
+          <tag line="134" name="throws" description="If there are too many email recipients" type="\OverflowException">
+            <type by_reference="false">\OverflowException</type>
+          </tag>
+          <tag line="134" name="return" description="" type="\Mail_Postmark">
+            <type by_reference="false">\Mail_Postmark</type>
+          </tag>
+        </docblock>
+        <argument line="143">
+          <name>$address</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="143">
+          <name>$name</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="158" package="Default">
+        <name>addCustomAttachment</name>
+        <full_name>addCustomAttachment</full_name>
+        <docblock line="149">
+          <description><![CDATA[Add an attachment.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="149" name="param" description="What to call the file" type="string" variable="$filename">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="149" name="param" description="Raw file data" type="string" variable="$content">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="149" name="param" description="The mime type of the file" type="string" variable="$mimeType">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="149" name="throws" description="If maximum attachment size has been reached" type="\OverflowException">
+            <type by_reference="false">\OverflowException</type>
+          </tag>
+          <tag line="149" name="return" description="" type="\Mail_Postmark">
+            <type by_reference="false">\Mail_Postmark</type>
+          </tag>
+        </docblock>
+        <argument line="158">
+          <name>$filename</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="158">
+          <name>$content</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="158">
+          <name>$mimeType</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="187" package="Default">
+        <name>addHeader</name>
+        <full_name>addHeader</full_name>
+        <docblock line="180">
+          <description><![CDATA[Add a custom header]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="180" name="param" description="Custom header name" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="180" name="param" description="Custom header value" type="string" variable="$value">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="180" name="return" description="" type="\Mail_Postmark">
+            <type by_reference="false">\Mail_Postmark</type>
+          </tag>
+        </docblock>
+        <argument line="187">
+          <name>$name</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="187">
+          <name>$value</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="202" package="Default">
+        <name>addTo</name>
+        <full_name>addTo</full_name>
+        <docblock line="193">
+          <description><![CDATA[Add a receiver]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="193" name="param" description="E-mail address used in To" type="string" variable="$address">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="193" name="param" description="Optional. Name used in To" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="193" name="throws" description="On invalid address" type="\InvalidArgumentException">
+            <type by_reference="false">\InvalidArgumentException</type>
+          </tag>
+          <tag line="193" name="throws" description="If there are too many email recipients" type="\OverflowException">
+            <type by_reference="false">\OverflowException</type>
+          </tag>
+          <tag line="193" name="return" description="" type="\Mail_Postmark">
+            <type by_reference="false">\Mail_Postmark</type>
+          </tag>
+        </docblock>
+        <argument line="202">
+          <name>$address</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="202">
+          <name>$name</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="213" package="Default">
+        <name>compose</name>
+        <full_name>compose</full_name>
+        <docblock line="208">
+          <description><![CDATA[New e-mail]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="208" name="return" description="" type="\Mail_Postmark">
+            <type by_reference="false">\Mail_Postmark</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="224" package="Default">
+        <name>debug</name>
+        <full_name>debug</full_name>
+        <docblock line="218">
+          <description><![CDATA[Turns debug output on]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="218" name="param" description="One of the debug constants" type="int" variable="$mode">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="218" name="return" description="" type="\Mail_Postmark">
+            <type by_reference="false">\Mail_Postmark</type>
+          </tag>
+        </docblock>
+        <argument line="224">
+          <name>$mode</name>
+          <default><![CDATA[self::DEBUG_VERBOSE]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="239" package="Default">
+        <name>from</name>
+        <full_name>from</full_name>
+        <docblock line="230">
+          <description><![CDATA[Specify sender.]]></description>
+          <long-description><![CDATA[<p>Overwrites default From. Note that the address
+must first be added in the Postmarkapp admin interface</p>]]></long-description>
+          <tag line="230" name="param" description="E-mail address used in From" type="string" variable="$address">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="230" name="param" description="Optional. Name used in From" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="230" name="throws" description="On invalid address" type="\InvalidArgumentException">
+            <type by_reference="false">\InvalidArgumentException</type>
+          </tag>
+          <tag line="230" name="return" description="" type="\Mail_Postmark">
+            <type by_reference="false">\Mail_Postmark</type>
+          </tag>
+        </docblock>
+        <argument line="239">
+          <name>$address</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="239">
+          <name>$name</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="255" package="Default">
+        <name>fromName</name>
+        <full_name>fromName</full_name>
+        <docblock line="249">
+          <description><![CDATA[Specify sender name.]]></description>
+          <long-description><![CDATA[<p>Overwrites default From name, but doesn't change address.</p>]]></long-description>
+          <tag line="249" name="param" description="Name used in From" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="249" name="return" description="" type="\Mail_Postmark">
+            <type by_reference="false">\Mail_Postmark</type>
+          </tag>
+        </docblock>
+        <argument line="255">
+          <name>$name</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="267" package="Default">
+        <name>messageHtml</name>
+        <full_name>messageHtml</full_name>
+        <docblock line="261">
+          <description><![CDATA[Add HTML message.]]></description>
+          <long-description><![CDATA[<p>Can be used in conjunction with messagePlain()</p>]]></long-description>
+          <tag line="261" name="param" description="E-mail message" type="string" variable="$message">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="261" name="return" description="" type="\Mail_Postmark">
+            <type by_reference="false">\Mail_Postmark</type>
+          </tag>
+        </docblock>
+        <argument line="267">
+          <name>$message</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="278" package="Default">
+        <name>messagePlain</name>
+        <full_name>messagePlain</full_name>
+        <docblock line="273">
+          <description><![CDATA[Add plaintext message.]]></description>
+          <long-description><![CDATA[<p>Can be used in conjunction with messageHtml()</p>]]></long-description>
+          <tag line="273" name="param" description="E-mail message" type="string" variable="$message">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="273" name="return" description="" type="\Mail_Postmark">
+            <type by_reference="false">\Mail_Postmark</type>
+          </tag>
+        </docblock>
+        <argument line="278">
+          <name>$message</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="292" package="Default">
+        <name>replyTo</name>
+        <full_name>replyTo</full_name>
+        <docblock line="284">
+          <description><![CDATA[Specify reply-to]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="284" name="param" description="E-mail address used in To" type="string" variable="$address">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="284" name="param" description="Optional. Name used in To" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="284" name="throws" description="On invalid address" type="\InvalidArgumentException">
+            <type by_reference="false">\InvalidArgumentException</type>
+          </tag>
+          <tag line="284" name="return" description="" type="\Mail_Postmark">
+            <type by_reference="false">\Mail_Postmark</type>
+          </tag>
+        </docblock>
+        <argument line="292">
+          <name>$address</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="292">
+          <name>$name</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="309" package="Default">
+        <name>send</name>
+        <full_name>send</full_name>
+        <docblock line="302">
+          <description><![CDATA[Sends the e-mail.]]></description>
+          <long-description><![CDATA[<p>Prints debug output if debug mode is turned on</p>]]></long-description>
+          <tag line="302" name="throws" description="If HTTP code 422, Exception with API error code and Postmark message, otherwise HTTP code." type="\Exception">
+            <type by_reference="false">\Exception</type>
+          </tag>
+          <tag line="302" name="throws" description="If From address, To address or Subject is missing" type="\BadMethodCallException">
+            <type by_reference="false">\BadMethodCallException</type>
+          </tag>
+          <tag line="302" name="return" description="True if success, array if DEBUG_RETURN is enabled" type="boolean|array">
+            <type by_reference="false">boolean</type>
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="380" package="Default">
+        <name>subject</name>
+        <full_name>subject</full_name>
+        <docblock line="374">
+          <description><![CDATA[Specify subject]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="374" name="param" description="E-mail subject" type="string" variable="$subject">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="374" name="return" description="" type="\Mail_Postmark">
+            <type by_reference="false">\Mail_Postmark</type>
+          </tag>
+        </docblock>
+        <argument line="380">
+          <name>$subject</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="396" package="Default">
+        <name>tag</name>
+        <full_name>tag</full_name>
+        <docblock line="386">
+          <description><![CDATA[You can categorize outgoing email using the optional Tag  property.]]></description>
+          <long-description><![CDATA[<p>If you use different tags for the different types of emails your
+application generates, you will be able to get detailed statistics
+for them through the Postmark user interface.
+Only 1 tag per email is supported.</p>]]></long-description>
+          <tag line="386" name="param" description="One tag" type="string" variable="$tag">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="386" name="return" description="" type="\Mail_Postmark">
+            <type by_reference="false">\Mail_Postmark</type>
+          </tag>
+        </docblock>
+        <argument line="396">
+          <name>$tag</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="410" package="Default">
+        <name>to</name>
+        <full_name>to</full_name>
+        <docblock line="402">
+          <description><![CDATA[Specify receiver.]]></description>
+          <long-description><![CDATA[<p>Use addTo to add more.</p>]]></long-description>
+          <tag line="402" name="deprecated" description="Use addTo."/>
+          <tag line="402" name="param" description="E-mail address used in To" type="string" variable="$address">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="402" name="param" description="Optional. Name used in To" type="string" variable="$name">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="402" name="return" description="" type="\Mail_Postmark">
+            <type by_reference="false">\Mail_Postmark</type>
+          </tag>
+        </docblock>
+        <argument line="410">
+          <name>$address</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="410">
+          <name>$name</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="424" package="Default">
+        <name>_addRecipient</name>
+        <full_name>_addRecipient</full_name>
+        <docblock line="417">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="417" name="param" description="Either 'to', 'cc' or 'bcc'" type="string" variable="$type">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="417" name="param" description="" type="string" variable="$address">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="417" name="param" description="" type="string|null" variable="$name">
+            <type by_reference="false">string</type>
+            <type by_reference="false">null</type>
+          </tag>
+          <tag line="417" name="throws" description="On invalid address" type="\InvalidArgumentException">
+            <type by_reference="false">\InvalidArgumentException</type>
+          </tag>
+          <tag line="417" name="throws" description="If there are too many email recipients" type="\OverflowException">
+            <type by_reference="false">\OverflowException</type>
+          </tag>
+        </docblock>
+        <argument line="424">
+          <name>$type</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="424">
+          <name>$address</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="424">
+          <name>$name</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="451" package="Default">
+        <name>_createAddress</name>
+        <full_name>_createAddress</full_name>
+        <argument line="451">
+          <name>$address</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="451">
+          <name>$name</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="463" package="Default">
+        <name>_getMimeType</name>
+        <full_name>_getMimeType</full_name>
+        <docblock line="460">
+          <description><![CDATA[Try to detect the mime type]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+        <argument line="463">
+          <name>$filename</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="490" package="Default">
+        <name>_isTwoHundred</name>
+        <full_name>_isTwoHundred</full_name>
+        <docblock line="487">
+          <description><![CDATA[If a number is 200-299]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+        <argument line="490">
+          <name>$value</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="500" package="Default">
+        <name>_log</name>
+        <full_name>_log</full_name>
+        <docblock line="495">
+          <description><![CDATA[Call the logger method, if one exists]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="495" name="param" description="" type="array" variable="$logData">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="500">
+          <name>$logData</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="510" package="Default">
+        <name>_prepareData</name>
+        <full_name>_prepareData</full_name>
+        <docblock line="507">
+          <description><![CDATA[Prepares the data array]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="589" package="Default">
+        <name>_validateAddress</name>
+        <full_name>_validateAddress</full_name>
+        <docblock line="586">
+          <description><![CDATA[Validates an e-mailadress]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+        <argument line="589">
+          <name>$email</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="605" package="Default">
+        <name>_validateData</name>
+        <full_name>_validateData</full_name>
+        <docblock line="600">
+          <description><![CDATA[Validate that the email can be sent]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="600" name="throws" description="If From address, To address or Subject is missing" type="\BadMethodCallException">
+            <type by_reference="false">\BadMethodCallException</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/postmark.class.php</error>
+      <error line="41" code="50018">No DocBlock was found for property $_mimeTypes</error>
+      <error line="43" code="50018">No DocBlock was found for property $_apiKey</error>
+      <error line="44" code="50018">No DocBlock was found for property $_from</error>
+      <error line="45" code="50018">No DocBlock was found for property $_to</error>
+      <error line="46" code="50018">No DocBlock was found for property $_cc</error>
+      <error line="47" code="50018">No DocBlock was found for property $_bcc</error>
+      <error line="48" code="50018">No DocBlock was found for property $_replyTo</error>
+      <error line="49" code="50018">No DocBlock was found for property $_subject</error>
+      <error line="50" code="50018">No DocBlock was found for property $_tag</error>
+      <error line="51" code="50018">No DocBlock was found for property $_messagePlain</error>
+      <error line="52" code="50018">No DocBlock was found for property $_messageHtml</error>
+      <error line="53" code="50018">No DocBlock was found for property $_headers</error>
+      <error line="54" code="50018">No DocBlock was found for property $_attachments</error>
+      <error line="55" code="50018">No DocBlock was found for property $_debugMode</error>
+      <error line="417" code="50012">No short description for method _addRecipient()</error>
+      <error line="451" code="50010">No DocBlock was found for method _createAddress()</error>
+      <error line="460" code="50015">Argument $filename is missing from the Docblock of _getMimeType()</error>
+      <error line="487" code="50015">Argument $value is missing from the Docblock of _isTwoHundred()</error>
+      <error line="586" code="50015">Argument $email is missing from the Docblock of _validateAddress()</error>
+    </parse_markers>
+  </file>
+  <file path="inc/scripts/populate_top.php" hash="2208b52aa3079bcddd0f2188f3eb6676" package="Default">
+    <docblock line="2">
+      <description><![CDATA[Madison 'Top Notes' Script
+	Run on cron to determine the most popular notes]]></description>
+      <long-description><![CDATA[<p>@copyright Copyright &copy; 2012 by The OpenGov Foundation</p>]]></long-description>
+      <tag line="2" name="license" description="http://www.gnu.org/licenses/ GNU GPL v.3"/>
+    </docblock>
+    <function namespace="global" line="76" package="Default">
+      <name>compute_score</name>
+      <full_name>\compute_score</full_name>
+      <argument line="76">
+        <name>$likes</name>
+        <default><![CDATA[]]></default>
+        <type/>
+      </argument>
+      <argument line="76">
+        <name>$dislikes</name>
+        <default><![CDATA[]]></default>
+        <type/>
+      </argument>
+      <argument line="76">
+        <name>$flags</name>
+        <default><![CDATA[]]></default>
+        <type/>
+      </argument>
+    </function>
+    <parse_markers>
+      <error line="76" code="50009">No DocBlock was found for function \compute_score()</error>
+    </parse_markers>
+  </file>
+  <file path="inc/user.class.php" hash="eb422a427783f1585f151e65e8fde6b6" package="Default">
+    <class final="false" abstract="false" namespace="global" line="10" package="Default">
+      <extends>\Object</extends>
+      <name>User</name>
+      <full_name>\User</full_name>
+      <docblock line="3">
+        <description><![CDATA[Madison User Class]]></description>
+        <long-description><![CDATA[<p>@copyright Copyright &copy; 2012 by The OpenGov Foundation</p>]]></long-description>
+        <tag line="3" name="license" description="http://www.gnu.org/licenses/ GNU GPL v.3"/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="12" namespace="global" package="Default">
+        <name>$salt</name>
+        <default><![CDATA['hoba']]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="14" namespace="global" package="Default">
+        <name>$loggedin</name>
+        <default><![CDATA[false]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="15" namespace="global" package="Default">
+        <name>$approved</name>
+        <default><![CDATA[false]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="16" namespace="global" package="Default">
+        <name>$user_level</name>
+        <default><![CDATA[3]]></default>
+      </property>
+      <property final="false" static="false" visibility="public" line="17" namespace="global" package="Default">
+        <name>$meta</name>
+        <default><![CDATA[array()]]></default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="21" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <argument line="21">
+          <name>$id</name>
+          <default><![CDATA[0]]></default>
+          <type/>
+        </argument>
+        <argument line="21">
+          <name>$db</name>
+          <default><![CDATA[NULL]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="41" package="Default">
+        <name>create</name>
+        <full_name>create</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="86" package="Default">
+        <name>edit</name>
+        <full_name>edit</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="130" package="Default">
+        <name>fb_login</name>
+        <full_name>fb_login</full_name>
+        <argument line="130">
+          <name>$email</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="130">
+          <name>$fname</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="130">
+          <name>$lname</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="194" package="Default">
+        <name>login</name>
+        <full_name>login</full_name>
+        <argument line="194">
+          <name>$email</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="194">
+          <name>$pass</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="246" package="Default">
+        <name>delete</name>
+        <full_name>delete</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="254" package="Default">
+        <name>email_exists</name>
+        <full_name>email_exists</full_name>
+        <argument line="254">
+          <name>$e</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/user.class.php</error>
+      <error line="12" code="50018">No DocBlock was found for property $salt</error>
+      <error line="14" code="50018">No DocBlock was found for property $loggedin</error>
+      <error line="15" code="50018">No DocBlock was found for property $approved</error>
+      <error line="16" code="50018">No DocBlock was found for property $user_level</error>
+      <error line="17" code="50018">No DocBlock was found for property $meta</error>
+      <error line="21" code="50010">No DocBlock was found for method __construct()</error>
+      <error line="41" code="50010">No DocBlock was found for method create()</error>
+      <error line="86" code="50010">No DocBlock was found for method edit()</error>
+      <error line="130" code="50010">No DocBlock was found for method fb_login()</error>
+      <error line="194" code="50010">No DocBlock was found for method login()</error>
+      <error line="246" code="50010">No DocBlock was found for method delete()</error>
+      <error line="254" code="50010">No DocBlock was found for method email_exists()</error>
+    </parse_markers>
+  </file>
+  <file path="inc/views/edit-user.php" hash="88cbbc7a12fa2625948b550cbfa8f641" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/views/edit-user.php</error>
+    </parse_markers>
+  </file>
+  <file path="inc/views/view-404.php" hash="e5d0c2f783ba40e82a298e256ca13c29" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/views/view-404.php</error>
+    </parse_markers>
+  </file>
+  <file path="inc/views/view-company-approval.php" hash="8ef015ee9e876b6744068305628a73a0" package="Default">
+    <docblock line="2">
+      <description><![CDATA[Madison View Template]]></description>
+      <long-description><![CDATA[<p>@copyright Copyright &copy; 2012 by The OpenGov Foundation</p>]]></long-description>
+      <tag line="2" name="license" description="http://www.gnu.org/licenses/ GNU GPL v.3"/>
+    </docblock>
+    <include line="10" type="Include" package="Default">
+      <name>view-404.php</name>
+    </include>
+  </file>
+  <file path="inc/views/view-contact-us.php" hash="39ba4907b01e2317d3b04f71fcde49c9" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/views/view-contact-us.php</error>
+    </parse_markers>
+  </file>
+  <file path="inc/views/view-forgot-password.php" hash="504ad44e06ac7cd564d60990d8db288c" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/views/view-forgot-password.php</error>
+    </parse_markers>
+  </file>
+  <file path="inc/views/view-index.php" hash="2cc3ac7f6c9fe38ebc07ed1a3be602dc" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/views/view-index.php</error>
+    </parse_markers>
+  </file>
+  <file path="inc/views/view-login.php" hash="83c0bd3bc8dd2c1a27f745a05a763413" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/views/view-login.php</error>
+    </parse_markers>
+  </file>
+  <file path="inc/views/view-note.php" hash="0308bc40995d3c4df69fd534988f7c75" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/views/view-note.php</error>
+    </parse_markers>
+  </file>
+  <file path="inc/views/view-notes.php" hash="5988685645f3f504115cd22eeeb10b65" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/views/view-notes.php</error>
+    </parse_markers>
+  </file>
+  <file path="inc/views/view-privacy-policy.php" hash="90e9b75c7495f6913a343e681f2037b1" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/views/view-privacy-policy.php</error>
+    </parse_markers>
+  </file>
+  <file path="inc/views/view-reader.php" hash="67e904f5d1ac4bc518676f6d48598eb6" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/views/view-reader.php</error>
+    </parse_markers>
+  </file>
+  <file path="inc/views/view-terms-conditions.php" hash="ab848422841bc06f16076b104c914cf0" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/views/view-terms-conditions.php</error>
+    </parse_markers>
+  </file>
+  <file path="inc/views/view-user-responses.php" hash="24423e931f5cc2290fd194c8a1cc8dfb" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file inc/views/view-user-responses.php</error>
+    </parse_markers>
+  </file>
+  <file path="index.php" hash="84d15fa80ed4fbeb9cab56cabe89b3b2" package="Default">
+    <include line="1" type="Require" package="Default">
+      <name>init.php</name>
+    </include>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file index.php</error>
+    </parse_markers>
+  </file>
+  <file path="init.php" hash="47cfc3fc195a896d68c8520ec86e244d" package="Default">
+    <include line="11" type="Require" package="Default">
+      <name>inc/config.php</name>
+      <docblock line="2">
+        <description><![CDATA[Madison controller]]></description>
+        <long-description><![CDATA[<p>@copyright Copyright &copy; 2012 by The OpenGov Foundation</p>]]></long-description>
+        <tag line="2" name="license" description="http://www.gnu.org/licenses/ GNU GPL v.3"/>
+      </docblock>
+    </include>
+    <include line="16" type="Require" package="Default">
+      <name>inc/db.class.php</name>
+    </include>
+    <include line="17" type="Require" package="Default">
+      <name>inc/object.class.php</name>
+    </include>
+    <include line="18" type="Require" package="Default">
+      <name>inc/bill.class.php</name>
+    </include>
+    <include line="19" type="Require" package="Default">
+      <name>inc/user.class.php</name>
+    </include>
+    <include line="20" type="Require" package="Default">
+      <name>inc/functions.php</name>
+    </include>
+    <include line="21" type="Require" package="Default">
+      <name>inc/facebook.php</name>
+    </include>
+    <include line="259" type="Include" package="Default">
+      <name>inc/views/view-note.php</name>
+    </include>
+    <include line="267" type="Include" package="Default">
+      <name>inc/views/view-404.php</name>
+    </include>
+    <include line="271" type="Include" package="Default">
+      <name>inc/views/view-notes.php</name>
+    </include>
+    <include line="275" type="Include" package="Default">
+      <name/>
+    </include>
+    <include line="279" type="Include" package="Default">
+      <name>admin/view-index.php</name>
+    </include>
+    <include line="282" type="Include" package="Default">
+      <name>admin/edit-doc.php</name>
+    </include>
+    <include line="285" type="Include" package="Default">
+      <name>admin/list-docs.php</name>
+    </include>
+    <include line="288" type="Include" package="Default">
+      <name>admin/edit-nav.php</name>
+    </include>
+    <include line="291" type="Include" package="Default">
+      <name>inc/views/view-404.php</name>
+    </include>
+    <include line="295" type="Include" package="Default">
+      <name>inc/views/view-404.php</name>
+    </include>
+    <include line="299" type="Include" package="Default">
+      <name/>
+    </include>
+    <include line="301" type="Include" package="Default">
+      <name/>
+    </include>
+    <include line="303" type="Include" package="Default">
+      <name>inc/views/view-404.php</name>
+    </include>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file init.php</error>
+    </parse_markers>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="inc&#10;&#9;@copyright Copyright &amp;copy; 2012 by The OpenGov Foundation" full_name="inc&#10;&#9;@copyright Copyright &amp;copy; 2012 by The OpenGov Foundation"/>
+  <namespace name="global" full_name="global"/>
+  <marker count="2">todo</marker>
+  <marker count="0">fixme</marker>
+  <deprecated count="3"/>
+</project>

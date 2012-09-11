@@ -1,0 +1,632 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Bill</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/inc%0A%09@copyright%20Copyright%20&amp;copy;%202012%20by%20The%20OpenGov%20Foundation.html"><i class="icon-folder-open"></i> inc
+	@copyright Copyright &amp;copy; 2012 by The OpenGov Foundation</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">214</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">2</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">3</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#add_note" title="add_note :: "><span class="description">add_note()
+        </span><pre>add_note()</pre></a></li>
+<li class="method public "><a href="#diff" title="diff :: "><span class="description">diff()
+        </span><pre>diff()</pre></a></li>
+<li class="method public "><a href="#edit_diff" title="edit_diff :: "><span class="description">edit_diff()
+        </span><pre>edit_diff()</pre></a></li>
+<li class="method public "><a href="#edit_diff_old" title="edit_diff_old :: "><span class="description">edit_diff_old()
+        </span><pre>edit_diff_old()</pre></a></li>
+<li class="method public inherited"><a href="#form_check" title="form_check :: "><span class="description">form_check()
+        </span><pre>form_check()</pre></a></li>
+<li class="method public "><a href="#get_all_section_notes" title="get_all_section_notes :: "><span class="description">get_all_section_notes()
+        </span><pre>get_all_section_notes()</pre></a></li>
+<li class="method public "><a href="#get_notes_by_part" title="get_notes_by_part :: "><span class="description">get_notes_by_part()
+        </span><pre>get_notes_by_part()</pre></a></li>
+<li class="method public "><a href="#get_notes_by_user" title="get_notes_by_user :: "><span class="description">get_notes_by_user()
+        </span><pre>get_notes_by_user()</pre></a></li>
+<li class="method public "><a href="#get_section" title="get_section :: "><span class="description">get_section()
+        </span><pre>get_section()</pre></a></li>
+<li class="method public "><a href="#get_section_part" title="get_section_part :: "><span class="description">get_section_part()
+        </span><pre>get_section_part()</pre></a></li>
+<li class="method public "><a href="#get_section_parts" title="get_section_parts :: "><span class="description">get_section_parts()
+        </span><pre>get_section_parts()</pre></a></li>
+<li class="method public inherited"><a href="#initialize" title="initialize :: "><span class="description">initialize()
+        </span><pre>initialize()</pre></a></li>
+<li class="method public "><a href="#ldf_note" title="ldf_note :: "><span class="description">ldf_note()
+        </span><pre>ldf_note()</pre></a></li>
+<li class="method public "><a href="#refresh_notes" title="refresh_notes :: "><span class="description">refresh_notes()
+        </span><pre>refresh_notes()</pre></a></li>
+<li class="method public inherited"><a href="#respond" title="respond :: "><span class="description">respond()
+        </span><pre>respond()</pre></a></li>
+<li class="method public "><a href="#section_to_html" title="section_to_html :: "><span class="description">section_to_html()
+        </span><pre>section_to_html()</pre></a></li>
+<li class="method public "><a href="#update_info" title="update_info :: Update the bill's basic info"><span class="description">Update the bill's basic info</span><pre>update_info()</pre></a></li>
+<li class="nav-header private">» Private</li>
+<li class="method private "><a href="#get_latest_user_suggestion" title="get_latest_user_suggestion :: "><span class="description">get_latest_user_suggestion()
+        </span><pre>get_latest_user_suggestion()</pre></a></li>
+<li class="method private "><a href="#get_top_level_content" title="get_top_level_content :: "><span class="description">get_top_level_content()
+        </span><pre>get_top_level_content()</pre></a></li>
+<li class="method private inherited"><a href="#is_valid_email" title="is_valid_email :: "><span class="description">is_valid_email()
+        </span><pre>is_valid_email()</pre></a></li>
+<li class="method private inherited"><a href="#is_valid_phone" title="is_valid_phone :: "><span class="description">is_valid_phone()
+        </span><pre>is_valid_phone()</pre></a></li>
+<li class="method private inherited"><a href="#is_valid_zip" title="is_valid_zip :: "><span class="description">is_valid_zip()
+        </span><pre>is_valid_zip()</pre></a></li>
+<li class="method private "><a href="#sorry_carlin" title="sorry_carlin :: "><span class="description">sorry_carlin()
+        </span><pre>sorry_carlin()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="property public "><a href="#%24comments" title="$comments :: "><span class="description">$comments</span><pre>$comments</pre></a></li>
+<li class="property public "><a href="#%24content" title="$content :: "><span class="description">$content</span><pre>$content</pre></a></li>
+<li class="property public inherited"><a href="#%24db" title="$db :: "><span class="description">$db</span><pre>$db</pre></a></li>
+<li class="property public "><a href="#%24description" title="$description :: "><span class="description">$description</span><pre>$description</pre></a></li>
+<li class="property public "><a href="#%24doc_location" title="$doc_location :: "><span class="description">$doc_location</span><pre>$doc_location</pre></a></li>
+<li class="property public inherited"><a href="#%24error" title="$error :: "><span class="description">$error</span><pre>$error</pre></a></li>
+<li class="property public "><a href="#%24first_section" title="$first_section :: "><span class="description">$first_section</span><pre>$first_section</pre></a></li>
+<li class="property public "><a href="#%24id" title="$id :: "><span class="description">$id</span><pre>$id</pre></a></li>
+<li class="property public inherited"><a href="#%24post" title="$post :: "><span class="description">$post</span><pre>$post</pre></a></li>
+<li class="property public "><a href="#%24section_part_ids" title="$section_part_ids :: "><span class="description">$section_part_ids</span><pre>$section_part_ids</pre></a></li>
+<li class="property public "><a href="#%24sections" title="$sections :: "><span class="description">$sections</span><pre>$sections</pre></a></li>
+<li class="property public "><a href="#%24shortname" title="$shortname :: "><span class="description">$shortname</span><pre>$shortname</pre></a></li>
+<li class="property public inherited"><a href="#%24success" title="$success :: "><span class="description">$success</span><pre>$success</pre></a></li>
+<li class="property public "><a href="#%24suggestions" title="$suggestions :: "><span class="description">$suggestions</span><pre>$suggestions</pre></a></li>
+<li class="property public inherited"><a href="#%24table" title="$table :: "><span class="description">$table</span><pre>$table</pre></a></li>
+<li class="property public "><a href="#%24title" title="$title :: "><span class="description">$title</span><pre>$title</pre></a></li>
+<li class="property public "><a href="#%24twitter_hash" title="$twitter_hash :: "><span class="description">$twitter_hash</span><pre>$twitter_hash</pre></a></li>
+<li class="property public "><a href="#%24twitter_text" title="$twitter_text :: "><span class="description">$twitter_text</span><pre>$twitter_text</pre></a></li>
+<li class="property public "><a href="#%24view_user_edits" title="$view_user_edits :: "><span class="description">$view_user_edits</span><pre>$view_user_edits</pre></a></li>
+<li class="property public inherited"><a href="#%24warning" title="$warning :: "><span class="description">$warning</span><pre>$warning</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected "><a href="#%24flagged_threshold" title="$flagged_threshold :: "><span class="description">$flagged_threshold</span><pre>$flagged_threshold</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CBill" id="\Bill"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Bill.html">Bill</a>
+</li>
+</ul>
+<div href="../classes/Bill.html" class="element class">
+<p class="short_description">Madison Document Class</p>
+<div class="details">
+<p class="long_description"><p>@copyright Copyright &copy; 2012 by The OpenGov Foundation</p></p>
+<table class="table table-bordered"><tr>
+<th>license</th>
+<td><a href="http://www.gnu.org/licenses/">GNU GPL v.3</a></td>
+</tr></table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct($id, $db) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$db</h4></div>
+</div></div>
+</div>
+<a name="add_note" id="add_note"></a><div class="element clickable method public add_note" data-toggle="collapse" data-target=".add_note .collapse">
+<h2>add_note()
+        </h2>
+<pre>add_note($part_id, $type, $note, $uid, $parent) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$part_id</h4></div>
+<div class="subelement argument"><h4>$type</h4></div>
+<div class="subelement argument"><h4>$note</h4></div>
+<div class="subelement argument"><h4>$uid</h4></div>
+<div class="subelement argument"><h4>$parent</h4></div>
+</div></div>
+</div>
+<a name="diff" id="diff"></a><div class="element clickable method public diff" data-toggle="collapse" data-target=".diff .collapse">
+<h2>diff()
+        </h2>
+<pre>diff($old, $new) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$old</h4></div>
+<div class="subelement argument"><h4>$new</h4></div>
+</div></div>
+</div>
+<a name="edit_diff" id="edit_diff"></a><div class="element clickable method public edit_diff" data-toggle="collapse" data-target=".edit_diff .collapse">
+<h2>edit_diff()
+        </h2>
+<pre>edit_diff($old, $new) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$old</h4></div>
+<div class="subelement argument"><h4>$new</h4></div>
+</div></div>
+</div>
+<a name="edit_diff_old" id="edit_diff_old"></a><div class="element clickable method public edit_diff_old" data-toggle="collapse" data-target=".edit_diff_old .collapse">
+<h2>edit_diff_old()
+        </h2>
+<pre>edit_diff_old($old, $new) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$old</h4></div>
+<div class="subelement argument"><h4>$new</h4></div>
+</div></div>
+</div>
+<a name="form_check" id="form_check"></a><div class="element clickable method public form_check" data-toggle="collapse" data-target=".form_check .collapse">
+<h2>form_check()
+        </h2>
+<pre>form_check() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Object::form_check()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="get_all_section_notes" id="get_all_section_notes"></a><div class="element clickable method public get_all_section_notes" data-toggle="collapse" data-target=".get_all_section_notes .collapse">
+<h2>get_all_section_notes()
+        </h2>
+<pre>get_all_section_notes() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="get_notes_by_part" id="get_notes_by_part"></a><div class="element clickable method public get_notes_by_part" data-toggle="collapse" data-target=".get_notes_by_part .collapse">
+<h2>get_notes_by_part()
+        </h2>
+<pre>get_notes_by_part($pid, $type, $shorten) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$pid</h4></div>
+<div class="subelement argument"><h4>$type</h4></div>
+<div class="subelement argument"><h4>$shorten</h4></div>
+</div></div>
+</div>
+<a name="get_notes_by_user" id="get_notes_by_user"></a><div class="element clickable method public get_notes_by_user" data-toggle="collapse" data-target=".get_notes_by_user .collapse">
+<h2>get_notes_by_user()
+        </h2>
+<pre>get_notes_by_user($uid, $pid, $ooc) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$uid</h4></div>
+<div class="subelement argument"><h4>$pid</h4></div>
+<div class="subelement argument"><h4>$ooc</h4></div>
+</div></div>
+</div>
+<a name="get_section" id="get_section"></a><div class="element clickable method public get_section" data-toggle="collapse" data-target=".get_section .collapse">
+<h2>get_section()
+        </h2>
+<pre>get_section($sid, $force_refresh, $show_edits) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$sid</h4></div>
+<div class="subelement argument"><h4>$force_refresh</h4></div>
+<div class="subelement argument"><h4>$show_edits</h4></div>
+</div></div>
+</div>
+<a name="get_section_part" id="get_section_part"></a><div class="element clickable method public get_section_part" data-toggle="collapse" data-target=".get_section_part .collapse">
+<h2>get_section_part()
+        </h2>
+<pre>get_section_part($pid, $parts) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$pid</h4></div>
+<div class="subelement argument"><h4>$parts</h4></div>
+</div></div>
+</div>
+<a name="get_section_parts" id="get_section_parts"></a><div class="element clickable method public get_section_parts" data-toggle="collapse" data-target=".get_section_parts .collapse">
+<h2>get_section_parts()
+        </h2>
+<pre>get_section_parts($root, $children) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$root</h4></div>
+<div class="subelement argument"><h4>$children</h4></div>
+</div></div>
+</div>
+<a name="initialize" id="initialize"></a><div class="element clickable method public initialize" data-toggle="collapse" data-target=".initialize .collapse">
+<h2>initialize()
+        </h2>
+<pre>initialize($id, $table, $is_slug) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Object::initialize()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$table</h4></div>
+<div class="subelement argument"><h4>$is_slug</h4></div>
+</div></div>
+</div>
+<a name="ldf_note" id="ldf_note"></a><div class="element clickable method public ldf_note" data-toggle="collapse" data-target=".ldf_note .collapse">
+<h2>ldf_note()
+        </h2>
+<pre>ldf_note($note_id, $type, $uid) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$note_id</h4></div>
+<div class="subelement argument"><h4>$type</h4></div>
+<div class="subelement argument"><h4>$uid</h4></div>
+</div></div>
+</div>
+<a name="refresh_notes" id="refresh_notes"></a><div class="element clickable method public refresh_notes" data-toggle="collapse" data-target=".refresh_notes .collapse">
+<h2>refresh_notes()
+        </h2>
+<pre>refresh_notes($pid) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$pid</h4></div>
+</div></div>
+</div>
+<a name="respond" id="respond"></a><div class="element clickable method public respond" data-toggle="collapse" data-target=".respond .collapse">
+<h2>respond()
+        </h2>
+<pre>respond($data) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Object::respond()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$data</h4></div>
+</div></div>
+</div>
+<a name="section_to_html" id="section_to_html"></a><div class="element clickable method public section_to_html" data-toggle="collapse" data-target=".section_to_html .collapse">
+<h2>section_to_html()
+        </h2>
+<pre>section_to_html($sec, $view, $children, $level) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$sec</h4></div>
+<div class="subelement argument"><h4>$view</h4></div>
+<div class="subelement argument"><h4>$children</h4></div>
+<div class="subelement argument"><h4>$level</h4></div>
+</div></div>
+</div>
+<a name="update_info" id="update_info"></a><div class="element clickable method public update_info" data-toggle="collapse" data-target=".update_info .collapse">
+<h2>Update the bill's basic info</h2>
+<pre>update_info() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="get_latest_user_suggestion" id="get_latest_user_suggestion"></a><div class="element clickable method private get_latest_user_suggestion" data-toggle="collapse" data-target=".get_latest_user_suggestion .collapse">
+<h2>get_latest_user_suggestion()
+        </h2>
+<pre>get_latest_user_suggestion($uid, $pid) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$uid</h4></div>
+<div class="subelement argument"><h4>$pid</h4></div>
+</div></div>
+</div>
+<a name="get_top_level_content" id="get_top_level_content"></a><div class="element clickable method private get_top_level_content" data-toggle="collapse" data-target=".get_top_level_content .collapse">
+<h2>get_top_level_content()
+        </h2>
+<pre>get_top_level_content($gen, $show_edits) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$gen</h4></div>
+<div class="subelement argument"><h4>$show_edits</h4></div>
+</div></div>
+</div>
+<a name="is_valid_email" id="is_valid_email"></a><div class="element clickable method private is_valid_email" data-toggle="collapse" data-target=".is_valid_email .collapse">
+<h2>is_valid_email()
+        </h2>
+<pre>is_valid_email($email) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Object::is_valid_email()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$email</h4></div>
+</div></div>
+</div>
+<a name="is_valid_phone" id="is_valid_phone"></a><div class="element clickable method private is_valid_phone" data-toggle="collapse" data-target=".is_valid_phone .collapse">
+<h2>is_valid_phone()
+        </h2>
+<pre>is_valid_phone($phone) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Object::is_valid_phone()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$phone</h4></div>
+</div></div>
+</div>
+<a name="is_valid_zip" id="is_valid_zip"></a><div class="element clickable method private is_valid_zip" data-toggle="collapse" data-target=".is_valid_zip .collapse">
+<h2>is_valid_zip()
+        </h2>
+<pre>is_valid_zip($zip) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Object::is_valid_zip()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$zip</h4></div>
+</div></div>
+</div>
+<a name="sorry_carlin" id="sorry_carlin"></a><div class="element clickable method private sorry_carlin" data-toggle="collapse" data-target=".sorry_carlin .collapse">
+<h2>sorry_carlin()
+        </h2>
+<pre>sorry_carlin($input) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$input</h4></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24comments" id="$comments"> </a><div class="element clickable property public $comments" data-toggle="collapse" data-target=".$comments .collapse">
+<h2>$comments</h2>
+<pre>$comments </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24content" id="$content"> </a><div class="element clickable property public $content" data-toggle="collapse" data-target=".$content .collapse">
+<h2>$content</h2>
+<pre>$content </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24db" id="$db"> </a><div class="element clickable property public $db" data-toggle="collapse" data-target=".$db .collapse">
+<h2>$db</h2>
+<pre>$db </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Object::$$db</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24description" id="$description"> </a><div class="element clickable property public $description" data-toggle="collapse" data-target=".$description .collapse">
+<h2>$description</h2>
+<pre>$description </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24doc_location" id="$doc_location"> </a><div class="element clickable property public $doc_location" data-toggle="collapse" data-target=".$doc_location .collapse">
+<h2>$doc_location</h2>
+<pre>$doc_location </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24error" id="$error"> </a><div class="element clickable property public $error" data-toggle="collapse" data-target=".$error .collapse">
+<h2>$error</h2>
+<pre>$error </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Object::$$error</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24first_section" id="$first_section"> </a><div class="element clickable property public $first_section" data-toggle="collapse" data-target=".$first_section .collapse">
+<h2>$first_section</h2>
+<pre>$first_section </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24id" id="$id"> </a><div class="element clickable property public $id" data-toggle="collapse" data-target=".$id .collapse">
+<h2>$id</h2>
+<pre>$id </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24post" id="$post"> </a><div class="element clickable property public $post" data-toggle="collapse" data-target=".$post .collapse">
+<h2>$post</h2>
+<pre>$post </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Object::$$post</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24section_part_ids" id="$section_part_ids"> </a><div class="element clickable property public $section_part_ids" data-toggle="collapse" data-target=".$section_part_ids .collapse">
+<h2>$section_part_ids</h2>
+<pre>$section_part_ids </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24sections" id="$sections"> </a><div class="element clickable property public $sections" data-toggle="collapse" data-target=".$sections .collapse">
+<h2>$sections</h2>
+<pre>$sections </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24shortname" id="$shortname"> </a><div class="element clickable property public $shortname" data-toggle="collapse" data-target=".$shortname .collapse">
+<h2>$shortname</h2>
+<pre>$shortname </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24success" id="$success"> </a><div class="element clickable property public $success" data-toggle="collapse" data-target=".$success .collapse">
+<h2>$success</h2>
+<pre>$success </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Object::$$success</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24suggestions" id="$suggestions"> </a><div class="element clickable property public $suggestions" data-toggle="collapse" data-target=".$suggestions .collapse">
+<h2>$suggestions</h2>
+<pre>$suggestions </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24table" id="$table"> </a><div class="element clickable property public $table" data-toggle="collapse" data-target=".$table .collapse">
+<h2>$table</h2>
+<pre>$table </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Object::$$table</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24title" id="$title"> </a><div class="element clickable property public $title" data-toggle="collapse" data-target=".$title .collapse">
+<h2>$title</h2>
+<pre>$title </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24twitter_hash" id="$twitter_hash"> </a><div class="element clickable property public $twitter_hash" data-toggle="collapse" data-target=".$twitter_hash .collapse">
+<h2>$twitter_hash</h2>
+<pre>$twitter_hash </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24twitter_text" id="$twitter_text"> </a><div class="element clickable property public $twitter_text" data-toggle="collapse" data-target=".$twitter_text .collapse">
+<h2>$twitter_text</h2>
+<pre>$twitter_text </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24view_user_edits" id="$view_user_edits"> </a><div class="element clickable property public $view_user_edits" data-toggle="collapse" data-target=".$view_user_edits .collapse">
+<h2>$view_user_edits</h2>
+<pre>$view_user_edits </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24warning" id="$warning"> </a><div class="element clickable property public $warning" data-toggle="collapse" data-target=".$warning .collapse">
+<h2>$warning</h2>
+<pre>$warning </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Object::$$warning</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24flagged_threshold" id="$flagged_threshold"> </a><div class="element clickable property protected $flagged_threshold" data-toggle="collapse" data-target=".$flagged_threshold .collapse">
+<h2>$flagged_threshold</h2>
+<pre>$flagged_threshold </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-09-11T15:02:17-04:00.<br></footer></div>
+</div>
+</body>
+</html>

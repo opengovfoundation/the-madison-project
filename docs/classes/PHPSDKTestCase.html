@@ -1,0 +1,652 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \PHPSDKTestCase</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/inc%0A%09@copyright%20Copyright%20&amp;copy;%202012%20by%20The%20OpenGov%20Foundation.html"><i class="icon-folder-open"></i> inc
+	@copyright Copyright &amp;copy; 2012 by The OpenGov Foundation</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">214</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">2</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">3</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#testAPIForLoggedOutUsers" title="testAPIForLoggedOutUsers :: "><span class="description">testAPIForLoggedOutUsers()
+        </span><pre>testAPIForLoggedOutUsers()</pre></a></li>
+<li class="method public "><a href="#testAPIGraphPublicData" title="testAPIGraphPublicData :: "><span class="description">testAPIGraphPublicData()
+        </span><pre>testAPIGraphPublicData()</pre></a></li>
+<li class="method public "><a href="#testAPIWithBogusAccessToken" title="testAPIWithBogusAccessToken :: "><span class="description">testAPIWithBogusAccessToken()
+        </span><pre>testAPIWithBogusAccessToken()</pre></a></li>
+<li class="method public "><a href="#testAppSecretCall" title="testAppSecretCall :: "><span class="description">testAppSecretCall()
+        </span><pre>testAppSecretCall()</pre></a></li>
+<li class="method public "><a href="#testBase64UrlEncode" title="testBase64UrlEncode :: "><span class="description">testBase64UrlEncode()
+        </span><pre>testBase64UrlEncode()</pre></a></li>
+<li class="method public "><a href="#testBundledCACert" title="testBundledCACert :: "><span class="description">testBundledCACert()
+        </span><pre>testBundledCACert()</pre></a></li>
+<li class="method public "><a href="#testConstructor" title="testConstructor :: "><span class="description">testConstructor()
+        </span><pre>testConstructor()</pre></a></li>
+<li class="method public "><a href="#testConstructorWithFileUpload" title="testConstructorWithFileUpload :: "><span class="description">testConstructorWithFileUpload()
+        </span><pre>testConstructorWithFileUpload()</pre></a></li>
+<li class="method public "><a href="#testCurlFailure" title="testCurlFailure :: "><span class="description">testCurlFailure()
+        </span><pre>testCurlFailure()</pre></a></li>
+<li class="method public "><a href="#testGetCodeWithInvalidCSRFState" title="testGetCodeWithInvalidCSRFState :: "><span class="description">testGetCodeWithInvalidCSRFState()
+        </span><pre>testGetCodeWithInvalidCSRFState()</pre></a></li>
+<li class="method public "><a href="#testGetCodeWithMissingCSRFState" title="testGetCodeWithMissingCSRFState :: "><span class="description">testGetCodeWithMissingCSRFState()
+        </span><pre>testGetCodeWithMissingCSRFState()</pre></a></li>
+<li class="method public "><a href="#testGetCodeWithValidCSRFState" title="testGetCodeWithValidCSRFState :: "><span class="description">testGetCodeWithValidCSRFState()
+        </span><pre>testGetCodeWithValidCSRFState()</pre></a></li>
+<li class="method public "><a href="#testGetCurrentURL" title="testGetCurrentURL :: "><span class="description">testGetCurrentURL()
+        </span><pre>testGetCurrentURL()</pre></a></li>
+<li class="method public "><a href="#testGetLoginURL" title="testGetLoginURL :: "><span class="description">testGetLoginURL()
+        </span><pre>testGetLoginURL()</pre></a></li>
+<li class="method public "><a href="#testGetLoginURLWithExtraParams" title="testGetLoginURLWithExtraParams :: "><span class="description">testGetLoginURLWithExtraParams()
+        </span><pre>testGetLoginURLWithExtraParams()</pre></a></li>
+<li class="method public "><a href="#testGetLoginURLWithScopeParamsAsArray" title="testGetLoginURLWithScopeParamsAsArray :: "><span class="description">testGetLoginURLWithScopeParamsAsArray()
+        </span><pre>testGetLoginURLWithScopeParamsAsArray()</pre></a></li>
+<li class="method public "><a href="#testGetSignedRequestFromCookie" title="testGetSignedRequestFromCookie :: "><span class="description">testGetSignedRequestFromCookie()
+        </span><pre>testGetSignedRequestFromCookie()</pre></a></li>
+<li class="method public "><a href="#testGetSignedRequestWithIncorrectSignature" title="testGetSignedRequestWithIncorrectSignature :: "><span class="description">testGetSignedRequestWithIncorrectSignature()
+        </span><pre>testGetSignedRequestWithIncorrectSignature()</pre></a></li>
+<li class="method public "><a href="#testGetUserAndAccessTokenFromSession" title="testGetUserAndAccessTokenFromSession :: "><span class="description">testGetUserAndAccessTokenFromSession()
+        </span><pre>testGetUserAndAccessTokenFromSession()</pre></a></li>
+<li class="method public "><a href="#testGetUserAndAccessTokenFromSignedRequestNotSession" title="testGetUserAndAccessTokenFromSignedRequestNotSession :: "><span class="description">testGetUserAndAccessTokenFromSignedRequestNotSession()
+        </span><pre>testGetUserAndAccessTokenFromSignedRequestNotSession()</pre></a></li>
+<li class="method public "><a href="#testGetUserFromSignedRequest" title="testGetUserFromSignedRequest :: "><span class="description">testGetUserFromSignedRequest()
+        </span><pre>testGetUserFromSignedRequest()</pre></a></li>
+<li class="method public "><a href="#testGetUserWithoutCodeOrSignedRequestOrSession" title="testGetUserWithoutCodeOrSignedRequestOrSession :: "><span class="description">testGetUserWithoutCodeOrSignedRequestOrSession()
+        </span><pre>testGetUserWithoutCodeOrSignedRequestOrSession()</pre></a></li>
+<li class="method public "><a href="#testGraphAPIMethod" title="testGraphAPIMethod :: "><span class="description">testGraphAPIMethod()
+        </span><pre>testGraphAPIMethod()</pre></a></li>
+<li class="method public "><a href="#testGraphAPIMethodOAuthSpecError" title="testGraphAPIMethodOAuthSpecError :: "><span class="description">testGraphAPIMethodOAuthSpecError()
+        </span><pre>testGraphAPIMethodOAuthSpecError()</pre></a></li>
+<li class="method public "><a href="#testGraphAPIOAuthSpecError" title="testGraphAPIOAuthSpecError :: "><span class="description">testGraphAPIOAuthSpecError()
+        </span><pre>testGraphAPIOAuthSpecError()</pre></a></li>
+<li class="method public "><a href="#testGraphAPIWithBogusAccessToken" title="testGraphAPIWithBogusAccessToken :: "><span class="description">testGraphAPIWithBogusAccessToken()
+        </span><pre>testGraphAPIWithBogusAccessToken()</pre></a></li>
+<li class="method public "><a href="#testGraphAPIWithExpiredAccessToken" title="testGraphAPIWithExpiredAccessToken :: "><span class="description">testGraphAPIWithExpiredAccessToken()
+        </span><pre>testGraphAPIWithExpiredAccessToken()</pre></a></li>
+<li class="method public "><a href="#testGraphAPIWithOnlyParams" title="testGraphAPIWithOnlyParams :: "><span class="description">testGraphAPIWithOnlyParams()
+        </span><pre>testGraphAPIWithOnlyParams()</pre></a></li>
+<li class="method public "><a href="#testLoginStatusURLCustom" title="testLoginStatusURLCustom :: "><span class="description">testLoginStatusURLCustom()
+        </span><pre>testLoginStatusURLCustom()</pre></a></li>
+<li class="method public "><a href="#testLoginStatusURLDefaults" title="testLoginStatusURLDefaults :: "><span class="description">testLoginStatusURLDefaults()
+        </span><pre>testLoginStatusURLDefaults()</pre></a></li>
+<li class="method public "><a href="#testLoginURLCustomNext" title="testLoginURLCustomNext :: "><span class="description">testLoginURLCustomNext()
+        </span><pre>testLoginURLCustomNext()</pre></a></li>
+<li class="method public "><a href="#testLoginURLDefaults" title="testLoginURLDefaults :: "><span class="description">testLoginURLDefaults()
+        </span><pre>testLoginURLDefaults()</pre></a></li>
+<li class="method public "><a href="#testLoginURLDefaultsDropCodeQueryParam" title="testLoginURLDefaultsDropCodeQueryParam :: "><span class="description">testLoginURLDefaultsDropCodeQueryParam()
+        </span><pre>testLoginURLDefaultsDropCodeQueryParam()</pre></a></li>
+<li class="method public "><a href="#testLoginURLDefaultsDropSignedRequestParamButNotOthers" title="testLoginURLDefaultsDropSignedRequestParamButNotOthers :: "><span class="description">testLoginURLDefaultsDropSignedRequestParamButNotOthers()
+        </span><pre>testLoginURLDefaultsDropSignedRequestParamButNotOthers()</pre></a></li>
+<li class="method public "><a href="#testLoginURLDefaultsDropStateQueryParam" title="testLoginURLDefaultsDropStateQueryParam :: "><span class="description">testLoginURLDefaultsDropStateQueryParam()
+        </span><pre>testLoginURLDefaultsDropStateQueryParam()</pre></a></li>
+<li class="method public "><a href="#testLogoutURLDefaults" title="testLogoutURLDefaults :: "><span class="description">testLogoutURLDefaults()
+        </span><pre>testLogoutURLDefaults()</pre></a></li>
+<li class="method public "><a href="#testNonDefaultPort" title="testNonDefaultPort :: "><span class="description">testNonDefaultPort()
+        </span><pre>testNonDefaultPort()</pre></a></li>
+<li class="method public "><a href="#testNonTossedSignedtoken" title="testNonTossedSignedtoken :: "><span class="description">testNonTossedSignedtoken()
+        </span><pre>testNonTossedSignedtoken()</pre></a></li>
+<li class="method public "><a href="#testNonUserAccessToken" title="testNonUserAccessToken :: "><span class="description">testNonUserAccessToken()
+        </span><pre>testNonUserAccessToken()</pre></a></li>
+<li class="method public "><a href="#testSecureCurrentUrl" title="testSecureCurrentUrl :: "><span class="description">testSecureCurrentUrl()
+        </span><pre>testSecureCurrentUrl()</pre></a></li>
+<li class="method public "><a href="#testSecureCurrentUrlWithNonDefaultPort" title="testSecureCurrentUrlWithNonDefaultPort :: "><span class="description">testSecureCurrentUrlWithNonDefaultPort()
+        </span><pre>testSecureCurrentUrlWithNonDefaultPort()</pre></a></li>
+<li class="method public "><a href="#testSetAPISecret" title="testSetAPISecret :: "><span class="description">testSetAPISecret()
+        </span><pre>testSetAPISecret()</pre></a></li>
+<li class="method public "><a href="#testSetAPPSecret" title="testSetAPPSecret :: "><span class="description">testSetAPPSecret()
+        </span><pre>testSetAPPSecret()</pre></a></li>
+<li class="method public "><a href="#testSetAccessToken" title="testSetAccessToken :: "><span class="description">testSetAccessToken()
+        </span><pre>testSetAccessToken()</pre></a></li>
+<li class="method public "><a href="#testSetAppId" title="testSetAppId :: "><span class="description">testSetAppId()
+        </span><pre>testSetAppId()</pre></a></li>
+<li class="method public "><a href="#testSetFileUploadSupport" title="testSetFileUploadSupport :: "><span class="description">testSetFileUploadSupport()
+        </span><pre>testSetFileUploadSupport()</pre></a></li>
+<li class="method public "><a href="#testSignedToken" title="testSignedToken :: "><span class="description">testSignedToken()
+        </span><pre>testSignedToken()</pre></a></li>
+<li class="method public "><a href="#testVideoUpload" title="testVideoUpload :: "><span class="description">testVideoUpload()
+        </span><pre>testVideoUpload()</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="method protected "><a href="#assertIsSubset" title="assertIsSubset :: Checks that the correct args are a subset of the returned obj"><span class="description">Checks that the correct args are a subset of the returned obj</span><pre>assertIsSubset()</pre></a></li>
+<li class="method protected "><a href="#clearSuperGlobals" title="clearSuperGlobals :: "><span class="description">clearSuperGlobals()
+        </span><pre>clearSuperGlobals()</pre></a></li>
+<li class="method protected "><a href="#generateMD5HashOfRandomValue" title="generateMD5HashOfRandomValue :: "><span class="description">generateMD5HashOfRandomValue()
+        </span><pre>generateMD5HashOfRandomValue()</pre></a></li>
+<li class="method protected "><a href="#setUp" title="setUp :: "><span class="description">setUp()
+        </span><pre>setUp()</pre></a></li>
+<li class="method protected "><a href="#tearDown" title="tearDown :: "><span class="description">tearDown()
+        </span><pre>tearDown()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header private">» Private</li>
+<li class="property private "><a href="#%24kExpiredAccessToken" title="$kExpiredAccessToken :: "><span class="description">$kExpiredAccessToken</span><pre>$kExpiredAccessToken</pre></a></li>
+<li class="property private "><a href="#%24kNonTosedSignedRequest" title="$kNonTosedSignedRequest :: "><span class="description">$kNonTosedSignedRequest</span><pre>$kNonTosedSignedRequest</pre></a></li>
+<li class="property private "><a href="#%24kSignedRequestWithBogusSignature" title="$kSignedRequestWithBogusSignature :: "><span class="description">$kSignedRequestWithBogusSignature</span><pre>$kSignedRequestWithBogusSignature</pre></a></li>
+<li class="property private "><a href="#%24kValidSignedRequest" title="$kValidSignedRequest :: "><span class="description">$kValidSignedRequest</span><pre>$kValidSignedRequest</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants</li>
+<li class="constant  "><a href="#APP_ID" title="APP_ID :: "><span class="description">APP_ID</span><pre>APP_ID</pre></a></li>
+<li class="constant  "><a href="#MIGRATED_APP_ID" title="MIGRATED_APP_ID :: "><span class="description">MIGRATED_APP_ID</span><pre>MIGRATED_APP_ID</pre></a></li>
+<li class="constant  "><a href="#MIGRATED_SECRET" title="MIGRATED_SECRET :: "><span class="description">MIGRATED_SECRET</span><pre>MIGRATED_SECRET</pre></a></li>
+<li class="constant  "><a href="#SECRET" title="SECRET :: "><span class="description">SECRET</span><pre>SECRET</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CPHPSDKTestCase" id="\PHPSDKTestCase"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/PHPSDKTestCase.html">PHPSDKTestCase</a>
+</li>
+</ul>
+<div href="../classes/PHPSDKTestCase.html" class="element class">
+<p class="short_description">Copyright 2011 Facebook, Inc.</p>
+<div class="details">
+<p class="long_description"><p>Licensed under the Apache License, Version 2.0 (the "License"); you may
+not use this file except in compliance with the License. You may obtain
+a copy of the License at</p>
+
+<pre><code>http://www.apache.org/licenses/LICENSE-2.0
+</code></pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License.</p></p>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="testAPIForLoggedOutUsers" id="testAPIForLoggedOutUsers"></a><div class="element clickable method public testAPIForLoggedOutUsers" data-toggle="collapse" data-target=".testAPIForLoggedOutUsers .collapse">
+<h2>testAPIForLoggedOutUsers()
+        </h2>
+<pre>testAPIForLoggedOutUsers() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testAPIGraphPublicData" id="testAPIGraphPublicData"></a><div class="element clickable method public testAPIGraphPublicData" data-toggle="collapse" data-target=".testAPIGraphPublicData .collapse">
+<h2>testAPIGraphPublicData()
+        </h2>
+<pre>testAPIGraphPublicData() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testAPIWithBogusAccessToken" id="testAPIWithBogusAccessToken"></a><div class="element clickable method public testAPIWithBogusAccessToken" data-toggle="collapse" data-target=".testAPIWithBogusAccessToken .collapse">
+<h2>testAPIWithBogusAccessToken()
+        </h2>
+<pre>testAPIWithBogusAccessToken() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testAppSecretCall" id="testAppSecretCall"></a><div class="element clickable method public testAppSecretCall" data-toggle="collapse" data-target=".testAppSecretCall .collapse">
+<h2>testAppSecretCall()
+        </h2>
+<pre>testAppSecretCall() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testBase64UrlEncode" id="testBase64UrlEncode"></a><div class="element clickable method public testBase64UrlEncode" data-toggle="collapse" data-target=".testBase64UrlEncode .collapse">
+<h2>testBase64UrlEncode()
+        </h2>
+<pre>testBase64UrlEncode() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testBundledCACert" id="testBundledCACert"></a><div class="element clickable method public testBundledCACert" data-toggle="collapse" data-target=".testBundledCACert .collapse">
+<h2>testBundledCACert()
+        </h2>
+<pre>testBundledCACert() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testConstructor" id="testConstructor"></a><div class="element clickable method public testConstructor" data-toggle="collapse" data-target=".testConstructor .collapse">
+<h2>testConstructor()
+        </h2>
+<pre>testConstructor() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testConstructorWithFileUpload" id="testConstructorWithFileUpload"></a><div class="element clickable method public testConstructorWithFileUpload" data-toggle="collapse" data-target=".testConstructorWithFileUpload .collapse">
+<h2>testConstructorWithFileUpload()
+        </h2>
+<pre>testConstructorWithFileUpload() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testCurlFailure" id="testCurlFailure"></a><div class="element clickable method public testCurlFailure" data-toggle="collapse" data-target=".testCurlFailure .collapse">
+<h2>testCurlFailure()
+        </h2>
+<pre>testCurlFailure() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testGetCodeWithInvalidCSRFState" id="testGetCodeWithInvalidCSRFState"></a><div class="element clickable method public testGetCodeWithInvalidCSRFState" data-toggle="collapse" data-target=".testGetCodeWithInvalidCSRFState .collapse">
+<h2>testGetCodeWithInvalidCSRFState()
+        </h2>
+<pre>testGetCodeWithInvalidCSRFState() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testGetCodeWithMissingCSRFState" id="testGetCodeWithMissingCSRFState"></a><div class="element clickable method public testGetCodeWithMissingCSRFState" data-toggle="collapse" data-target=".testGetCodeWithMissingCSRFState .collapse">
+<h2>testGetCodeWithMissingCSRFState()
+        </h2>
+<pre>testGetCodeWithMissingCSRFState() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testGetCodeWithValidCSRFState" id="testGetCodeWithValidCSRFState"></a><div class="element clickable method public testGetCodeWithValidCSRFState" data-toggle="collapse" data-target=".testGetCodeWithValidCSRFState .collapse">
+<h2>testGetCodeWithValidCSRFState()
+        </h2>
+<pre>testGetCodeWithValidCSRFState() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testGetCurrentURL" id="testGetCurrentURL"></a><div class="element clickable method public testGetCurrentURL" data-toggle="collapse" data-target=".testGetCurrentURL .collapse">
+<h2>testGetCurrentURL()
+        </h2>
+<pre>testGetCurrentURL() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testGetLoginURL" id="testGetLoginURL"></a><div class="element clickable method public testGetLoginURL" data-toggle="collapse" data-target=".testGetLoginURL .collapse">
+<h2>testGetLoginURL()
+        </h2>
+<pre>testGetLoginURL() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testGetLoginURLWithExtraParams" id="testGetLoginURLWithExtraParams"></a><div class="element clickable method public testGetLoginURLWithExtraParams" data-toggle="collapse" data-target=".testGetLoginURLWithExtraParams .collapse">
+<h2>testGetLoginURLWithExtraParams()
+        </h2>
+<pre>testGetLoginURLWithExtraParams() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testGetLoginURLWithScopeParamsAsArray" id="testGetLoginURLWithScopeParamsAsArray"></a><div class="element clickable method public testGetLoginURLWithScopeParamsAsArray" data-toggle="collapse" data-target=".testGetLoginURLWithScopeParamsAsArray .collapse">
+<h2>testGetLoginURLWithScopeParamsAsArray()
+        </h2>
+<pre>testGetLoginURLWithScopeParamsAsArray() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testGetSignedRequestFromCookie" id="testGetSignedRequestFromCookie"></a><div class="element clickable method public testGetSignedRequestFromCookie" data-toggle="collapse" data-target=".testGetSignedRequestFromCookie .collapse">
+<h2>testGetSignedRequestFromCookie()
+        </h2>
+<pre>testGetSignedRequestFromCookie() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testGetSignedRequestWithIncorrectSignature" id="testGetSignedRequestWithIncorrectSignature"></a><div class="element clickable method public testGetSignedRequestWithIncorrectSignature" data-toggle="collapse" data-target=".testGetSignedRequestWithIncorrectSignature .collapse">
+<h2>testGetSignedRequestWithIncorrectSignature()
+        </h2>
+<pre>testGetSignedRequestWithIncorrectSignature() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testGetUserAndAccessTokenFromSession" id="testGetUserAndAccessTokenFromSession"></a><div class="element clickable method public testGetUserAndAccessTokenFromSession" data-toggle="collapse" data-target=".testGetUserAndAccessTokenFromSession .collapse">
+<h2>testGetUserAndAccessTokenFromSession()
+        </h2>
+<pre>testGetUserAndAccessTokenFromSession() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testGetUserAndAccessTokenFromSignedRequestNotSession" id="testGetUserAndAccessTokenFromSignedRequestNotSession"></a><div class="element clickable method public testGetUserAndAccessTokenFromSignedRequestNotSession" data-toggle="collapse" data-target=".testGetUserAndAccessTokenFromSignedRequestNotSession .collapse">
+<h2>testGetUserAndAccessTokenFromSignedRequestNotSession()
+        </h2>
+<pre>testGetUserAndAccessTokenFromSignedRequestNotSession() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testGetUserFromSignedRequest" id="testGetUserFromSignedRequest"></a><div class="element clickable method public testGetUserFromSignedRequest" data-toggle="collapse" data-target=".testGetUserFromSignedRequest .collapse">
+<h2>testGetUserFromSignedRequest()
+        </h2>
+<pre>testGetUserFromSignedRequest() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testGetUserWithoutCodeOrSignedRequestOrSession" id="testGetUserWithoutCodeOrSignedRequestOrSession"></a><div class="element clickable method public testGetUserWithoutCodeOrSignedRequestOrSession" data-toggle="collapse" data-target=".testGetUserWithoutCodeOrSignedRequestOrSession .collapse">
+<h2>testGetUserWithoutCodeOrSignedRequestOrSession()
+        </h2>
+<pre>testGetUserWithoutCodeOrSignedRequestOrSession() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testGraphAPIMethod" id="testGraphAPIMethod"></a><div class="element clickable method public testGraphAPIMethod" data-toggle="collapse" data-target=".testGraphAPIMethod .collapse">
+<h2>testGraphAPIMethod()
+        </h2>
+<pre>testGraphAPIMethod() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testGraphAPIMethodOAuthSpecError" id="testGraphAPIMethodOAuthSpecError"></a><div class="element clickable method public testGraphAPIMethodOAuthSpecError" data-toggle="collapse" data-target=".testGraphAPIMethodOAuthSpecError .collapse">
+<h2>testGraphAPIMethodOAuthSpecError()
+        </h2>
+<pre>testGraphAPIMethodOAuthSpecError() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testGraphAPIOAuthSpecError" id="testGraphAPIOAuthSpecError"></a><div class="element clickable method public testGraphAPIOAuthSpecError" data-toggle="collapse" data-target=".testGraphAPIOAuthSpecError .collapse">
+<h2>testGraphAPIOAuthSpecError()
+        </h2>
+<pre>testGraphAPIOAuthSpecError() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testGraphAPIWithBogusAccessToken" id="testGraphAPIWithBogusAccessToken"></a><div class="element clickable method public testGraphAPIWithBogusAccessToken" data-toggle="collapse" data-target=".testGraphAPIWithBogusAccessToken .collapse">
+<h2>testGraphAPIWithBogusAccessToken()
+        </h2>
+<pre>testGraphAPIWithBogusAccessToken() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testGraphAPIWithExpiredAccessToken" id="testGraphAPIWithExpiredAccessToken"></a><div class="element clickable method public testGraphAPIWithExpiredAccessToken" data-toggle="collapse" data-target=".testGraphAPIWithExpiredAccessToken .collapse">
+<h2>testGraphAPIWithExpiredAccessToken()
+        </h2>
+<pre>testGraphAPIWithExpiredAccessToken() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testGraphAPIWithOnlyParams" id="testGraphAPIWithOnlyParams"></a><div class="element clickable method public testGraphAPIWithOnlyParams" data-toggle="collapse" data-target=".testGraphAPIWithOnlyParams .collapse">
+<h2>testGraphAPIWithOnlyParams()
+        </h2>
+<pre>testGraphAPIWithOnlyParams() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testLoginStatusURLCustom" id="testLoginStatusURLCustom"></a><div class="element clickable method public testLoginStatusURLCustom" data-toggle="collapse" data-target=".testLoginStatusURLCustom .collapse">
+<h2>testLoginStatusURLCustom()
+        </h2>
+<pre>testLoginStatusURLCustom() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testLoginStatusURLDefaults" id="testLoginStatusURLDefaults"></a><div class="element clickable method public testLoginStatusURLDefaults" data-toggle="collapse" data-target=".testLoginStatusURLDefaults .collapse">
+<h2>testLoginStatusURLDefaults()
+        </h2>
+<pre>testLoginStatusURLDefaults() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testLoginURLCustomNext" id="testLoginURLCustomNext"></a><div class="element clickable method public testLoginURLCustomNext" data-toggle="collapse" data-target=".testLoginURLCustomNext .collapse">
+<h2>testLoginURLCustomNext()
+        </h2>
+<pre>testLoginURLCustomNext() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testLoginURLDefaults" id="testLoginURLDefaults"></a><div class="element clickable method public testLoginURLDefaults" data-toggle="collapse" data-target=".testLoginURLDefaults .collapse">
+<h2>testLoginURLDefaults()
+        </h2>
+<pre>testLoginURLDefaults() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testLoginURLDefaultsDropCodeQueryParam" id="testLoginURLDefaultsDropCodeQueryParam"></a><div class="element clickable method public testLoginURLDefaultsDropCodeQueryParam" data-toggle="collapse" data-target=".testLoginURLDefaultsDropCodeQueryParam .collapse">
+<h2>testLoginURLDefaultsDropCodeQueryParam()
+        </h2>
+<pre>testLoginURLDefaultsDropCodeQueryParam() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testLoginURLDefaultsDropSignedRequestParamButNotOthers" id="testLoginURLDefaultsDropSignedRequestParamButNotOthers"></a><div class="element clickable method public testLoginURLDefaultsDropSignedRequestParamButNotOthers" data-toggle="collapse" data-target=".testLoginURLDefaultsDropSignedRequestParamButNotOthers .collapse">
+<h2>testLoginURLDefaultsDropSignedRequestParamButNotOthers()
+        </h2>
+<pre>testLoginURLDefaultsDropSignedRequestParamButNotOthers() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testLoginURLDefaultsDropStateQueryParam" id="testLoginURLDefaultsDropStateQueryParam"></a><div class="element clickable method public testLoginURLDefaultsDropStateQueryParam" data-toggle="collapse" data-target=".testLoginURLDefaultsDropStateQueryParam .collapse">
+<h2>testLoginURLDefaultsDropStateQueryParam()
+        </h2>
+<pre>testLoginURLDefaultsDropStateQueryParam() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testLogoutURLDefaults" id="testLogoutURLDefaults"></a><div class="element clickable method public testLogoutURLDefaults" data-toggle="collapse" data-target=".testLogoutURLDefaults .collapse">
+<h2>testLogoutURLDefaults()
+        </h2>
+<pre>testLogoutURLDefaults() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testNonDefaultPort" id="testNonDefaultPort"></a><div class="element clickable method public testNonDefaultPort" data-toggle="collapse" data-target=".testNonDefaultPort .collapse">
+<h2>testNonDefaultPort()
+        </h2>
+<pre>testNonDefaultPort() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testNonTossedSignedtoken" id="testNonTossedSignedtoken"></a><div class="element clickable method public testNonTossedSignedtoken" data-toggle="collapse" data-target=".testNonTossedSignedtoken .collapse">
+<h2>testNonTossedSignedtoken()
+        </h2>
+<pre>testNonTossedSignedtoken() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testNonUserAccessToken" id="testNonUserAccessToken"></a><div class="element clickable method public testNonUserAccessToken" data-toggle="collapse" data-target=".testNonUserAccessToken .collapse">
+<h2>testNonUserAccessToken()
+        </h2>
+<pre>testNonUserAccessToken() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testSecureCurrentUrl" id="testSecureCurrentUrl"></a><div class="element clickable method public testSecureCurrentUrl" data-toggle="collapse" data-target=".testSecureCurrentUrl .collapse">
+<h2>testSecureCurrentUrl()
+        </h2>
+<pre>testSecureCurrentUrl() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testSecureCurrentUrlWithNonDefaultPort" id="testSecureCurrentUrlWithNonDefaultPort"></a><div class="element clickable method public testSecureCurrentUrlWithNonDefaultPort" data-toggle="collapse" data-target=".testSecureCurrentUrlWithNonDefaultPort .collapse">
+<h2>testSecureCurrentUrlWithNonDefaultPort()
+        </h2>
+<pre>testSecureCurrentUrlWithNonDefaultPort() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testSetAPISecret" id="testSetAPISecret"></a><div class="element clickable method public testSetAPISecret" data-toggle="collapse" data-target=".testSetAPISecret .collapse">
+<h2>testSetAPISecret()
+        </h2>
+<pre>testSetAPISecret() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testSetAPPSecret" id="testSetAPPSecret"></a><div class="element clickable method public testSetAPPSecret" data-toggle="collapse" data-target=".testSetAPPSecret .collapse">
+<h2>testSetAPPSecret()
+        </h2>
+<pre>testSetAPPSecret() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testSetAccessToken" id="testSetAccessToken"></a><div class="element clickable method public testSetAccessToken" data-toggle="collapse" data-target=".testSetAccessToken .collapse">
+<h2>testSetAccessToken()
+        </h2>
+<pre>testSetAccessToken() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testSetAppId" id="testSetAppId"></a><div class="element clickable method public testSetAppId" data-toggle="collapse" data-target=".testSetAppId .collapse">
+<h2>testSetAppId()
+        </h2>
+<pre>testSetAppId() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testSetFileUploadSupport" id="testSetFileUploadSupport"></a><div class="element clickable method public testSetFileUploadSupport" data-toggle="collapse" data-target=".testSetFileUploadSupport .collapse">
+<h2>testSetFileUploadSupport()
+        </h2>
+<pre>testSetFileUploadSupport() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testSignedToken" id="testSignedToken"></a><div class="element clickable method public testSignedToken" data-toggle="collapse" data-target=".testSignedToken .collapse">
+<h2>testSignedToken()
+        </h2>
+<pre>testSignedToken() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="testVideoUpload" id="testVideoUpload"></a><div class="element clickable method public testVideoUpload" data-toggle="collapse" data-target=".testVideoUpload .collapse">
+<h2>testVideoUpload()
+        </h2>
+<pre>testVideoUpload() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="assertIsSubset" id="assertIsSubset"></a><div class="element clickable method protected assertIsSubset" data-toggle="collapse" data-target=".assertIsSubset .collapse">
+<h2>Checks that the correct args are a subset of the returned obj</h2>
+<pre>assertIsSubset(array $correct, array $actual, $msg) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$correct</h4>
+<code>array</code><p>The correct array values</p></div>
+<div class="subelement argument">
+<h4>$actual</h4>
+<code>array</code><p>The values in practice</p></div>
+<div class="subelement argument"><h4>$msg</h4></div>
+</div></div>
+</div>
+<a name="clearSuperGlobals" id="clearSuperGlobals"></a><div class="element clickable method protected clearSuperGlobals" data-toggle="collapse" data-target=".clearSuperGlobals .collapse">
+<h2>clearSuperGlobals()
+        </h2>
+<pre>clearSuperGlobals() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="generateMD5HashOfRandomValue" id="generateMD5HashOfRandomValue"></a><div class="element clickable method protected generateMD5HashOfRandomValue" data-toggle="collapse" data-target=".generateMD5HashOfRandomValue .collapse">
+<h2>generateMD5HashOfRandomValue()
+        </h2>
+<pre>generateMD5HashOfRandomValue() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="setUp" id="setUp"></a><div class="element clickable method protected setUp" data-toggle="collapse" data-target=".setUp .collapse">
+<h2>setUp()
+        </h2>
+<pre>setUp() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="tearDown" id="tearDown"></a><div class="element clickable method protected tearDown" data-toggle="collapse" data-target=".tearDown .collapse">
+<h2>tearDown()
+        </h2>
+<pre>tearDown() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24kExpiredAccessToken" id="$kExpiredAccessToken"> </a><div class="element clickable property private $kExpiredAccessToken" data-toggle="collapse" data-target=".$kExpiredAccessToken .collapse">
+<h2>$kExpiredAccessToken</h2>
+<pre>$kExpiredAccessToken </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24kNonTosedSignedRequest" id="$kNonTosedSignedRequest"> </a><div class="element clickable property private $kNonTosedSignedRequest" data-toggle="collapse" data-target=".$kNonTosedSignedRequest .collapse">
+<h2>$kNonTosedSignedRequest</h2>
+<pre>$kNonTosedSignedRequest </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24kSignedRequestWithBogusSignature" id="$kSignedRequestWithBogusSignature"> </a><div class="element clickable property private $kSignedRequestWithBogusSignature" data-toggle="collapse" data-target=".$kSignedRequestWithBogusSignature .collapse">
+<h2>$kSignedRequestWithBogusSignature</h2>
+<pre>$kSignedRequestWithBogusSignature </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24kValidSignedRequest" id="$kValidSignedRequest"> </a><div class="element clickable property private $kValidSignedRequest" data-toggle="collapse" data-target=".$kValidSignedRequest .collapse">
+<h2>$kValidSignedRequest</h2>
+<pre>$kValidSignedRequest </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a name="APP_ID" id="APP_ID"> </a><div class="element clickable constant  APP_ID" data-toggle="collapse" data-target=".APP_ID .collapse">
+<h2>APP_ID</h2>
+<pre>APP_ID </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="MIGRATED_APP_ID" id="MIGRATED_APP_ID"> </a><div class="element clickable constant  MIGRATED_APP_ID" data-toggle="collapse" data-target=".MIGRATED_APP_ID .collapse">
+<h2>MIGRATED_APP_ID</h2>
+<pre>MIGRATED_APP_ID </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="MIGRATED_SECRET" id="MIGRATED_SECRET"> </a><div class="element clickable constant  MIGRATED_SECRET" data-toggle="collapse" data-target=".MIGRATED_SECRET .collapse">
+<h2>MIGRATED_SECRET</h2>
+<pre>MIGRATED_SECRET </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="SECRET" id="SECRET"> </a><div class="element clickable constant  SECRET" data-toggle="collapse" data-target=".SECRET .collapse">
+<h2>SECRET</h2>
+<pre>SECRET </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-09-11T15:02:17-04:00.<br></footer></div>
+</div>
+</body>
+</html>

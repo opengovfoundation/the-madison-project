@@ -1,0 +1,762 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Mail_Postmark</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/inc%0A%09@copyright%20Copyright%20&amp;copy;%202012%20by%20The%20OpenGov%20Foundation.html"><i class="icon-folder-open"></i> inc
+	@copyright Copyright &amp;copy; 2012 by The OpenGov Foundation</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">214</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">2</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">3</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: Initialize"><span class="description">Initialize</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#_addRecipient" title="_addRecipient :: "><span class="description">_addRecipient()
+        </span><pre>_addRecipient()</pre></a></li>
+<li class="method public "><a href="#addAttachment" title="addAttachment :: Add a physical file as an attachment
+Options:
+- filenameAlias, use a different filename for the attachment"><span class="description">Add a physical file as an attachment
+Options:
+- filenameAlias, use a different filename for the attachment</span><pre>addAttachment()</pre></a></li>
+<li class="method public "><a href="#addBcc" title="addBcc :: Add a BCC address"><span class="description">Add a BCC address</span><pre>addBcc()</pre></a></li>
+<li class="method public "><a href="#addCc" title="addCc :: Add a CC address"><span class="description">Add a CC address</span><pre>addCc()</pre></a></li>
+<li class="method public "><a href="#addCustomAttachment" title="addCustomAttachment :: Add an attachment."><span class="description">Add an attachment.</span><pre>addCustomAttachment()</pre></a></li>
+<li class="method public "><a href="#addHeader" title="addHeader :: Add a custom header"><span class="description">Add a custom header</span><pre>addHeader()</pre></a></li>
+<li class="method public "><a href="#addTo" title="addTo :: Add a receiver"><span class="description">Add a receiver</span><pre>addTo()</pre></a></li>
+<li class="method public "><a href="#compose" title="compose :: New e-mail"><span class="description">New e-mail</span><pre>compose()</pre></a></li>
+<li class="method public "><a href="#debug" title="debug :: Turns debug output on"><span class="description">Turns debug output on</span><pre>debug()</pre></a></li>
+<li class="method public "><a href="#from" title="from :: Specify sender."><span class="description">Specify sender.</span><pre>from()</pre></a></li>
+<li class="method public "><a href="#fromName" title="fromName :: Specify sender name."><span class="description">Specify sender name.</span><pre>fromName()</pre></a></li>
+<li class="method public "><a href="#messageHtml" title="messageHtml :: Add HTML message."><span class="description">Add HTML message.</span><pre>messageHtml()</pre></a></li>
+<li class="method public "><a href="#messagePlain" title="messagePlain :: Add plaintext message."><span class="description">Add plaintext message.</span><pre>messagePlain()</pre></a></li>
+<li class="method public "><a href="#replyTo" title="replyTo :: Specify reply-to"><span class="description">Specify reply-to</span><pre>replyTo()</pre></a></li>
+<li class="method public "><a href="#send" title="send :: Sends the e-mail."><span class="description">Sends the e-mail.</span><pre>send()</pre></a></li>
+<li class="method public "><a href="#subject" title="subject :: Specify subject"><span class="description">Specify subject</span><pre>subject()</pre></a></li>
+<li class="method public "><a href="#tag" title="tag :: You can categorize outgoing email using the optional Tag  property."><span class="description">You can categorize outgoing email using the optional Tag  property.</span><pre>tag()</pre></a></li>
+<li class="method public "><a href="#to" title="to :: Specify receiver."><span class="description">Specify receiver.</span><pre>to()</pre></a></li>
+<li class="nav-header private">» Private</li>
+<li class="method private "><a href="#_createAddress" title="_createAddress :: "><span class="description">_createAddress()
+        </span><pre>_createAddress()</pre></a></li>
+<li class="method private "><a href="#_getMimeType" title="_getMimeType :: Try to detect the mime type"><span class="description">Try to detect the mime type</span><pre>_getMimeType()</pre></a></li>
+<li class="method private "><a href="#_isTwoHundred" title="_isTwoHundred :: If a number is 200-299"><span class="description">If a number is 200-299</span><pre>_isTwoHundred()</pre></a></li>
+<li class="method private "><a href="#_log" title="_log :: Call the logger method, if one exists"><span class="description">Call the logger method, if one exists</span><pre>_log()</pre></a></li>
+<li class="method private "><a href="#_prepareData" title="_prepareData :: Prepares the data array"><span class="description">Prepares the data array</span><pre>_prepareData()</pre></a></li>
+<li class="method private "><a href="#_validateAddress" title="_validateAddress :: Validates an e-mailadress"><span class="description">Validates an e-mailadress</span><pre>_validateAddress()</pre></a></li>
+<li class="method private "><a href="#_validateData" title="_validateData :: Validate that the email can be sent"><span class="description">Validate that the email can be sent</span><pre>_validateData()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="property public "><a href="#%24_mimeTypes" title="$_mimeTypes :: "><span class="description">$_mimeTypes</span><pre>$_mimeTypes</pre></a></li>
+<li class="nav-header private">» Private</li>
+<li class="property private "><a href="#%24_apiKey" title="$_apiKey :: "><span class="description">$_apiKey</span><pre>$_apiKey</pre></a></li>
+<li class="property private "><a href="#%24_attachments" title="$_attachments :: "><span class="description">$_attachments</span><pre>$_attachments</pre></a></li>
+<li class="property private "><a href="#%24_bcc" title="$_bcc :: "><span class="description">$_bcc</span><pre>$_bcc</pre></a></li>
+<li class="property private "><a href="#%24_cc" title="$_cc :: "><span class="description">$_cc</span><pre>$_cc</pre></a></li>
+<li class="property private "><a href="#%24_debugMode" title="$_debugMode :: "><span class="description">$_debugMode</span><pre>$_debugMode</pre></a></li>
+<li class="property private "><a href="#%24_from" title="$_from :: "><span class="description">$_from</span><pre>$_from</pre></a></li>
+<li class="property private "><a href="#%24_headers" title="$_headers :: "><span class="description">$_headers</span><pre>$_headers</pre></a></li>
+<li class="property private "><a href="#%24_messageHtml" title="$_messageHtml :: "><span class="description">$_messageHtml</span><pre>$_messageHtml</pre></a></li>
+<li class="property private "><a href="#%24_messagePlain" title="$_messagePlain :: "><span class="description">$_messagePlain</span><pre>$_messagePlain</pre></a></li>
+<li class="property private "><a href="#%24_replyTo" title="$_replyTo :: "><span class="description">$_replyTo</span><pre>$_replyTo</pre></a></li>
+<li class="property private "><a href="#%24_subject" title="$_subject :: "><span class="description">$_subject</span><pre>$_subject</pre></a></li>
+<li class="property private "><a href="#%24_tag" title="$_tag :: "><span class="description">$_tag</span><pre>$_tag</pre></a></li>
+<li class="property private "><a href="#%24_to" title="$_to :: "><span class="description">$_to</span><pre>$_to</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants</li>
+<li class="constant  "><a href="#DEBUG_OFF" title="DEBUG_OFF :: "><span class="description">DEBUG_OFF</span><pre>DEBUG_OFF</pre></a></li>
+<li class="constant  "><a href="#DEBUG_RETURN" title="DEBUG_RETURN :: "><span class="description">DEBUG_RETURN</span><pre>DEBUG_RETURN</pre></a></li>
+<li class="constant  "><a href="#DEBUG_VERBOSE" title="DEBUG_VERBOSE :: "><span class="description">DEBUG_VERBOSE</span><pre>DEBUG_VERBOSE</pre></a></li>
+<li class="constant  "><a href="#MAX_ATTACHMENT_SIZE" title="MAX_ATTACHMENT_SIZE :: "><span class="description">MAX_ATTACHMENT_SIZE</span><pre>MAX_ATTACHMENT_SIZE</pre></a></li>
+<li class="constant  "><a href="#TESTING_API_KEY" title="TESTING_API_KEY :: "><span class="description">TESTING_API_KEY</span><pre>TESTING_API_KEY</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CMail_Postmark" id="\Mail_Postmark"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Mail_Postmark.html">Mail_Postmark</a>
+</li>
+</ul>
+<div href="../classes/Mail_Postmark.html" class="element class">
+<p class="short_description">Postmark PHP class</p>
+<div class="details">
+<p class="long_description"><p>Copyright 2010, Markus Hedlund, Mimmin AB, www.mimmin.com
+Licensed under The MIT License
+Redistributions of files must retain the above copyright notice.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="">Markus Hedlund (markus@mimmin.com) at mimmin (www.mimmin.com)</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright 2009 - 2010, Markus Hedlund, Mimmin AB, www.mimmin.com</td>
+</tr>
+<tr>
+<th>version</th>
+<td>0.4.4</td>
+</tr>
+<tr>
+<th>license</th>
+<td><a href="">http://www.opensource.org/licenses/mit-license.php The MIT License
+Usage:
+Mail_Postmark::compose()
+     -&gt;addTo('address@example.com', 'Name')
+     -&gt;subject('Subject')
+     -&gt;messagePlain('Plaintext message')
+    -&gt;tag('Test tag')
+     -&gt;send();
+or:
+$email = new Mail_Postmark();
+$email-&gt;addTo('address@example.com', 'Name')
+     -&gt;subject('Subject')
+     -&gt;messagePlain('Plaintext message')
+    -&gt;tag('Test tag')
+     -&gt;send();</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Initialize</h2>
+<pre>__construct() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="_addRecipient" id="_addRecipient"></a><div class="element clickable method public _addRecipient" data-toggle="collapse" data-target="._addRecipient .collapse">
+<h2>_addRecipient()
+        </h2>
+<pre>_addRecipient(string $type, string $address, string | null $name) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>string</code><p>Either 'to', 'cc' or 'bcc'</p>
+</div>
+<div class="subelement argument">
+<h4>$address</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><code>null</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
+<td>On invalid address</td>
+</tr>
+<tr>
+<th><code><a href="http://php.net/manual/en/class.overflowexception.php">\OverflowException</a></code></th>
+<td>If there are too many email recipients</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="addAttachment" id="addAttachment"></a><div class="element clickable method public addAttachment" data-toggle="collapse" data-target=".addAttachment .collapse">
+<h2>Add a physical file as an attachment
+Options:
+- filenameAlias, use a different filename for the attachment</h2>
+<pre>addAttachment(string $filename, array $options) : <a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$filename</h4>
+<code>string</code><p>Location of the file</p></div>
+<div class="subelement argument">
+<h4>$options</h4>
+<code>array</code><p>An optional array with options</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
+<td>If file doesn't exist</td>
+</tr>
+<tr>
+<th><code><a href="http://php.net/manual/en/class.overflowexception.php">\OverflowException</a></code></th>
+<td>If maximum attachment size has been reached</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></code></div>
+</div></div>
+</div>
+<a name="addBcc" id="addBcc"></a><div class="element clickable method public addBcc" data-toggle="collapse" data-target=".addBcc .collapse">
+<h2>Add a BCC address</h2>
+<pre>addBcc(string $address, string $name) : <a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$address</h4>
+<code>string</code><p>E-mail address used in BCC</p>
+</div>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>Optional. Name used in BCC</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
+<td>On invalid address</td>
+</tr>
+<tr>
+<th><code><a href="http://php.net/manual/en/class.overflowexception.php">\OverflowException</a></code></th>
+<td>If there are too many email recipients</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></code></div>
+</div></div>
+</div>
+<a name="addCc" id="addCc"></a><div class="element clickable method public addCc" data-toggle="collapse" data-target=".addCc .collapse">
+<h2>Add a CC address</h2>
+<pre>addCc(string $address, string $name) : <a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$address</h4>
+<code>string</code><p>E-mail address used in CC</p>
+</div>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>Optional. Name used in CC</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
+<td>On invalid address</td>
+</tr>
+<tr>
+<th><code><a href="http://php.net/manual/en/class.overflowexception.php">\OverflowException</a></code></th>
+<td>If there are too many email recipients</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></code></div>
+</div></div>
+</div>
+<a name="addCustomAttachment" id="addCustomAttachment"></a><div class="element clickable method public addCustomAttachment" data-toggle="collapse" data-target=".addCustomAttachment .collapse">
+<h2>Add an attachment.</h2>
+<pre>addCustomAttachment(string $filename, string $content, string $mimeType) : <a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$filename</h4>
+<code>string</code><p>What to call the file</p></div>
+<div class="subelement argument">
+<h4>$content</h4>
+<code>string</code><p>Raw file data</p></div>
+<div class="subelement argument">
+<h4>$mimeType</h4>
+<code>string</code><p>The mime type of the file</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.overflowexception.php">\OverflowException</a></code></th>
+<td>If maximum attachment size has been reached</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></code></div>
+</div></div>
+</div>
+<a name="addHeader" id="addHeader"></a><div class="element clickable method public addHeader" data-toggle="collapse" data-target=".addHeader .collapse">
+<h2>Add a custom header</h2>
+<pre>addHeader(string $name, string $value) : <a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>Custom header name</p></div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>string</code><p>Custom header value</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></code></div>
+</div></div>
+</div>
+<a name="addTo" id="addTo"></a><div class="element clickable method public addTo" data-toggle="collapse" data-target=".addTo .collapse">
+<h2>Add a receiver</h2>
+<pre>addTo(string $address, string $name) : <a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$address</h4>
+<code>string</code><p>E-mail address used in To</p>
+</div>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>Optional. Name used in To</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
+<td>On invalid address</td>
+</tr>
+<tr>
+<th><code><a href="http://php.net/manual/en/class.overflowexception.php">\OverflowException</a></code></th>
+<td>If there are too many email recipients</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></code></div>
+</div></div>
+</div>
+<a name="compose" id="compose"></a><div class="element clickable method public compose" data-toggle="collapse" data-target=".compose .collapse">
+<h2>New e-mail</h2>
+<pre>compose() : <a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></code></div>
+</div></div>
+</div>
+<a name="debug" id="debug"></a><div class="element clickable method public debug" data-toggle="collapse" data-target=".debug .collapse">
+<h2>Turns debug output on</h2>
+<pre>debug(int $mode) : <a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$mode</h4>
+<code>int</code><p>One of the debug constants</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></code></div>
+</div></div>
+</div>
+<a name="from" id="from"></a><div class="element clickable method public from" data-toggle="collapse" data-target=".from .collapse">
+<h2>Specify sender.</h2>
+<pre>from(string $address, string $name) : <a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Overwrites default From. Note that the address
+must first be added in the Postmarkapp admin interface</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$address</h4>
+<code>string</code><p>E-mail address used in From</p>
+</div>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>Optional. Name used in From</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
+<td>On invalid address</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></code></div>
+</div></div>
+</div>
+<a name="fromName" id="fromName"></a><div class="element clickable method public fromName" data-toggle="collapse" data-target=".fromName .collapse">
+<h2>Specify sender name.</h2>
+<pre>fromName(string $name) : <a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Overwrites default From name, but doesn't change address.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>Name used in From</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></code></div>
+</div></div>
+</div>
+<a name="messageHtml" id="messageHtml"></a><div class="element clickable method public messageHtml" data-toggle="collapse" data-target=".messageHtml .collapse">
+<h2>Add HTML message.</h2>
+<pre>messageHtml(string $message) : <a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Can be used in conjunction with messagePlain()</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$message</h4>
+<code>string</code><p>E-mail message</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></code></div>
+</div></div>
+</div>
+<a name="messagePlain" id="messagePlain"></a><div class="element clickable method public messagePlain" data-toggle="collapse" data-target=".messagePlain .collapse">
+<h2>Add plaintext message.</h2>
+<pre>messagePlain(string $message) : <a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Can be used in conjunction with messageHtml()</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$message</h4>
+<code>string</code><p>E-mail message</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></code></div>
+</div></div>
+</div>
+<a name="replyTo" id="replyTo"></a><div class="element clickable method public replyTo" data-toggle="collapse" data-target=".replyTo .collapse">
+<h2>Specify reply-to</h2>
+<pre>replyTo(string $address, string $name) : <a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$address</h4>
+<code>string</code><p>E-mail address used in To</p>
+</div>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>Optional. Name used in To</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
+<td>On invalid address</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></code></div>
+</div></div>
+</div>
+<a name="send" id="send"></a><div class="element clickable method public send" data-toggle="collapse" data-target=".send .collapse">
+<h2>Sends the e-mail.</h2>
+<pre>send() : boolean | array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Prints debug output if debug mode is turned on</p></p>
+<h3>Exceptions</h3>
+<table class="table table-bordered">
+<tr>
+<th><code><a href="http://php.net/manual/en/class.exception.php">\Exception</a></code></th>
+<td>If HTTP code 422, Exception with API error code and Postmark message, otherwise HTTP code.</td>
+</tr>
+<tr>
+<th><code><a href="http://php.net/manual/en/class.badmethodcallexception.php">\BadMethodCallException</a></code></th>
+<td>If From address, To address or Subject is missing</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code><code>array</code>True if success, array if DEBUG_RETURN is enabled</div>
+</div></div>
+</div>
+<a name="subject" id="subject"></a><div class="element clickable method public subject" data-toggle="collapse" data-target=".subject .collapse">
+<h2>Specify subject</h2>
+<pre>subject(string $subject) : <a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$subject</h4>
+<code>string</code><p>E-mail subject</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></code></div>
+</div></div>
+</div>
+<a name="tag" id="tag"></a><div class="element clickable method public tag" data-toggle="collapse" data-target=".tag .collapse">
+<h2>You can categorize outgoing email using the optional Tag  property.</h2>
+<pre>tag(string $tag) : <a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>If you use different tags for the different types of emails your
+application generates, you will be able to get detailed statistics
+for them through the Postmark user interface.
+Only 1 tag per email is supported.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$tag</h4>
+<code>string</code><p>One tag</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></code></div>
+</div></div>
+</div>
+<a name="to" id="to"></a><div class="element clickable method public to" data-toggle="collapse" data-target=".to .collapse">
+<h2>Specify receiver.</h2>
+<pre>to(string $address, string $name) : <a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>Use addTo to add more.</p></p>
+<table class="table table-bordered"><tr>
+<th>deprecated</th>
+<td>Use addTo.</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$address</h4>
+<code>string</code><p>E-mail address used in To</p>
+</div>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>Optional. Name used in To</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Mail_Postmark.html">\Mail_Postmark</a></code></div>
+</div></div>
+</div>
+<a name="_createAddress" id="_createAddress"></a><div class="element clickable method private _createAddress" data-toggle="collapse" data-target="._createAddress .collapse">
+<h2>_createAddress()
+        </h2>
+<pre>_createAddress($address, $name) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$address</h4></div>
+<div class="subelement argument"><h4>$name</h4></div>
+</div></div>
+</div>
+<a name="_getMimeType" id="_getMimeType"></a><div class="element clickable method private _getMimeType" data-toggle="collapse" data-target="._getMimeType .collapse">
+<h2>Try to detect the mime type</h2>
+<pre>_getMimeType($filename) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$filename</h4></div>
+</div></div>
+</div>
+<a name="_isTwoHundred" id="_isTwoHundred"></a><div class="element clickable method private _isTwoHundred" data-toggle="collapse" data-target="._isTwoHundred .collapse">
+<h2>If a number is 200-299</h2>
+<pre>_isTwoHundred($value) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$value</h4></div>
+</div></div>
+</div>
+<a name="_log" id="_log"></a><div class="element clickable method private _log" data-toggle="collapse" data-target="._log .collapse">
+<h2>Call the logger method, if one exists</h2>
+<pre>_log(array $logData) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$logData</h4>
+<code>array</code>
+</div>
+</div></div>
+</div>
+<a name="_prepareData" id="_prepareData"></a><div class="element clickable method private _prepareData" data-toggle="collapse" data-target="._prepareData .collapse">
+<h2>Prepares the data array</h2>
+<pre>_prepareData() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="_validateAddress" id="_validateAddress"></a><div class="element clickable method private _validateAddress" data-toggle="collapse" data-target="._validateAddress .collapse">
+<h2>Validates an e-mailadress</h2>
+<pre>_validateAddress($email) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$email</h4></div>
+</div></div>
+</div>
+<a name="_validateData" id="_validateData"></a><div class="element clickable method private _validateData" data-toggle="collapse" data-target="._validateData .collapse">
+<h2>Validate that the email can be sent</h2>
+<pre>_validateData() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.badmethodcallexception.php">\BadMethodCallException</a></code></th>
+<td>If From address, To address or Subject is missing</td>
+</tr></table>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24_mimeTypes" id="$_mimeTypes"> </a><div class="element clickable property public $_mimeTypes" data-toggle="collapse" data-target=".$_mimeTypes .collapse">
+<h2>$_mimeTypes</h2>
+<pre>$_mimeTypes </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24_apiKey" id="$_apiKey"> </a><div class="element clickable property private $_apiKey" data-toggle="collapse" data-target=".$_apiKey .collapse">
+<h2>$_apiKey</h2>
+<pre>$_apiKey </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24_attachments" id="$_attachments"> </a><div class="element clickable property private $_attachments" data-toggle="collapse" data-target=".$_attachments .collapse">
+<h2>$_attachments</h2>
+<pre>$_attachments </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24_bcc" id="$_bcc"> </a><div class="element clickable property private $_bcc" data-toggle="collapse" data-target=".$_bcc .collapse">
+<h2>$_bcc</h2>
+<pre>$_bcc </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24_cc" id="$_cc"> </a><div class="element clickable property private $_cc" data-toggle="collapse" data-target=".$_cc .collapse">
+<h2>$_cc</h2>
+<pre>$_cc </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24_debugMode" id="$_debugMode"> </a><div class="element clickable property private $_debugMode" data-toggle="collapse" data-target=".$_debugMode .collapse">
+<h2>$_debugMode</h2>
+<pre>$_debugMode </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24_from" id="$_from"> </a><div class="element clickable property private $_from" data-toggle="collapse" data-target=".$_from .collapse">
+<h2>$_from</h2>
+<pre>$_from </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24_headers" id="$_headers"> </a><div class="element clickable property private $_headers" data-toggle="collapse" data-target=".$_headers .collapse">
+<h2>$_headers</h2>
+<pre>$_headers </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24_messageHtml" id="$_messageHtml"> </a><div class="element clickable property private $_messageHtml" data-toggle="collapse" data-target=".$_messageHtml .collapse">
+<h2>$_messageHtml</h2>
+<pre>$_messageHtml </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24_messagePlain" id="$_messagePlain"> </a><div class="element clickable property private $_messagePlain" data-toggle="collapse" data-target=".$_messagePlain .collapse">
+<h2>$_messagePlain</h2>
+<pre>$_messagePlain </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24_replyTo" id="$_replyTo"> </a><div class="element clickable property private $_replyTo" data-toggle="collapse" data-target=".$_replyTo .collapse">
+<h2>$_replyTo</h2>
+<pre>$_replyTo </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24_subject" id="$_subject"> </a><div class="element clickable property private $_subject" data-toggle="collapse" data-target=".$_subject .collapse">
+<h2>$_subject</h2>
+<pre>$_subject </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24_tag" id="$_tag"> </a><div class="element clickable property private $_tag" data-toggle="collapse" data-target=".$_tag .collapse">
+<h2>$_tag</h2>
+<pre>$_tag </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24_to" id="$_to"> </a><div class="element clickable property private $_to" data-toggle="collapse" data-target=".$_to .collapse">
+<h2>$_to</h2>
+<pre>$_to </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a name="DEBUG_OFF" id="DEBUG_OFF"> </a><div class="element clickable constant  DEBUG_OFF" data-toggle="collapse" data-target=".DEBUG_OFF .collapse">
+<h2>DEBUG_OFF</h2>
+<pre>DEBUG_OFF </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="DEBUG_RETURN" id="DEBUG_RETURN"> </a><div class="element clickable constant  DEBUG_RETURN" data-toggle="collapse" data-target=".DEBUG_RETURN .collapse">
+<h2>DEBUG_RETURN</h2>
+<pre>DEBUG_RETURN </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="DEBUG_VERBOSE" id="DEBUG_VERBOSE"> </a><div class="element clickable constant  DEBUG_VERBOSE" data-toggle="collapse" data-target=".DEBUG_VERBOSE .collapse">
+<h2>DEBUG_VERBOSE</h2>
+<pre>DEBUG_VERBOSE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="MAX_ATTACHMENT_SIZE" id="MAX_ATTACHMENT_SIZE"> </a><div class="element clickable constant  MAX_ATTACHMENT_SIZE" data-toggle="collapse" data-target=".MAX_ATTACHMENT_SIZE .collapse">
+<h2>MAX_ATTACHMENT_SIZE</h2>
+<pre>MAX_ATTACHMENT_SIZE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="TESTING_API_KEY" id="TESTING_API_KEY"> </a><div class="element clickable constant  TESTING_API_KEY" data-toggle="collapse" data-target=".TESTING_API_KEY .collapse">
+<h2>TESTING_API_KEY</h2>
+<pre>TESTING_API_KEY </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-09-11T15:02:17-04:00.<br></footer></div>
+</div>
+</body>
+</html>
