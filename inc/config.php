@@ -30,7 +30,7 @@
 		
 		
 	$db_creds = array(
-		'rw'=>array('host'=>'localhost', 'name'=>'madison', 'user'=>'madison', 'pass'=>'D5nzW4DQD3y9LJx4')
+		'rw'=>array('host'=>'localhost', 'name'=>'', 'user'=>'', 'pass'=>'')
 		//,'r2'=>array('host'=>'', 'name'=>'', 'user'=>'', 'pass'=>'')
 	);
 	
