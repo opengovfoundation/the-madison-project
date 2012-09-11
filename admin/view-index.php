@@ -1,3 +1,11 @@
+<?php
+/**
+ * 	Madison Admin Page
+ * 
+ * 	@copyright Copyright &copy; 2012 by The OpenGov Foundation
+ *	@license http://www.gnu.org/licenses/ GNU GPL v.3
+ */
+?>
 <h1>Administrative Index</h1>
 <ul>
 	<li><a href="/admin/info">Site Info</a></li>

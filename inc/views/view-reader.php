@@ -1,3 +1,11 @@
+<?php
+/**
+ * 	Madison View Template
+ * 
+ * 	@copyright Copyright &copy; 2012 by The OpenGov Foundation
+ *	@license http://www.gnu.org/licenses/ GNU GPL v.3
+ */
+?>
 <style>#content{overflow:visible; height:600px;}</style>
 <script type="text/javascript">
 

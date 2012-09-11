@@ -1,4 +1,10 @@
 <?php
+/**
+ *	Madison controller
+ *
+ * 	@copyright Copyright &copy; 2012 by The OpenGov Foundation
+ *	@license http://www.gnu.org/licenses/ GNU GPL v.3
+ */
 
 	/* REQUIRE CONFIGURATION SCRIPT
 	=====================================================================*/
@@ -277,6 +283,9 @@
 			}
 			elseif($_GET['page'] == 'docs'){
 				include('admin/list-docs.php');
+			}
+			elseif($_GET['page'] == 'nav'){
+				include('admin/edit-nav.php');
 			}
 			else{
 				include ('inc/views/view-404.php');

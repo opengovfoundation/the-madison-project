@@ -1,3 +1,11 @@
+<?php
+/**
+ * 	Madison View Template
+ * 
+ * 	@copyright Copyright &copy; 2012 by The OpenGov Foundation
+ *	@license http://www.gnu.org/licenses/ GNU GPL v.3
+ */
+?>
 <h1>Privacy Policy</h1>
 <p>Last Updated: December 3, 2011</p>
 <p>KeeptheWebOpen.com strives to offer its visitors the many advantages of Internet technology and to provide an interactive and personalized experience. We may use Personally Identifiable Information (your name, e-mail address, street address, telephone number) subject to the terms of this privacy policy. We will never sell, barter, or rent your email address to any unauthorized third party. Period.</p>

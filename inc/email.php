@@ -1,3 +1,14 @@
+<?php
+/**
+ * 	Madison Email Template
+ * 
+ * 	@copyright Copyright &copy; 2012 by The OpenGov Foundation
+ *	@license http://www.gnu.org/licenses/ GNU GPL v.3
+ */
+
+?>
+
+
 <html>
 <body marginheight="0" marginwidth="0" style="margin:0px; background:#EFEFEF" background="#EFEFEF">
 <table width="600" border="0" cellspacing="0" cellpadding="0" align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:12px;">

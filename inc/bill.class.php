@@ -1,4 +1,10 @@
 <?php
+/**
+ * 	Madison Document Class
+ * 
+ * 	@copyright Copyright &copy; 2012 by The OpenGov Foundation
+ *	@license http://www.gnu.org/licenses/ GNU GPL v.3
+ */
 
 class Bill extends Object {
 	

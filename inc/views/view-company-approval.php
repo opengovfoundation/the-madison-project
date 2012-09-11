@@ -1,4 +1,11 @@
 <?php 
+/**
+ * 	Madison View Template
+ * 
+ * 	@copyright Copyright &copy; 2012 by The OpenGov Foundation
+ *	@license http://www.gnu.org/licenses/ GNU GPL v.3
+ */
+
 if($u->id != 1 && $u->id != 10) :
 	include('view-404.php');
 else : 	

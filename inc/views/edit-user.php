@@ -1,3 +1,11 @@
+<?php
+/**
+ * 	Madison View Template
+ * 
+ * 	@copyright Copyright &copy; 2012 by The OpenGov Foundation
+ *	@license http://www.gnu.org/licenses/ GNU GPL v.3
+ */
+?>
 <?php $create = strpos($_SERVER['REQUEST_URI'], '/edit/user') === false; ?>
 <?php if($create && !isset($_POST['rep_org'])) : ?>
 <style>.org_info{display:none}</style>

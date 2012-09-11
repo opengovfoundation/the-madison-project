@@ -1,4 +1,11 @@
 <?php
+/**
+ * 	Madison Functions File
+ * 
+ * 	@copyright Copyright &copy; 2012 by The OpenGov Foundation
+ *	@license http://www.gnu.org/licenses/ GNU GPL v.3
+ */
+
 	/* ADMIN FUNCTION - ARCHIVE COMPANIES
 	=====================================================================*/
 	function archive_companies($ac)

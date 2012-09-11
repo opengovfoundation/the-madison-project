@@ -1,4 +1,12 @@
 <?php
+/**
+ * 	Madison Facebook Configuration File
+ * 
+ * 	@copyright Copyright &copy; 2012 by The OpenGov Foundation
+ *	@license http://www.gnu.org/licenses/ GNU GPL v.3
+ */
+
+
 	//TODO: Create Madison Facebook App and plug in ID and Secret
   
   /* Live */

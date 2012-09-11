@@ -1,11 +1,13 @@
 <?php
 
 /**
- * db.class.php
+ * 	db.class.php
  *
- * Purpose is to simplify commonly used db code
+ * 	Purpose is to simplify commonly used db code
  *
- * @package inc
+ * 	@package inc
+ * 	@copyright Copyright &copy; 2012 by The OpenGov Foundation
+ *	@license http://www.gnu.org/licenses/ GNU GPL v.3
  */
 class db {
 

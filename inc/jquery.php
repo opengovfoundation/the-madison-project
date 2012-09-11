@@ -1,4 +1,10 @@
 <?php
+/**
+ * Madison Ajax Controller
+ * 
+ * 	@copyright Copyright &copy; 2012 by The OpenGov Foundation
+ *	@license http://www.gnu.org/licenses/ GNU GPL v.3
+ */ 
 
 	require('config.php');
 

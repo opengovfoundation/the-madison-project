@@ -8,7 +8,7 @@ if(!empty($_GET["width"]) && !empty($_GET["height"])) {
 ?>
 <html>
 <head>
-    <title>Oversight & Government Reform - Live Stream</title>
+    <title></title>
 </head>
 <body style="margin: 0;">
 	<?php 
@@ -19,8 +19,8 @@ if(!empty($_GET["width"]) && !empty($_GET["height"])) {
 	<script type="text/javascript">
 		jwplayer("hoclive").setup({
 			flashplayer: "mediaplayer-5.8-licensed/player.swf",
-			abouttext: "House Oversight & Government Reform Committee",
-			aboutlink: "http://oversight.house.gov/",
+			abouttext: "",
+			aboutlink: "",
 			width: <?php echo $width;?>,
 			height: <?php echo $height;?>,
 			skin: "skins/glow/glow.zip",

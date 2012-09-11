@@ -1,5 +1,12 @@
 <?php
 
+/**
+ *  Madison Object Class
+ * 
+ * 	@copyright Copyright &copy; 2012 by The OpenGov Foundation
+ *	@license http://www.gnu.org/licenses/ GNU GPL v.3
+ */
+
 class Object {
 	
 	var $id = 0;

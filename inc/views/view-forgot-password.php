@@ -1,3 +1,11 @@
+<?php
+/**
+ * 	Madison View Template
+ * 
+ * 	@copyright Copyright &copy; 2012 by The OpenGov Foundation
+ *	@license http://www.gnu.org/licenses/ GNU GPL v.3
+ */
+?>
 <h1>Forgot Your Password?</h1>
 <?php if(isset($response) && $response['type'] == 'error') : ?>
 <div class="error">Error: <?=$response['message']?></div>

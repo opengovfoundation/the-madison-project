@@ -1,4 +1,13 @@
 <?php
+/**
+ * 	Madison 'Top Notes' Script
+ * 	Run on cron to determine the most popular notes
+ * 	
+ * 
+ * 	@copyright Copyright &copy; 2012 by The OpenGov Foundation
+ *	@license http://www.gnu.org/licenses/ GNU GPL v.3
+ */
+
 
 $user = '';
 
