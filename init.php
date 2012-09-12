@@ -175,7 +175,7 @@
                                     <div>Position: '.$u->post['position'].'</div>
                                     <div>URL: '.$u->post['url'].'</div><br />
 									<a href="'.SERVER_URL.'/company-approval">Click Here to Approve This Account.</a>';
-						email('seamus.kraft@gmail.com', 'An Organization Has Signed Up on KeeptheWebOpen.com', $message);
+						email('your_email', 'An Organization Has Signed Up on KeeptheWebOpen.com', $message);
 					}
 				}
 				break;
