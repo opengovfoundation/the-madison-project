@@ -98,7 +98,7 @@ Please send all questions and feedback to sayhello {AT} opengovfoundation.org or
 We are using the built-in gitHub bug tracker for this project. 
 
 ### Acknowledgements
-We'd like to thank Matt Turow, Jayson Manship, Chris Birk, Brooke McKinney, Caleb Duke, and Jeremiah Reising of [inSourceCode, LLC](http://www.insourcecode.com) for turning Madison from an idea into something real, and for their continued support and involvement in the Madison Project.
+We'd like to thank Matt Turow, Jayson Manship, Chris Birk, Brooke McKinney, Caleb D., and Jeremiah Reising of [inSourceCode, LLC](http://www.insourcecode.com) for turning Madison from an idea into something real, and for their continued support and involvement in the Madison Project.
 
 We'd like to thank Karl Fogel of [Open Tech Strategies, LLC](http://opentechstrategies.com) for volunteering his time and expertise in preparing Madison for posting on GitHub.
 
