@@ -15,7 +15,7 @@
     <div class="success"><?=$response['message']?></div>
     <?php endif; ?>
     <?php if(isset($_GET['activation-successful'])) : ?>
-    <div class="success">You've Successfully Activated Your KeeptheWebOpen.com Account.  Login Below.</div>
+    <div class="success">You've Successfully Activated Your <?php echo SITE_TITLE; ?> Account.  Login Below.</div>
     <?php endif; ?>
     <form method="post" action="<?=SERVER_URL?>/login<?=isset($_GET['redirect']) ? '?redirect='.$_GET['redirect'] : ''?>" id="frm">
         <table width="100%" border="0" cellspacing="0" cellpadding="5">

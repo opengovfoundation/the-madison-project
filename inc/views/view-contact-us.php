@@ -42,10 +42,4 @@
   <input type="submit" value="Submit Feedback" style="margin:20px 0 40px 188px;" />
   <input name="action" type="hidden" value="feedback-submit" />
 </form>
-<!--<h2 style="margin-top:50px;">Contact Us</h2>
-<strong>KeeptheWebOpen.com</strong><br />
-14074 Trade Center Drive Suite 228 <br />
-Fishers, IN 46038<br /><br />
-317-723-6155<br />
-<a href="mailto:info@keepthewebopen.com">info@keepthewebopen.com</a>-->
 </div>

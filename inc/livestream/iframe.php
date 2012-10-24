@@ -11,9 +11,6 @@ if(!empty($_GET["width"]) && !empty($_GET["height"])) {
     <title></title>
 </head>
 <body style="margin: 0;">
-	<?php 
-		if(strpos($_SERVER["HTTP_REFERER"], "keepthewebopen.com/sopa") !== false || strpos($_SERVER["HTTP_REFERER"], "keepthewebopen.com/open") !== false) : ?>
-
 	<div id="hoclive"><a href="http://www.adobe.com/go/getflashplayer" target="_blank"><img src="images/flash.jpg" title="Install/Upgrade Adobe Flash Player" alt="Install/Upgrade Adobe Flash Player" border="0"/></a></div>
 	<script type="text/javascript" src="mediaplayer-5.8-licensed/jwplayer.js"></script>
 	<script type="text/javascript">
@@ -31,6 +28,5 @@ if(!empty($_GET["width"]) && !empty($_GET["height"])) {
 			provider: "rtmp"
 		});	
 	</script>
-    <?php endif; ?>
 </body>
 </html>

@@ -324,7 +324,7 @@ class Mail_Postmark
 		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
 		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
-		curl_setopt($ch, CURLOPT_CAINFO, '/home/keeptwo/sites/keepthewebopen.com/htdocs/inc/cacert.pem');
+		curl_setopt($ch, CURLOPT_CAINFO, '/inc/cacert.pem');
 		
 		$return = curl_exec($ch);
 		$curlError = curl_error($ch);
