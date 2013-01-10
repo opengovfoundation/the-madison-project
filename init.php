@@ -60,7 +60,7 @@
 	
 	/* CHECK IF REQUESTED BILL IS DIFFERENT THAN SESSION BILL
 	=====================================================================*/
-	if($b->slug != $_GET['page'] && $bill_id = get_bill_by_slug($_GET['page']))
+	if(isset($b->slug) && $b->slug != $_GET['page'] && $bill_id = get_bill_by_slug($_GET['page']))
 		$b = new Bill($bill_id, $db);
 
 	$u->db = $db;
@@ -271,7 +271,7 @@
 			include('inc/views/view-notes.php');
 		}
 	}
-	elseif($type == 'page' && $_GET['page'] == $b->slug) // Show Bill Reader App
+	elseif($type == 'page' && isset($b->slug) && $_GET['page'] == $b->slug) // Show Bill Reader App
 		include('inc/views/'.$action.'-reader.php');
 	elseif($type == 'admin'){
 		if($u->loggedin && $u->user_level == 1){
@@ -288,7 +288,7 @@
 				include('admin/edit-nav.php');
 			}
 			elseif($_GET['page'] == 'company-approval'){
-				include('admin/company-approval.php');
+				include('admin/approve-company.php');
 			}
 			else{
 				include ('inc/views/view-404.php');
