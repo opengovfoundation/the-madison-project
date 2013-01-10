@@ -54,7 +54,15 @@
 	//$_GET['page'] = $type == 'index' || $_SERVER['REQUEST_URI'] == '/' || strpos($_SERVER['REQUEST_URI'], '/?') !== false ? 'digital-bill-of-rights' : $_GET['page'];
 
 	$u  = isset($_SESSION['user']) ? $_SESSION['user'] : (isset($_COOKIE['user']) ? new User($_COOKIE['user'], $db) : new User(0, $db));
-	$b  = isset($_SESSION['bill']) ? $_SESSION['bill'] : new Bill(1, $db);
+	if(!isset($_SESSION['bill'])){
+		$firstId = mysql_query("SELECT id from " . DB_TBL_BILLS . " limit 1");
+		$firstId = mysql_result($firstId, 0);
+		
+		$b = $_SESSION['bill'] = new Bill($firstId, $db);
+	}
+	else{
+		$b = $_SESSION['bill'];
+	}
 	
 	//print_r($b);
 	
@@ -271,7 +279,7 @@
 			include('inc/views/view-notes.php');
 		}
 	}
-	elseif($type == 'page' && isset($b->slug) && $_GET['page'] == $b->slug) // Show Bill Reader App
+	elseif(($type == 'page' && isset($b->slug) && $_GET['page'] == $b->slug) || ($_SERVER['REQUEST_URI'] == '/' && isset($b->slug))) // Show Bill Reader App
 		include('inc/views/'.$action.'-reader.php');
 	elseif($type == 'admin'){
 		if($u->loggedin && $u->user_level == 1){
