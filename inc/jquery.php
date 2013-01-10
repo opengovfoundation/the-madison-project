@@ -77,7 +77,7 @@
 
 					$suggestions = $b->get_notes_by_part($_POST['part_id'], 'suggestions', true);
 					$comments	 = $b->get_notes_by_part($_POST['part_id'], 'comments', true);
-					$response 	 = array('status'=>'OK', 'message'=>'', 'data'=>array('suggestions'	=>array('total'=>count($suggestions), 'suggestions'=>$suggestions), 
+					$response 	 = array('status'=>'OK', 'message'=>'', 'slug'=>$b->slug, 'data'=>array('suggestions'	=>array('total'=>count($suggestions), 'suggestions'=>$suggestions), 
 																					  'comments'	=>array('total'=>count($comments), 'comments'=>$comments)));
 					break;
 				
