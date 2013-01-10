@@ -6,7 +6,7 @@
  *	@license http://www.gnu.org/licenses/ GNU GPL v.3
  */
 ?>
-<h1>OPEN</h1>
+<h1>HOME</h1>
 <div id="generic-content">
 	HOME
 </div>

@@ -13,6 +13,7 @@
 	define('DB_NAME', '');
 	define('DB_USER', '');
 	define('DB_PASS', '');
+	define('SITE_TITLE', 'Madison');
 
 	/**
 	 *	Server Definitions
