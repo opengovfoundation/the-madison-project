@@ -31,9 +31,9 @@
 	=====================================================================*/
 	global $u, $b, $db;
 	
-	print_r($_SERVER['REQUEST_URI']);
-	echo "<hr>";
-	print_r($_SERVER['QUERY_STRING']);
+	//print_r($_SERVER['REQUEST_URI']);
+	//echo "<hr>";
+	//print_r($_SERVER['QUERY_STRING']);
 	
 	/* LOG USER OUT
 	=====================================================================*/
