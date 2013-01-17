@@ -65,5 +65,20 @@ class db {
 		
 		return mysql_affected_rows($this->mySQLconnRW);
 	}
+	
+	public function insertOrUpdate($t, $u, $w = ''){
+		if(empty($u))
+			return 0;
+		
+		$update = '';
+		
+		foreach($u as $k=>$v)
+			$update .= ",`".$k."`=".($v == $k.'='.$k.'+1' || $v == $k.'='.$k.'-1' ? $this->clean($v) : "'".$this->clean($v)."'");
+
+		mysql_query("REPLACE INTO ".$t." SET ".substr($update, 1).($w == '' ? "" : " WHERE ".$w), $this->mySQLconnRW) or error_log('MYSQL ERROR: '.mysql_error());
+		
+		return mysql_affected_rows($this->mySQLconnRW);
+		
+	}
 }
 ?>

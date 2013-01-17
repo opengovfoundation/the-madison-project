@@ -4,7 +4,7 @@
 			$nav = $_POST['nav-menu'];
 			$serialized = serialize($nav);
 			
-			$rows = $db->update('site_info', array('meta_value'=>$serialized), "meta_key = 'nav_menu'");
+			$rows = $db->insertOrUpdate('site_info', array('meta_key'=>'nav_menu', 'meta_value'=>$serialized));
 			
 			$ret = array('rows'=>$rows);
 			echo json_encode($ret);
