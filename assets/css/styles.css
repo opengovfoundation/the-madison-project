@@ -349,6 +349,9 @@ textarea {
 				vertical-align:top;
 				margin-top:10px;
 			}
+			.subnav_div:first-child{
+				display:none;
+			}
 			.dropdown_arrow{margin-left:5px;}
 	
 /* VIEW - READER
