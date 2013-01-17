@@ -68,7 +68,7 @@
 	
 	/* CHECK IF REQUESTED BILL IS DIFFERENT THAN SESSION BILL
 	=====================================================================*/
-	if(isset($b->slug) && $b->slug != $_GET['page'] && $bill_id = get_bill_by_slug($_GET['page']))
+	if(isset($b->slug) && $b->slug != $_GET['page'] && $_SERVER['REQUEST_URI'] != '/' && $bill_id = get_bill_by_slug($_GET['page']))
 		$b = new Bill($bill_id, $db);
 
 	$u->db = $db;
@@ -226,6 +226,9 @@
 				$response = array('type'=>'success', 'message'=>'Feedback Submitted Successfully.');
 				
 				break;
+			case 'save-nav' :
+				require_once('admin/admin-ajax.php');
+				exit;
 		}
 	}
 
