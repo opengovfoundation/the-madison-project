@@ -27,7 +27,6 @@
 	$nav = mysql_query('SELECT meta_value FROM site_info WHERE meta_key = "nav_menu"');
 	$nav = mysql_result($nav, 0);
 	$nav = unserialize($nav);
-	//print_r($nav);
 	
 	//Recuresively build child navigation
 	function buildChildNav($parent){
@@ -43,6 +42,7 @@
 					<div>
 						<span><?php echo $child['label']; ?></span>
 						<input type="hidden" value="<?php echo $child['link']; ?>"/>
+						<p class="delete_nav_item">delete</p>
 					</div>
 				</li>
 				<?php
@@ -61,6 +61,7 @@
 				<div>
 					<span><?php echo $navItem['label']; ?></span>
 					<input type="hidden" value="<?php echo $navItem['link']; ?>"/>
+					<p class="delete_nav_item">delete</p>
 				</div>
 				<?php 
 					buildChildNav($navItem); 
@@ -69,7 +70,7 @@
 		<?php endforeach; ?>
 	</ol>
 	<input type="submit" value="Save Nav" id="save_nav"/>
-	<div id="save_message">
+	<div id="save_message" class="ajax_message hidden">
 		
 	</div>
 </div>
@@ -119,7 +120,7 @@
 				var slug = checkbox.val();
 				
 				//Append item to nav list
-				$('#nav_list').append('<li class="nav_item"><div><span>' + label + '</span><input type="hidden" value="/' + slug + '" /></div></li>');
+				$('#nav_list').append('<li class="nav_item"><div><span>' + label + '</span><input type="hidden" value="/' + slug + '" /><p class="delete_nav_item">delete</p></div></li>');
 				
 				//Uncheck the item
 				checkbox.prop('checked', false);
@@ -192,6 +193,14 @@
 			else{//Error
 				$('#save_message').html('There was an error updating the nav menu.');
 			}
+			
+			$('#save_message').removeClass('hidden');
 		});
+	});
+	
+	//Delete item from nav menu
+	$('.delete_nav_item').click(function(){
+		var parent = $(this).parent('div').parent('.nav_item');
+		parent.remove();
 	});
 </script>

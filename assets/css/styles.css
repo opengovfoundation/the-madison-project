@@ -1100,9 +1100,60 @@ h1.sopa-markup{
 
 
 /* Admin Content Styling */
-
+#content.admin{margin-top:50px;}
 #content.admin input[type="submit"]{ display:block; }
-
+	
+	/* Nav Admin Page */
+	.list_wrapper{
+		display:inline-block;
+		vertical-align:top;
+		min-width:50%;
+	}
+		.list_wrapper ol{list-style-type:none;}
+		.list_wrapper .sortable li{position:relative;}
+		.list_wrapper .sortable li div{
+			border: 1px solid #d4d4d4;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			border-color: #D4D4D4 #D4D4D4 #BCBCBC;
+			padding: 6px;
+			margin: 0;
+			cursor: move;
+			background: #f6f6f6;
+			background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed));
+			background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+			background: -o-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+			background: -ms-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+			background: linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 );
+		}
+		
+	.menu_items{
+		display:inline-block;
+		vertical-align:top;
+		margin-left:20px;
+	}
+		.menu_items li{
+			list-style:none;
+		}
+	.ajax_message{
+		text-align:center;
+		float:left;
+		padding:5px 10px;
+		background-color:lightyellow;
+		border:1px solid darkgoldenrod;
+	}
+	.delete_nav_item{
+		display:inline;
+		position:absolute;
+		right:0;
+		margin:0 10px 0 0;
+		text-decoration:underline;
+		color:red;
+		cursor:pointer;
+	}
 
 
 

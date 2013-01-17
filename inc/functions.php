@@ -126,7 +126,12 @@
 	/* DISPLAY HTML HEADER AND META INFORMATION AS WELL AS NAVIGATION, ETC...
 	=====================================================================*/
 	function get_header() { 
-		global $u, $facebook; ?>
+		global $u, $facebook; 
+		
+		$nav = mysql_query('SELECT meta_value FROM site_info WHERE meta_key = "nav_menu"');
+		$nav = mysql_result($nav, 0);
+		$nav = unserialize($nav);
+	?>
 		
     <!DOCTYPE html>
 	<html>
@@ -149,7 +154,7 @@
 				<script src="<?=SERVER_URL?>/assets/js/jquery.ui.widget.js"></script>
 				<script src="<?= SERVER_URL?>/assets/js/jquery.ui.mouse.js"></script>
 				<script src="<?= SERVER_URL?>/assets/js/jquery.ui.sortable.js"></script>
-				<script src="<?=SERVER_URL?>/jquery.mjs.nestedSortable.js"></script>
+				<script src="<?=SERVER_URL?>/assets/js/jquery.mjs.nestedSortable.js"></script>
 			<?php else : ?>
 				<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 				<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
@@ -192,7 +197,15 @@
         	</div>
         	<div id="nav">
         		<div id="subnav-items">
-           			<a href="<?=SERVER_URL?>/about">
+					<?php foreach($nav as $navItem) : ?>
+						<?php if(!isset($navItem['children'])) : ?>
+							<a href="<?php echo SERVER_URL . $navItem['link']; ?>">
+								<div class="subnav-item"><?php echo $navItem['label']; ?></div>
+							</a>
+						<?php endif; ?>
+					<?php endforeach; ?>
+           			<!--
+					<a href="<?=SERVER_URL?>/about">
 						<div class="subnav-item">About</div>
 					</a>
            			<div class="subnav_div"></div>
@@ -232,6 +245,7 @@
               		<a href="<?=SERVER_URL?>/acta"><div class="subnav-item">ACTA</div></a>
               		<div class="subnav_div"></div>
               		<a href="<?=SERVER_URL?>/tpp"><div class="subnav-item">TPP</div></a>
+					-->
             	</div>
         	</div>
         	<div id="nav-items">
