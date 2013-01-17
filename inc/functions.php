@@ -204,7 +204,12 @@
 								<div class="subnav-item"><?php echo $navItem['label']; ?></div>
 							</a>
 						<?php else : ?>
-							<div class="subnav_dropdown"><a href="<?php echo SERVER_URL . $navItem['link']; ?>"><?php echo $navItem['label']?></a>
+							<div class="subnav_dropdown">
+								<a href="<?php echo SERVER_URL . $navItem['link']; ?>">
+									<div class="subnav-item">
+									<?php echo $navItem['label']?><img src="/assets/i/arrow-down.png" class="dropdown_arrow"/>	
+									</div>
+								</a>
 								<ul>
 									<?php foreach($navItem['children'] as $child) : ?>
 										<li>
