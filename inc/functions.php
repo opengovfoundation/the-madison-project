@@ -197,11 +197,24 @@
         	</div>
         	<div id="nav">
         		<div id="subnav-items">
-					<?php foreach($nav as $navItem) : ?>
+					<?php $first = true; foreach($nav as $navItem) : ?>
+						<div class="subnav_div"></div>
 						<?php if(!isset($navItem['children'])) : ?>
 							<a href="<?php echo SERVER_URL . $navItem['link']; ?>">
 								<div class="subnav-item"><?php echo $navItem['label']; ?></div>
 							</a>
+						<?php else : ?>
+							<div class="subnav_dropdown"><a href="<?php echo SERVER_URL . $navItem['link']; ?>"><?php echo $navItem['label']?></a>
+								<ul>
+									<?php foreach($navItem['children'] as $child) : ?>
+										<li>
+											<a href="<?php echo SERVER_URL . $child['link']; ?>">
+												<?php echo $child['label']; ?>
+											</a>
+										</li>
+									<?php endforeach; ?>
+								</ul>
+							</div>
 						<?php endif; ?>
 					<?php endforeach; ?>
            			<!--
