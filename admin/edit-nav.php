@@ -95,7 +95,8 @@
 			$('.sortable').nestedSortable({
 				handle: 'div',
 				items: 'li',
-				toleranceElement: 'div'
+				toleranceElement: 'div',
+				maxLevels: 2
 			});
 		}
 		catch(err){
