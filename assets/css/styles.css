@@ -1171,6 +1171,21 @@ h1.sopa-markup{
 		cursor:pointer;
 	}
 
+	/* Document Admin Page */
+	.edit_doc_info{
+		display:inline-block;
+		vertical-align:top;
+	}
+		.edit_doc_info h2{
+			text-align:center;
+		}
+	.edit_doc_content{
+		display:inline-block;
+		vertical-align:top;
+	}
+		.edit_doc_info h2{
+			text-align:center;
+		}
 
 
 
