@@ -6,6 +6,40 @@
  *	@license http://www.gnu.org/licenses/ GNU GPL v.3
  */
 
+	/**
+	 * 	Admin Functino - Create Document
+	 *  @param [string] title
+	 * 	@param [string] slug
+	 */
+	function create_doc($title, $slug){
+		global $db;
+		
+		//Must have title and slug
+		if(empty($title) || empty($slug)){
+			error_log("Cannot create document (missing title or slug)");
+			return false;
+		}
+		
+		//Check that no other document has the same slug
+		$ret = mysql_query('select id from ' . DB_TBL_BILLS . ' where slug = "' . $slug . '"', $db->mySQLconnR);
+		if(mysql_num_rows($ret) > 0){
+			error_log("A document has already been created with slug = '$slug'");
+			return false;
+		}
+		
+		//Insert title and slug into doc table
+		$doc_id = $db->insert(DB_TBL_BILLS, array('bill'=>$title, 'slug'=>$slug));
+		
+		//Insert first line of dummy content into content table
+		$init_id = $db->insert(DB_TBL_BILL_CONTENT, array('bill_id'=>$doc_id, 'parent'=>0, 'content'=>'New Document Content'));
+		
+		//Update doc init section
+		$db->update(DB_TBL_BILLS, array('init_section'=>$init_id), "id = $doc_id");
+		
+		//Return doc id
+		return $doc_id; 
+	}
+
 	/* ADMIN FUNCTION - ARCHIVE COMPANIES
 	=====================================================================*/
 	function archive_companies($ac)
