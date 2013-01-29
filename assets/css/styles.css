@@ -138,6 +138,7 @@ textarea {
 	border:2px solid #693;	
 	margin:10px 0;
 }
+.red{color:red;}
 
 /* BODY STRUCTURE
 =====================================================================*/
@@ -1118,12 +1119,12 @@ h1.sopa-markup{
 /* Admin Content Styling */
 #content.admin{margin-top:50px;}
 #content.admin input[type="submit"]{ display:block; }
+img.admin_info_ico{position:relative; top:5px; cursor:help;}
 	
 	/* Nav Admin Page */
 	.list_wrapper{
 		display:inline-block;
 		vertical-align:top;
-		min-width:49%;
 	}
 		.list_wrapper ol{list-style-type:none;}
 		.list_wrapper .sortable li{position:relative;}
@@ -1169,18 +1170,40 @@ h1.sopa-markup{
 		text-decoration:underline;
 		color:red;
 		cursor:pointer;
+		z-index:10;
+		top:5px;
+	}
+	.add_doc_item{
+		display:inline;
+		position:absolute;
+		margin:0;
+		right:22px;
+		border:1px solid black;
+		border-radius:10px;
+		padding:0 4px;
+		top:6px;
+		cursor:pointer;
+	}
+	.add_doc_item:hover{
+		background-color:lightgray;
 	}
 
 	/* Document Admin Page */
 	.edit_doc_info{
-		display:inline-block;
 		vertical-align:top;
+		text-align:center;
+		
 	}
 		.edit_doc_info h2{
 			text-align:center;
 		}
+		.edit_doc_info input[type="submit"]{
+			margin:0 auto;
+		}
+		.edit_info_link{text-decoration:underline; cursor:pointer;}
+		
 	.edit_doc_content{
-		display:inline-block;
+		display:block;
 		vertical-align:top;
 	}
 		.edit_doc_info h2{
