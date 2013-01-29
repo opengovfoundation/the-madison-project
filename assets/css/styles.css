@@ -1123,7 +1123,7 @@ h1.sopa-markup{
 	.list_wrapper{
 		display:inline-block;
 		vertical-align:top;
-		min-width:50%;
+		min-width:49%;
 	}
 		.list_wrapper ol{list-style-type:none;}
 		.list_wrapper .sortable li{position:relative;}
@@ -1161,7 +1161,7 @@ h1.sopa-markup{
 		background-color:lightyellow;
 		border:1px solid darkgoldenrod;
 	}
-	.delete_nav_item{
+	.delete_nav_item, .delete_doc_item{
 		display:inline;
 		position:absolute;
 		right:0;
@@ -1186,7 +1186,24 @@ h1.sopa-markup{
 		.edit_doc_info h2{
 			text-align:center;
 		}
-
+		.doc_item_content{
+			max-height:0;
+			display:block;
+			clear:both;
+			margin:0;
+			overflow:hidden;
+			transition: max-height .5s;
+			-moz-transition: max-height .5s; /* Firefox 4 */
+			-webkit-transition: max-height .5s; /* Safari and Chrome */
+			-o-transition: max-height .5s; /* Opera */
+		}
+		.doc_item_content.expanded{
+			max-height:999px;
+		}
+		.doc_item_content textarea{
+			width:98%;
+			resize:both;
+		}
 
 
 

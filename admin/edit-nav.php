@@ -28,7 +28,7 @@
 	$nav = mysql_result($nav, 0);
 	$nav = unserialize($nav);
 	
-	//Recuresively build child navigation
+	//Recursively build child navigation
 	function buildChildNav($parent){
 		if(!isset($parent['children'])){
 			return;
