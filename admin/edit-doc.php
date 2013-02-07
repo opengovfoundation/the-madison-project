@@ -41,21 +41,18 @@
 					<img style="cursor:pointer;" src="/assets/i/arrow-down.png" alt="Dropdown Arrow" class="dropdown_arrow" />
 					<?php echo $content; ?>
 				</span>
-				<input type="hidden" value="<?php echo $parent['id']; ?>"/>
+				<input name="content_id" type="hidden" value="<?php echo $parent['id']; ?>"/>
 				<p class="add_doc_item">+</p>
 				<p class="delete_doc_item">x</p>
 				<p class="doc_item_content"><textarea><?php echo $parent['content']; ?></textarea></p>
 			</div>
 		</li>
-		<?php
-		if(!isset($parent['children'])){
-			return;
-		}
-		?>
 		<ol>
 			<?php 
-				foreach($parent['children'] as $child){
-					buildSection($child);
+				if(isset($parent['children'])){
+					foreach($parent['children'] as $child){
+						buildSection($child);
+					}
 				}
 			?>
 		</ol>
@@ -95,19 +92,47 @@
 			?>
 			<div id="doc_tab_<?php echo $c; ?>" class="doc_section <?php echo $c == 0 ? '' : 'hidden'?>">
 				<?php //Create nestedSortable lists in each tab ?>
-				<ol id="doc_list_<?php echo $c; ?>" class="sortable">
+				<ol id="doc_list_<?php echo $c; ?>" class="sortable doc_list">
 					<?php buildSection($section_parts); ?>
 				</ol>
 			</div>
 			<?php
 			endforeach;
 		?>
+		<input id="doc_id" name="doc_id" type="hidden" value="<?php echo $bill_id; ?>"/>
+		<input type="submit" value="Save Doc" id="save_doc"/>
+		<div id="save_message" class="ajax_message hidden"></div>
 	</div>
 </div>
-<div class="add_doc_content list_wrapper">
-	<h2 class="center">Add Content:</h2>
-</div>
 <script type="text/javascript">
+	function saveDocument(){
+		var doc_items = new Array();
+		var doc_id = $('#doc_id').val();
+		
+		$('.doc_item').each(function(){
+			var parent = $(this).parent('ol').parent('.doc_item');
+			if(parent.length == 0){
+				parent_id = 0;
+			}
+			else{
+				parent_id = parent.children('div').children('input[name="content_id"]').val();
+			}
+			
+			var content = $(this).children('div').children('.doc_item_content').children('textarea').val();
+			var id = $(this).children('div').children('input[name="content_id"]').val();
+			
+			ret = {"id":id, "parent_id":parent_id, "content":content};
+			doc_items.push(ret);
+		});
+		
+		$.post('admin/admin-ajax.php', {"action":"save-doc", "doc_id": doc_id, "doc_items":doc_items}, function(data){
+			console.log(data);
+			data = JSON.parse(data);
+			
+			$('#save_message').html(data.msg).removeClass('hidden');
+		});
+	}
+
 	$(document).ready(function(){
 		try{
 			$('.sortable').nestedSortable({
@@ -116,6 +141,20 @@
 				toleranceElement: 'div',
 				maxLevels: 0
 			});
+			$('.doc_item .dropdown_arrow').click(dropdown_arrow_handler);
+			$('.delete_doc_item').click(delete_doc_handler);
+			$('.add_doc_item').click(add_doc_handler);
+			$('.edit_info_link').click(function(){
+				if($(this).hasClass('red')){
+					$(this).removeClass('red');
+					$('.edit_doc_info').hide();
+				}
+				else{
+					$(this).addClass('red');
+					$('.edit_doc_info').show();
+				}
+			});
+			$('#save_doc').click(saveDocument);
 		}
 		catch(err){
 			console.log(err);
@@ -135,9 +174,8 @@
 		
 		//Append a div and the child elements to the parent doc item
 		doc_item.append($('<div></div>').append([sib1, sib2, sib3, sib4, sib5]));
-		
 		//Append the parent doc item to the list
-		$(this).parent('div').parent('.doc_item').after(doc_item);
+		$(this).parent('div').parent('.doc_item').siblings('ol').prepend(doc_item);
 	}
 	function delete_doc_handler(){
 		$(this).parent('div').parent('.doc_item').remove();
@@ -152,18 +190,4 @@
 			sibling_content.addClass('expanded');
 		}
 	}
-	
-	$('.doc_item .dropdown_arrow').click(dropdown_arrow_handler);
-	$('.delete_doc_item').click(delete_doc_handler);
-	$('.add_doc_item').click(add_doc_handler);
-	$('.edit_info_link').click(function(){
-		if($(this).hasClass('red')){
-			$(this).removeClass('red');
-			$('.edit_doc_info').hide();
-		}
-		else{
-			$(this).addClass('red');
-			$('.edit_doc_info').show();
-		}
-	});
 </script>
