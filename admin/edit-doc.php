@@ -30,7 +30,7 @@
 	function buildSection($parent){
 		?>
 		<li class="doc_item">
-			<div>
+			<div class="sort_handle">
 				<span>
 					<?php
 						$content = $parent['content'];
@@ -44,6 +44,16 @@
 				<input name="content_id" type="hidden" value="<?php echo $parent['id']; ?>"/>
 				<p class="add_doc_item">+</p>
 				<p class="delete_doc_item">x</p>
+				<div class="floatingCirclesG hidden">
+					<div class="f_circleG frotateG_01"></div>
+					<div class="f_circleG frotateG_02"></div>
+					<div class="f_circleG frotateG_03"></div>
+					<div class="f_circleG frotateG_04"></div>
+					<div class="f_circleG frotateG_05"></div>
+					<div class="f_circleG frotateG_06"></div>
+					<div class="f_circleG frotateG_07"></div>
+					<div class="f_circleG frotateG_08"></div>
+				</div>
 				<p class="doc_item_content"><textarea><?php echo $parent['content']; ?></textarea></p>
 			</div>
 		</li>
@@ -162,12 +172,33 @@
 	});
 	
 	function add_doc_handler(){
+		var doc_id = $('#doc_id').val();
+		var parent_id = $(this).siblings('input[name="content_id"]').val();
+		var success;
+		var new_id;
+		//Get new content id
+		$.post('admin/admin-ajax.php', {'action':'add-doc-section', 'doc_id':doc_id, 'parent_id':parent_id}, function(data){
+			data = JSON.parse(data);
+			
+			success = data.success;
+			if(!success){
+				alert(data.msg);
+			}
+			else{
+				new_id = data.new_id;
+			}
+		});
+		
+		if(success == false){
+			return;
+		}
+		
 		//Create parent doc item
 		var doc_item = $('<li class="doc_item"></li>');
 		
 		//Create objects to be appended to parent doc item
 		var sib1 = $('<span></span>').append($('<img style="cursor:pointer;" src="/assets/i/arrow-down.png" alt="Dropdown Arrow" class="dropdown_arrow" />').click(dropdown_arrow_handler)).append(' New Content');
-		var sib2 = $('<input type="hidden" value="" />');
+		var sib2 = $('<input type="hidden" value="' + new_id + '" />');
 		var sib3 = $('<p class="add_doc_item">+</p>').click(add_doc_handler);
 		var sib4 = $('<p class="delete_doc_item">x</p>').click(delete_doc_handler);
 		var sib5 = $('<p class="doc_item_content"><textarea>New Content</textarea></p>');
@@ -178,7 +209,29 @@
 		$(this).parent('div').parent('.doc_item').siblings('ol').prepend(doc_item);
 	}
 	function delete_doc_handler(){
-		$(this).parent('div').parent('.doc_item').remove();
+		$('.delete_doc_item').addClass('hidden');
+		$('.floatingCirclesG').removeClass('hidden');
+		$('.f_circleG').addClass('animated');
+		
+		var success = true;
+		var id = $(this).siblings('input[name="content_id"]').val();
+		console.log('posting');
+		try{
+			$.post('admin/admin-ajax.php', {'action':'delete-doc-section', 'id':id}, function(data){
+				data = JSON.parse(data);
+				console.log(data);
+				if(data.success == false){
+					alert(data.msg);
+				}
+				else{
+					window.location.reload();
+				}
+			});
+		}
+		catch(err)
+		{
+			console.log(err);
+		}
 	}
 	function dropdown_arrow_handler(){
 		var sibling_content = $(this).parent('span').siblings('.doc_item_content');
@@ -189,5 +242,8 @@
 		else{
 			sibling_content.addClass('expanded');
 		}
+	}
+	function loadSpinner(element){
+		
 	}
 </script>

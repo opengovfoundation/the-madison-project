@@ -229,6 +229,8 @@
 			case 'save-nav' :
 			case 'create-doc' :
 			case 'save-doc' :
+			case 'add-doc-section' :
+			case 'delete-doc-section' :
 				require_once('admin/admin-ajax.php');
 				exit;
 		}

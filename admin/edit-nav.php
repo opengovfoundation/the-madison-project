@@ -39,7 +39,7 @@
 			foreach($parent['children'] as $child){
 				?>
 				<li class="nav_item">
-					<div>
+					<div class="sort_handle">
 						<span><?php echo $child['label']; ?></span>
 						<input type="hidden" value="<?php echo $child['link']; ?>"/>
 						<p class="delete_nav_item">delete</p>
@@ -58,7 +58,7 @@
 		<h2>Navigation</h2>
 		<?php foreach($nav as $navItem) : ?>	
 			<li class="nav_item">
-				<div>
+				<div class="sort_handle">
 					<span><?php echo $navItem['label']; ?></span>
 					<input type="hidden" value="<?php echo $navItem['link']; ?>"/>
 					<p class="delete_nav_item">delete</p>

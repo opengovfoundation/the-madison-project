@@ -36,6 +36,38 @@
 				
 				echo json_encode(array('msg'=>$msg, 'success'=>$success));
 				break;
+			case 'add-doc-section':
+				$doc_id = $_POST['doc_id'];
+				$parent_id = $_POST['parent_id'];
+				$query = "INSERT INTO " . DB_TBL_BILL_CONTENT . " (bill_id, parent, content) VALUES ('$doc_id', '$parent_id', 'New Content')";
+				if(!mysql_query($query, $db->mySQLconnRW)){
+					error_log("ERROR CREATING NEW DOCUMENT SECTION: " . mysql_error());
+					$msg = "Failed to create section";
+					$success = false;
+					$new_id = -1;
+				}
+				else{
+					$msg = "Created section";
+					$success = true;
+					$new_id = mysql_insert_id();
+				}
+				echo json_encode(array('msg'=>$msg, 'success'=>$success, 'new_id'=>$new_id));
+				break;
+			case 'delete-doc-section':
+				$id = $_POST['id'];
+				$query = "DELETE FROM " . DB_TBL_BILL_CONTENT . " WHERE (id = '$id' or parent='$id')";
+				if(!mysql_query($query, $db->mySQLconnRW)){
+					error_log("ERROR DELETING NEW DOCUMENT SECTION: " . mysql_error());
+					$msg = "Failed to delete section";
+					$success = false;
+				}
+				else{
+					$msg = "Section Deleted.";
+					$success = true;
+				}
+				echo json_encode(array('msg'=>$msg, 'success'=>$success));
+				break;
+				
 		}
 	}
 	else{

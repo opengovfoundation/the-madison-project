@@ -1128,7 +1128,7 @@ img.admin_info_ico{position:relative; top:5px; cursor:help;}
 	}
 		.list_wrapper ol{list-style-type:none;}
 		.list_wrapper .sortable li{position:relative;}
-		.list_wrapper .sortable li div{
+		.list_wrapper .sortable li div.sort_handle{
 			border: 1px solid #d4d4d4;
 			-webkit-border-radius: 3px;
 			-moz-border-radius: 3px;
@@ -1163,7 +1163,6 @@ img.admin_info_ico{position:relative; top:5px; cursor:help;}
 		border:1px solid darkgoldenrod;
 	}
 	.delete_nav_item, .delete_doc_item{
-		display:inline;
 		position:absolute;
 		right:0;
 		margin:0 10px 0 0;
@@ -1229,5 +1228,182 @@ img.admin_info_ico{position:relative; top:5px; cursor:help;}
 		}
 
 
+/*	CSS Spinner Loading Icon */
+	.floatingCirclesG{
+		position:relative;
+		width:14px;
+		height:14px;
+		-moz-transform:scale(0.6);
+		-webkit-transform:scale(0.6);
+		-ms-transform:scale(0.6);
+		-o-transform:scale(0.6);
+		transform:scale(0.6);
+	}
+	.sort_handle .floatingCirclesG{
+		position:absolute;
+		top:6px;
+		right:5px;
+	}
 
+	.f_circleG{
+		position:absolute;
+		background-color:#ffffff;
+		height:3px;
+		width:3px;
+	}
+	.f_circleG.animated{
+		-moz-border-radius:1px;
+		-moz-animation-name:f_fadeG;
+		-moz-animation-duration:1.04s;
+		-moz-animation-iteration-count:infinite;
+		-moz-animation-direction:linear;
+		-webkit-border-radius:1px;
+		-webkit-animation-name:f_fadeG;
+		-webkit-animation-duration:1.04s;
+		-webkit-animation-iteration-count:infinite;
+		-webkit-animation-direction:linear;
+		-ms-border-radius:1px;
+		-ms-animation-name:f_fadeG;
+		-ms-animation-duration:1.04s;
+		-ms-animation-iteration-count:infinite;
+		-ms-animation-direction:linear;
+		-o-border-radius:1px;
+		-o-animation-name:f_fadeG;
+		-o-animation-duration:1.04s;
+		-o-animation-iteration-count:infinite;
+		-o-animation-direction:linear;
+		border-radius:1px;
+		animation-name:f_fadeG;
+		animation-duration:1.04s;
+		animation-iteration-count:infinite;
+		animation-direction:linear;
+	}
 
+	.frotateG_01{
+		left:0;
+		top:6px;
+		-moz-animation-delay:0.39s;
+		-webkit-animation-delay:0.39s;
+		-ms-animation-delay:0.39s;
+		-o-animation-delay:0.39s;
+		animation-delay:0.39s;
+	}
+
+	.frotateG_02{
+		left:2px;
+		top:2px;
+		-moz-animation-delay:0.52s;
+		-webkit-animation-delay:0.52s;
+		-ms-animation-delay:0.52s;
+		-o-animation-delay:0.52s;
+		animation-delay:0.52s;
+	}
+
+	.frotateG_03{
+		left:6px;
+		top:0;
+		-moz-animation-delay:0.65s;
+		-webkit-animation-delay:0.65s;
+		-ms-animation-delay:0.65s;
+		-o-animation-delay:0.65s;
+		animation-delay:0.65s;
+	}
+
+	.frotateG_04{
+		right:2px;
+		top:2px;
+		-moz-animation-delay:0.78s;
+		-webkit-animation-delay:0.78s;
+		-ms-animation-delay:0.78s;
+		-o-animation-delay:0.78s;
+		animation-delay:0.78s;
+	}
+
+	.frotateG_05{
+		right:0;
+		top:6px;
+		-moz-animation-delay:0.91s;
+		-webkit-animation-delay:0.91s;
+		-ms-animation-delay:0.91s;
+		-o-animation-delay:0.91s;
+		animation-delay:0.91s;
+	}
+
+	.frotateG_06{
+		right:2px;
+		bottom:2px;
+		-moz-animation-delay:1.04s;
+		-webkit-animation-delay:1.04s;
+		-ms-animation-delay:1.04s;
+		-o-animation-delay:1.04s;
+		animation-delay:1.04s;
+	}
+
+	.frotateG_07{
+		left:6px;
+		bottom:0;
+		-moz-animation-delay:1.17s;
+		-webkit-animation-delay:1.17s;
+		-ms-animation-delay:1.17s;
+		-o-animation-delay:1.17s;
+		animation-delay:1.17s;
+	}
+
+	.frotateG_08{
+		left:2px;
+		bottom:2px;
+		-moz-animation-delay:1.3s;
+		-webkit-animation-delay:1.3s;
+		-ms-animation-delay:1.3s;
+		-o-animation-delay:1.3s;
+		animation-delay:1.3s;
+	}
+
+	@-moz-keyframes f_fadeG{
+		0%{
+			background-color:#ff0000
+		}
+		100%{
+			background-color:#ffffff
+		}
+	}
+
+	@-webkit-keyframes f_fadeG{
+		0%{
+			background-color:#ff0000
+		}
+		100%{
+			background-color:#ffffff
+		}
+	}
+
+	@-ms-keyframes f_fadeG{
+		0%{
+			background-color:#ff0000
+		}
+
+		100%{
+			background-color:#ffffff
+		}
+	}
+
+	@-o-keyframes f_fadeG{
+		0%{
+			background-color:#ff0000
+		}
+		100%{
+			background-color:#ffffff
+		}
+	}
+
+	@keyframes f_fadeG{
+		0%{
+			background-color:#ff0000
+		}
+
+		100%{
+			background-color:#ffffff
+		}
+	}
+
+	/* End Spinner Loading Icon */
