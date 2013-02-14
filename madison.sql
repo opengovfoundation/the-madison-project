@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 17, 2013 at 06:38 AM
+-- Generation Time: Feb 14, 2013 at 02:07 PM
 -- Server version: 5.5.25a
 -- PHP Version: 5.3.15
 
@@ -49,6 +49,7 @@ CREATE TABLE IF NOT EXISTS `bill_content` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `bill_id` int(11) NOT NULL,
   `parent` int(11) NOT NULL,
+  `child_priority` int(11) DEFAULT '0',
   `content` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1;
