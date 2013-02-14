@@ -129,7 +129,7 @@ class Bill extends Object {
 	private function get_top_level_content($gen, $show_edits = 0)
 	{
 		
-	   	$r = mysql_query("SELECT * FROM ".DB_TBL_BILL_CONTENT." WHERE parent='".$gen[count($gen) - 1]."'", $this->db->mySQLconnR);
+	   	$r = mysql_query("SELECT * FROM ".DB_TBL_BILL_CONTENT." WHERE parent='".$gen[count($gen) - 1]."' ORDER BY child_priority ASC", $this->db->mySQLconnR);
 	   	if(mysql_num_rows($r))
 	   	{
 			while($c = mysql_fetch_assoc($r))

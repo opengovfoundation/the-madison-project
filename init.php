@@ -31,10 +31,6 @@
 	=====================================================================*/
 	global $u, $b, $db;
 	
-	//print_r($_SERVER['REQUEST_URI']);
-	//echo "<hr>";
-	//print_r($_SERVER['QUERY_STRING']);
-	
 	/* LOG USER OUT
 	=====================================================================*/
 	if(isset($_GET['logout']))
@@ -49,6 +45,9 @@
 	/* INSTANTIATE INITIAL CLASSES
 	=====================================================================*/
 	$db = new db($db_creds);
+	
+	//Update Database
+	require('update/update-db.php');
 
 	// Force home page to be OPEN bill for initial launch.
 	//$_GET['page'] = $type == 'index' || $_SERVER['REQUEST_URI'] == '/' || strpos($_SERVER['REQUEST_URI'], '/?') !== false ? 'digital-bill-of-rights' : $_GET['page'];

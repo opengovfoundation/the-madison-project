@@ -10,6 +10,7 @@
 	$bill_id = get_bill_by_slug($slug);
 	$b = new Bill($bill_id, $db);
 	
+	//Update Document for this view
 	if(!empty($_POST) && $u->loggedin && $u->user_level == 1){
 		if(isset($_POST['form_submission']) && $_POST['form_submission'] == "doc_info"){
 			$updated = false;
@@ -26,7 +27,7 @@
 		}
 	}
 	
-	//Build out each section recursively
+	//Function used to build out each section recursively
 	function buildSection($parent){
 		?>
 		<li class="doc_item">
@@ -56,16 +57,17 @@
 				</div>
 				<p class="doc_item_content"><textarea><?php echo $parent['content']; ?></textarea></p>
 			</div>
-		</li>
-		<ol>
-			<?php 
-				if(isset($parent['children'])){
-					foreach($parent['children'] as $child){
-						buildSection($child);
+			<ol>
+				<?php 
+					if(isset($parent['children'])){
+						foreach($parent['children'] as $child){
+							buildSection($child);
+						}
 					}
-				}
-			?>
-		</ol>
+				?>
+			</ol>
+		</li>
+		
 		<?php
 	}
 ?>
@@ -114,4 +116,4 @@
 		<div id="save_message" class="ajax_message hidden"></div>
 	</div>
 </div>
-<script type="text/javascript" src="<?php echo SERVER_URL . "/assets/js/edit-doc.js"?>"></script>
+<script type="text/javascript" src="<?php echo SERVER_URL . "/assets/js/edit-doc.js"; ?>"></script>
