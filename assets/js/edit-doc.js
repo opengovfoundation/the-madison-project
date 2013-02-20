@@ -86,7 +86,7 @@ function add_doc_handler(){
 		var sib2 = $('<input type="hidden" name="content_id" value="' + new_id + '" />');
 		var sib3 = $('<p class="add_doc_item">+</p>').click(add_doc_handler);
 		var sib4 = $('<p class="delete_doc_item">x</p>').click(delete_doc_handler);
-		var sib5 = $('<p class="doc_item_content"><textarea>New Content</textarea></p>');
+		var sib5 = $('<p class="doc_item_content expanded"><textarea>New Content</textarea></p>');
 		
 		//Append a div and the child elements to the parent doc item
 		doc_item.append($('<div class="sort_handle"></div>').append([sib1, sib2, sib3, sib4, sib5]));
