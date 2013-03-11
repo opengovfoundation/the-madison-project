@@ -17,7 +17,8 @@ to view the “living” document within the referenced document (e.g.
 individual document view vs. US Code view), and the user-generated data
 needs to be associated with both.*
 
-### Interface Documentation
+### Installation Documentation
+Installation documentation can be found here: [Installation Documentation](INSTALL.md)	
 
 #### Overview
 When a person visits Madison as it stands now, they are presented with a document, a side bar of document edits and comments made by other users, and login and create an account options.  Individuals may create a user name and password for themselves, request authentication for an organization user name and password, or login with Facebook.  Vistors may read and share the document, as well as registered users edits and comments, without logging into Madison.  
