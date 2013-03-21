@@ -32,7 +32,7 @@
 				
 				//Add each document item to the query
 				foreach($doc_items as $doc_item){
-					$query .= "('$doc_item[id]', '$doc_id', '$doc_item[parent_id]', '$doc_item[child_priority]', '$doc_item[content]'), ";
+					$query .= "('$doc_item[id]', '$doc_id', '$doc_item[parent_id]', '$doc_item[child_priority]', '" . mysql_real_escape_string($doc_item[content]) . "'), ";
 				}
 				$query = rtrim($query, ", ");
 				
