@@ -230,6 +230,7 @@
 			case 'save-doc' :
 			case 'add-doc-section' :
 			case 'delete-doc-section' :
+			case 'update-doc' : 
 				require_once('admin/admin-ajax.php');
 				exit;
 		}

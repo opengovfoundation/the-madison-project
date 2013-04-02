@@ -76,22 +76,23 @@
 <div class="edit_info_link">Edit Document Info</div>
 <div class="edit_doc_info hidden">
 	<h2>Document Info:</h2>
-	<form action="" method="post" name="doc_info">
 		<label for="title">Title:</label>
-		<input type="text" name="title" value="<?php echo $b->title; ?>"/>
+		<input id="title" type="text" name="title" value="<?php echo $b->title; ?>"/>
+		<label for="slug">Slug:</label>
+		<input id="slug" name="slug" value="<?php echo $slug; ?>"/>
 		<label for="shortname">Shortname <img src="/assets/i/question_icon.png" alt="Info" title="Document short title used in various places in the document reader" class="admin_info_ico"/>:</label>
-		<input type="text" name="shortname" value="<?php echo $b->shortname; ?>" />
+		<input id="shortname" type="text" name="shortname" value="<?php echo $b->shortname; ?>" />
 		<label for="twitter_text">Twitter Text <img src="/assets/i/question_icon.png" alt="Info" title="The text that is pre-filled in the tweet button" class="admin_info_ico"/>:</label>
-		<input type="text" name="twitter_text" value="<?php echo $b->twitter_text; ?>"/>
+		<input id="twitter_text" type="text" name="twitter_text" value="<?php echo $b->twitter_text; ?>"/>
 		<label for="twitter_hash">Twitter Hashtags <img src="/assets/i/question_icon.png" alt="Info" title="The hashes that are appended to the pre-filled tweet" class="admin_info_ico"/>:</label>
-		<input type="text" name="twitter_hash" value="<?php echo $b->twitter_hash; ?>"/>
+		<input id="twitter_hash" type="text" name="twitter_hash" value="<?php echo $b->twitter_hash; ?>"/>
 		<label for="doc_location">Document Location <img src="/assets/i/question_icon.png" alt="Info" title="The location on disk of the pdf for this document" class="admin_info_ico"/>:</label>
-		<input type="text" name="doc_location" value="<?php echo $b->doc_location; ?>"/>
+		<input id="doc_location" type="text" name="doc_location" value="<?php echo $b->doc_location; ?>"/>
 		<label for="description">Description:</label>
 		<textarea name="description" id="description" cols="50" rows="20"><?php echo $b->description; ?></textarea>
 		<input type="hidden" value="bill_info" name="form_submission"/>
-		<input type="submit" value="Update"/>
-	</form>
+		<input id="update_doc_info" type="submit" value="Update"/>
+		<div id="update_message" class="ajax_message hidden" style="width:200px;margin:5px auto; float:none;"></div>
 </div>
 <div class="edit_doc_content list_wrapper">
 	<h2>Document Content:</h2>

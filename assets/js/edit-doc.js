@@ -55,11 +55,28 @@ $(document).ready(function(){
 			}
 		});
 		$('#save_doc').click(saveDocument);
+		$('#update_doc_info').click(updateDocInfo);
 	}
 	catch(err){
 		console.log(err);
 	}
 });
+
+function updateDocInfo(){
+	var title = $('#title').val();
+	var slug = $('#slug').val();
+	var shortname = $('#shortname').val();
+	var twitter_text = $('#twitter_text').val();
+	var twitter_hash = $('#twitter_hash').val();
+	var doc_location = $('#doc_location').val();
+	var description = $('#description').val();
+	var doc_id = $("#doc_id").val();
+	
+	$.post('admin/admin-ajax.php', {"action":"update-doc", "doc_id":doc_id, "title":title, "slug":slug, "shortname":shortname, "twitter_text":twitter_text, "twitter_hash":twitter_hash, "doc_location":doc_location, "description":description}, function(data){
+		data = JSON.parse(data);
+		$('#update_message').html(data.msg).removeClass('hidden');
+	});
+}
 
 function add_doc_handler(){
 	var doc_id = $('#doc_id').val();

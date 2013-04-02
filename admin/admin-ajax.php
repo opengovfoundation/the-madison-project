@@ -87,6 +87,29 @@
 				}
 				echo json_encode(array('msg'=>$msg, 'success'=>$success));
 				break;
+			case 'update-doc':
+				$title = $_POST['title'];
+				$slug = $_POST['slug'];
+				$shortname = $_POST['shortname'];
+				$twitter_text = $_POST['twitter_text'];
+				$twitter_hash = $_POST['twitter_hash'];
+				$doc_location = $_POST['doc_location'];
+				$description = $_POST['description'];
+				$doc_id = $_POST['doc_id'];
+
+				$query = "UPDATE bills set bill = '$title', slug = '$slug', shortname = '$shortname', description = '$description', twitter_text = '$twitter_text', twitter_hash = '$twitter_hash', doc_location = '$doc_location' where id = '$doc_id'";
+				error_log($query);
+				if(!mysql_query($query, $db->mySQLconnRW)){
+					error_log("ERROR UPDATING BILL INFO: " . mysql_error());
+					$msg = "Failed to update document information";
+					$success = false;
+				}
+				else{
+					$msg = "Document Info Updated.";
+					$success = true;
+				}
+				echo json_encode(array('msg' => $msg, 'success' => $success));
+				break;
 				
 		}
 	}
