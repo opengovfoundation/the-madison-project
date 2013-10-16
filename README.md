@@ -1,3 +1,5 @@
+**Note: This is the legacy version of Madison.  It is currently being developed using [Laravel](http://three.laravel.com) at [the new project page](https://github.com/opengovfoundation/madison)**
+
 # Madison
 ***
 
