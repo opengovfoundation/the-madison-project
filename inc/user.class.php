@@ -169,6 +169,7 @@ class User extends Object {
   	$this->display_name = $this->company != '' ? $this->company : $this->fname.' '.strtoupper(substr($this->lname, 0, 1)).'.';
 	
   	//GRAB USER META PROPERTIES
+  	$this->meta = array();
   	$r = mysql_query("SELECT meta_key,meta_value FROM ".DB_TBL_USER_META." WHERE user='".$this->db->clean($this->id)."'", $this->db->mySQLconnR);
   	while($u = mysql_fetch_assoc($r))
   		$this->meta[$u['meta_key']] = $u['meta_value'];
@@ -215,6 +216,7 @@ class User extends Object {
   	$this->display_name = $this->company != '' ? $this->company : $this->fname.' '.strtoupper(substr($this->lname, 0, 1)).'.';
 	
   	//GRAB USER META PROPERTIES
+  	$this->meta = array();
   	$r = mysql_query("SELECT meta_key,meta_value FROM ".DB_TBL_USER_META." WHERE user='".$this->db->clean($this->id)."'", $this->db->mySQLconnR);
   	while($u = mysql_fetch_assoc($r))
   		$this->meta[$u['meta_key']] = $u['meta_value'];
